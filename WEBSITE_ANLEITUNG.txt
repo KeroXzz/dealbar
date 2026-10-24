@@ -1,0 +1,28 @@
+﻿dealbar Website – Kurzanleitung
+==============================
+
+Website bauen:
+1. Deals wie gewohnt in deals.xlsx eintragen (Produktname, Preise, Preis geprüft am, Affiliate-Link).
+2. START.bat doppelklicken (baut Videos und Website) oder nur WEBSITE.bat. Die fertige Website liegt im Ordner "website" und öffnet sich im Browser.
+
+Was auf die Website kommt:
+- Jede Zeile mit Produktname und echtem Affiliate-Link (https://amzn.to/...).
+- Status "abgelaufen" oder "aus" blendet einen Deal aus.
+- Spalte "Kategorie" (Auswahlliste oder eigener Begriff) für den Kategorie-Filter.
+
+Bilder (Amazon-Regeln beachten!):
+- Am besten: auf Amazon in der SiteStripe-Leiste "Bild" wählen, den HTML-Code kopieren und als
+  sitestripe.txt in den Deal-Ordner legen (z. B. deals\kopfhoerer-sony\sitestripe.txt).
+- Sonst wird das erste eigene Foto aus dem Deal-Ordner verwendet.
+- Screenshots von Amazon (Dateiname beginnt mit "Screenshot") werden NICHT verwendet.
+
+Preise (Amazon-Regeln):
+- Euro-Preise werden nicht angezeigt, bis der Creators-API-Zugang da ist (website.json: preise_in_euro_zeigen).
+- Der Rabatt erscheint mit Datum und Uhrzeit, aber nur 24 Stunden nach "Preis geprüft am"
+  (website.json: rabatt_zeigen_stunden). Danach steht dort "Aktuellen Preis bei Amazon ansehen".
+
+Vor dem Veröffentlichen:
+- website.json öffnen und Name, Adresse und E-Mail für Impressum und Datenschutz eintragen.
+- Den Inhalt des Ordners "website" bei einem Hoster hochladen (z. B. Netlify, Cloudflare Pages).
+
+Einzelne Deals verlinken (z. B. "Link in Bio"): deine-domain.de/#ordnername

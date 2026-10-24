@@ -1,0 +1,11 @@
+{
+  "name_bold": "deal",
+  "name_light": "bar",
+  "tagline": "Geprüfte Deals · täglich frisch",
+  "ink": "#111111",
+  "paper": "#FFFFFF",
+  "background": "#F4F3EF",
+  "accent": "#FF4B36",
+  "muted": "#8A8A86",
+  "intro": true
+}

@@ -1,0 +1,14 @@
+{
+  "titel": "dealbar – geprüfte Amazon-Deals, täglich frisch",
+  "beschreibung": "Die besten Amazon-Angebote des Tages: von Hand geprüft, mit Rabatt auf einen Blick.",
+  "domain": "",
+  "rabatt_zeigen_stunden": 24,
+  "preise_in_euro_zeigen": false,
+  "impressum": {
+    "name": "VORNAME NACHNAME",
+    "strasse": "STRASSE HAUSNUMMER",
+    "plz_ort": "PLZ ORT",
+    "email": "EMAIL@BEISPIEL.DE",
+    "telefon": ""
+  }
+}

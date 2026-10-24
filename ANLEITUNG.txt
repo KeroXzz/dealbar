@@ -1,0 +1,19 @@
+﻿dealbar – Kurzanleitung
+=======================
+
+Neues Video erstellen:
+1. Ordner in "deals" anlegen, z. B. deals\kopfhoerer-sony, und 1–4 Produktbilder hineinlegen.
+2. deals.xlsx öffnen, eine Zeile ausfüllen (Ordner, Produktname, Preise, Hook, Link), Status "neu".
+3. Excel speichern und schließen.
+4. START.bat doppelklicken.
+5. Video + Beschreibungstext liegen danach im Ordner "videos".
+
+Beim allerersten Start werden benötigte Python-Pakete automatisch installiert (einmalig, ca. 1 Minute).
+
+Weitere Dateien:
+- marke.json: Name, Claim und Farben der Marke
+- LOGO_EXPORTIEREN.bat: speichert Logo, Profilbild und Intro im Ordner "marke"
+- programm\: die Programmdateien (nicht nötig zu öffnen)
+
+Ein Video erneut erstellen: Status in deals.xlsx wieder auf "neu" setzen.
+Probleme: Steht in der Tabelle "Fehler", findest du den Grund in der Spalte "Videodatei".
