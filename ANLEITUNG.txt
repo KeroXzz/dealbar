@@ -1,19 +1,26 @@
 ﻿dealbar – Kurzanleitung
 =======================
 
-Neues Video erstellen:
-1. Ordner in "deals" anlegen, z. B. deals\kopfhoerer-sony, und 1–4 Produktbilder hineinlegen.
-2. deals.xlsx öffnen, eine Zeile ausfüllen (Ordner, Produktname, Preise, Hook, Link), Status "neu".
-3. Excel speichern und schließen.
-4. START.bat doppelklicken.
-5. Video + Beschreibungstext liegen danach im Ordner "videos".
+Am einfachsten: Deals vom Handy an den Telegram-Bot schicken (Amazon-App -> Teilen -> Telegram -> Bot,
+Preis dazuschreiben, Speichern). Website, Video und Text zum Posten entstehen dann automatisch.
+Im Bot zeigt /hilfe die Kurzanleitung, /liste alle Deals.
+
+Am PC (optional):
+1. Neueste Version von GitHub holen (der Bot aendert deals.xlsx in der Cloud).
+2. Ordner in "deals" anlegen, z. B. deals\kopfhoerer-sony, und 1–4 EIGENE Fotos hineinlegen.
+   Keine Screenshots oder Bilder von Amazon. Ohne Fotos entsteht ein Video im Text-Design.
+3. deals.xlsx öffnen, eine Zeile ausfüllen (Ordner, Produktname, Preise, Preis geprüft am, Hook, Link,
+   Kategorie), Status "neu". Nr und ASIN trägt das Programm selbst ein.
+4. Excel speichern und schließen.
+5. START.bat doppelklicken. Video + Text zum Posten liegen danach im Ordner "videos".
 
 Beim allerersten Start werden benötigte Python-Pakete automatisch installiert (einmalig, ca. 1 Minute).
 
 Weitere Dateien:
 - marke.json: Name, Claim und Farben der Marke
+- website.json: Einstellungen der Website (siehe WEBSITE_ANLEITUNG.txt)
 - LOGO_EXPORTIEREN.bat: speichert Logo, Profilbild und Intro im Ordner "marke"
 - programm\: die Programmdateien (nicht nötig zu öffnen)
 
-Ein Video erneut erstellen: Status in deals.xlsx wieder auf "neu" setzen.
+Ein Video erneut erstellen: im Bot /liste -> Deal -> "Video neu", oder in deals.xlsx Status wieder auf "neu".
 Probleme: Steht in der Tabelle "Fehler", findest du den Grund in der Spalte "Videodatei".

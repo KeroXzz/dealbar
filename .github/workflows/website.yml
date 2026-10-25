@@ -3,6 +3,8 @@ name: Website
 on:
   push:
     branches: [main]
+  schedule:
+    - cron: "23 3 * * *"   # taeglich frueh: Ordnung nach Alter, Sitemap
   workflow_dispatch:
 
 permissions:
@@ -17,6 +19,7 @@ concurrency:
 env:
   TZ: Europe/Berlin
   PYTHONIOENCODING: utf-8
+  PARTNER_TAG: ${{ vars.PARTNER_TAG }}
 
 jobs:
   website:

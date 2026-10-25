@@ -1,0 +1,31 @@
+name: Tests
+
+# Prueft jede Programmaenderung: simulierte Telegram-Nachrichten, Tabellen-Konflikte, Website und Videos.
+on:
+  push:
+    branches: [main]
+    paths: ["programm/**", ".github/workflows/**"]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+env:
+  TZ: Europe/Berlin
+  PYTHONIOENCODING: utf-8
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: programm/requirements.txt
+      - run: pip install -r programm/requirements.txt pyflakes
+      - run: python -m pyflakes programm
+      - run: python programm/tests.py --video
