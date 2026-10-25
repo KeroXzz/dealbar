@@ -73,6 +73,10 @@ def test_parse():
         "Meine Jacke", 19.99, 39.99, "Küche", "Super leicht"), d
     d = tb.parse("Schau dir dieses Produkt bei Amazon an: Bosch Akkuschrauber 18V, 2 Akkus https://amzn.eu/d/x1")
     assert d.get("share_title") == "Bosch Akkuschrauber 18V", d
+    d = tb.parse("🔥 Bosch Akkuschrauber 18V für 49,99 statt 89,99 (-44%)\nhttps://www.amazon.de/dp/B0TEST0005")
+    assert (d.get("share_title"), d.get("new"), d.get("old")) == ("Bosch Akkuschrauber 18V", 49.99, 89.99), d
+    d = tb.parse("Amazon.de: Herren T-Shirt 100% Baumwolle : Fashion https://amzn.eu/d/x2")
+    assert d.get("share_title") == "Herren T-Shirt 100% Baumwolle" and "new" not in d, d
     for text, want in (("19,99 statt 34,99", (19.99, 34.99)), ("UVP 34,99 → 19,99", (19.99, 34.99)),
                        ("-43% 19.99€", (19.99, None)), ("1.299,00 statt 1.599,00", (1299.0, 1599.0)),
                        ("jetzt nur 9,99 €", (9.99, None)), ("Mode", None), ("3 Stück", None)):
@@ -143,9 +147,11 @@ class FakeTelegram:
                if m in ("sendMessage", "editMessageText", "sendVideo", "sendPhoto")]
         return "\n---\n".join(out[-n:])
 
-    def msg(self, text=None, photo=None, chat=4242):
+    def msg(self, text=None, photo=None, chat=4242, entities=None):
         self.uid += 1
         m = {"message_id": 1000 + self.uid, "chat": {"id": chat}, "date": int(time.time())}
+        if entities:
+            m["caption_entities" if photo else "entities"] = entities
         if photo:
             m["photo"] = [{"file_id": photo + "-klein"}, {"file_id": photo}]
             if text:
@@ -283,6 +289,15 @@ def test_bot():
     n = len(fake.calls)
     bot.handle_batch([fake.msg("https://www.amazon.de/dp/B0TEST0003", chat=666)])
     assert "draft" not in bot.st and len(fake.calls) == n
+
+    # 10b. Weitergeleiteter Deal-Post: Link versteckt hinter "Zum Deal", fremde Partner-ID; dann /abbrechen
+    bot.handle_batch([fake.msg("Bosch Akkuschrauber 18V für 49,99 statt 89,99 Zum Deal", entities=[
+        {"type": "bold", "offset": 0, "length": 5},
+        {"type": "text_link", "offset": 46, "length": 8, "url": "https://www.amazon.de/dp/B0TEST0006?tag=fremd-21"}])])
+    d = bot.st["draft"]
+    assert d["url"] == "https://www.amazon.de/dp/B0TEST0006?tag=dealbar-21" and (d["new"], d["old"]) == (49.99, 89.99), d
+    bot.handle_batch([fake.msg("/abbrechen")])
+    assert "draft" not in bot.st and "verworfen" in fake.texts(2)
 
     # 11. Kanal-Post: mit Werbehinweis und Partnerlink
     assert bot.post_channel(n0 + 1)
