@@ -513,7 +513,8 @@ def ausgang():
     st = load_state()
     sent = set(st.get("sent", []))
     for f in sorted(os.listdir(VIDEO_DIR)):
-        if not f.endswith(".mp4") or f in sent:
+        key = f"{f}@{int(os.path.getmtime(os.path.join(VIDEO_DIR, f)))}"  # neu gerenderte Videos erneut senden
+        if not f.endswith(".mp4") or key in sent:
             continue
         base = f[:-4]
         cap_path = os.path.join(VIDEO_DIR, base + "_beschreibung.txt")
@@ -522,7 +523,7 @@ def ausgang():
             api("sendVideo", {"chat_id": CHAT_ID, "supports_streaming": "true"}, files={"video": (f, fh.read())})
         if caption:
             send(CHAT_ID, caption)
-        sent.add(f)
+        sent.add(key)
         print("Gesendet:", f)
     st["sent"] = sorted(sent)[-200:]
     save_state(st)
