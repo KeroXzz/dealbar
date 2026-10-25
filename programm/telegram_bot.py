@@ -43,8 +43,11 @@ TOKEN = os.environ.get("TELEGRAM_BOT_TOKEN", "").strip()
 CHAT_ID = os.environ.get("TELEGRAM_CHAT_ID", "").strip()
 TAG = os.environ.get("PARTNER_TAG", "").strip()
 
-CATEGORIES = ["Technik", "Haushalt", "Küche", "Sport & Freizeit", "Beauty & Pflege", "Spielzeug",
+CATEGORIES = ["Technik", "Haushalt", "Küche", "Mode", "Sport & Freizeit", "Beauty & Pflege", "Spielzeug",
               "Garten & Baumarkt", "Sonstiges"]
+ALIASES = {"kleidung": "Mode", "fashion": "Mode", "schuhe": "Mode", "elektronik": "Technik", "tech": "Technik",
+           "garten": "Garten & Baumarkt", "werkzeug": "Garten & Baumarkt", "sport": "Sport & Freizeit",
+           "beauty": "Beauty & Pflege", "drogerie": "Beauty & Pflege", "spiele": "Spielzeug"}
 LINK_RE = re.compile(r"https?://[^\s<>]*(?:amazon\.de|amzn\.to|amzn\.eu|a\.co)[^\s<>]*", re.I)
 ASIN_RE = re.compile(r"/(?:dp|gp/product|gp/aw/d|d)/([A-Z0-9]{10})(?:[/?&#]|$)", re.I)
 HIDDEN = ("abgelaufen", "aus", "offline")
@@ -160,14 +163,16 @@ def shorten(text, limit=70):
 
 def title_from_url(url):
     path = urllib.parse.urlparse(url).path
-    m = re.match(r"/([^/]+)/(?:dp|gp/product)/", path)
-    if not m:
+    m = re.search(r"/([^/]+)/(?:dp|gp/product)/", path)
+    if not m or len(m.group(1)) <= 2:
         return ""
     return shorten(urllib.parse.unquote(m.group(1)).replace("-", " "), 60)
 
 
 def match_category(line):
     low = line.lower().strip(" .:#")
+    if low in ALIASES:
+        return ALIASES[low]
     for c in CATEGORIES:
         if low == c.lower() or low in [p.strip() for p in c.lower().split("&")]:
             return c
@@ -184,8 +189,12 @@ def parse(text):
     """Text einer Deal-Nachricht -> Felder. Fehlende Felder bleiben leer."""
     d = {}
     rest = []
+    lines = []
     for line in (text or "").splitlines():
-        line = line.strip()
+        # Alles in einer Zeile mit dem Link: "Link, 19,99 statt 34,99, Küche, Hook"
+        lines += re.split(r"[,;]\s+|,$", line) if LINK_RE.search(line) else [line]
+    for line in lines:
+        line = line.strip(" ,;")
         if not line:
             continue
         m = LINK_RE.search(line)
