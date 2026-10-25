@@ -479,6 +479,13 @@ def lauschen():
         sys.exit("TELEGRAM_BOT_TOKEN fehlt.")
     end = time.time() + float(os.environ.get("MAX_MINUTES", "340")) * 60
     st = load_state()
+    wb, ws, head = open_table()
+    if any(str(ws.cell(r, head["Status"]).value or "").strip().lower() == "neu" for r in range(2, ws.max_row + 1)):
+        # Zeilen, die direkt in deals.xlsx auf "neu" gesetzt wurden, gleich rendern
+        sh(sys.executable, os.path.join(HERE, "run.py"))
+        ausgang()
+        git_save("Videos neu erstellt")
+        publish_website()
     while time.time() < end:
         try:
             updates = api("getUpdates", {"offset": st.get("offset", 0), "allowed_updates": ["message"],
