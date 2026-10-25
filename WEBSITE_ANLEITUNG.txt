@@ -1,28 +1,42 @@
 ﻿dealbar Website – Kurzanleitung
 ==============================
 
-Website bauen:
-1. Deals wie gewohnt in deals.xlsx eintragen (Produktname, Preise, Preis geprüft am, Affiliate-Link).
-2. START.bat doppelklicken (baut Videos und Website) oder nur WEBSITE.bat. Die fertige Website liegt im Ordner "website" und öffnet sich im Browser.
+Die Website baut sich selbst: nach jedem neuen Deal, jeder Änderung im Bot und einmal täglich.
+Adresse: https://keroxzz.github.io/dealbar/
 
 Was auf die Website kommt:
-- Jede Zeile mit Produktname und echtem Affiliate-Link (https://amzn.to/...).
-- Status "abgelaufen" oder "aus" blendet einen Deal aus.
-- Spalte "Kategorie" (Auswahlliste oder eigener Begriff) für den Kategorie-Filter.
+- Jede Zeile mit Produktname und echtem Amazon-Link. Der neueste Deal steht groß oben.
+- Status "abgelaufen" oder "aus" (im Bot: /liste -> Offline nehmen) blendet einen Deal aus.
+  Seine Deal-Seite bleibt mit dem Hinweis "abgelaufen" erreichbar, damit geteilte Links nicht ins Leere führen.
+- Deals, die älter als 21 Tage sind, stehen unter "Ältere Deals" (website.json: aeltere_deals_ab_tagen).
+- Kategorie-Filter, Suche (auch nach Deal-Nummer) und Sortierung nach Rabatt.
+
+Deal-Seiten und "Link in Bio":
+- Jeder Deal hat eine eigene Seite: https://keroxzz.github.io/dealbar/12/ (12 = Deal-Nummer).
+  Beim Teilen (WhatsApp, Telegram ...) erscheint ein Vorschaubild mit Titel.
+- Im Video steht "Deal #12 · Link in Bio". Auf der Startseite findet man ihn über die Suche
+  oder direkt mit https://keroxzz.github.io/dealbar/?q=12
 
 Bilder (Amazon-Regeln beachten!):
-- Am besten: auf Amazon in der SiteStripe-Leiste "Bild" wählen, den HTML-Code kopieren und als
-  sitestripe.txt in den Deal-Ordner legen (z. B. deals\kopfhoerer-sony\sitestripe.txt).
-- Sonst wird das erste eigene Foto aus dem Deal-Ordner verwendet.
+- Eigene Fotos aus dem Deal-Ordner (die schickst du dem Bot mit).
+- Oder SiteStripe: auf Amazon in der SiteStripe-Leiste "Bild" wählen, den HTML-Code kopieren und als
+  sitestripe.txt in den Deal-Ordner legen. Das Bild wird dann direkt von Amazon geladen.
 - Screenshots von Amazon (Dateiname beginnt mit "Screenshot") werden NICHT verwendet.
+- Ohne Bild zeigt die Website eine Kachel im Text-Design.
 
 Preise (Amazon-Regeln):
 - Euro-Preise werden nicht angezeigt, bis der Creators-API-Zugang da ist (website.json: preise_in_euro_zeigen).
 - Der Rabatt erscheint mit Datum und Uhrzeit, aber nur 24 Stunden nach "Preis geprüft am"
   (website.json: rabatt_zeigen_stunden). Danach steht dort "Aktuellen Preis bei Amazon ansehen".
+  Ist der Preis noch gültig: im Bot /liste -> Deal -> "Preis noch aktuell".
 
-Vor dem Veröffentlichen:
-- website.json öffnen und Name, Adresse und E-Mail für Impressum und Datenschutz eintragen.
-- Den Inhalt des Ordners "website" bei einem Hoster hochladen (z. B. Netlify, Cloudflare Pages).
+Pflichtangaben:
+- Impressum: im Bot /impressum schicken (oder in website.json eintragen).
+- Partner-ID: im Bot /partnerid deinname-21 schicken. Sie wird auch in alle bisherigen Links eingesetzt.
 
-Einzelne Deals verlinken (z. B. "Link in Bio"): deine-domain.de/#ordnername
+Weitere Einstellungen in website.json:
+- titel, beschreibung: für Google und Vorschaubilder
+- domain: eigene Domain, z. B. "www.dealbar.de" (zusätzlich bei GitHub unter Settings -> Pages eintragen)
+- social: Links zu Instagram, TikTok, YouTube, Pinterest, Facebook (erscheinen auf der Website)
+
+Am PC ansehen: WEBSITE.bat (echte Deals) oder BEISPIEL_WEBSITE.bat (erfundene Beispiel-Deals).

@@ -4,6 +4,16 @@
   "domain": "",
   "rabatt_zeigen_stunden": 24,
   "preise_in_euro_zeigen": false,
+  "aeltere_deals_ab_tagen": 21,
+  "partner_tag": "",
+  "telegram_kanal": "",
+  "social": {
+    "instagram": "",
+    "tiktok": "",
+    "youtube": "",
+    "pinterest": "",
+    "facebook": ""
+  },
   "impressum": {
     "name": "VORNAME NACHNAME",
     "strasse": "STRASSE HAUSNUMMER",

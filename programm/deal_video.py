@@ -216,6 +216,37 @@ def make_badge(text, accent):
     return b.rotate(-8, resample=Image.BICUBIC, expand=False)
 
 
+def make_text_card(cfg, brand, box):
+    """Produktkarte ohne Foto (Amazon-Bilder sind tabu): grosser Rabatt oder Bildmarke, Kategorie, Deal-Nr."""
+    import brand as brandlib
+
+    ink, muted = hex_rgb(brand["ink"]), hex_rgb(brand["muted"])
+    accent = hex_rgb(cfg.get("accent", brand["accent"]))
+    tint = tuple(int(255 - (255 - c) * 0.08) for c in accent)
+    im = Image.new("RGBA", (box, box), tint + (255,))
+    d = ImageDraw.Draw(im)
+    cat = (cfg.get("category") or "").strip()
+    if cat:
+        tag = brandlib.make_tagline(cat, 34, muted, font, spacing=0.16)
+        im.alpha_composite(tag, ((box - tag.width) // 2, 92))
+    disc = cfg.get("discount_percent") if cfg.get("show_discount", True) else None
+    if disc:
+        txt = f"−{disc}%"
+        fs = 270
+        while fs > 120 and text_w(d, txt, font("black", fs)) > box - 110:
+            fs -= 6
+        d.text((box / 2, box / 2 - 30), txt, font=font("black", fs), fill=accent + (255,), anchor="mm")
+        lbl = brandlib.make_tagline("Rabatt", 44, ink, font, spacing=0.22)
+        im.alpha_composite(lbl, ((box - lbl.width) // 2, int(box / 2 + fs * 0.42)))
+    else:
+        mark = brandlib.make_mark(250, ink)
+        im.alpha_composite(mark, ((box - mark.width) // 2, (box - mark.height) // 2 - 10))
+    if cfg.get("nr"):
+        nr = brandlib.make_tagline(f"Deal #{cfg['nr']}", 30, muted, font, spacing=0.16)
+        im.alpha_composite(nr, ((box - nr.width) // 2, box - 128))
+    return im
+
+
 def make_pill(text, f, bg, fg, padx=38, h=84):
     tmp = ImageDraw.Draw(Image.new("RGBA", (1, 1)))
     tw = text_w(tmp, text, f)
@@ -256,6 +287,9 @@ def render(cfg, base_dir, out_path, brand):
     mask = rounded_mask((CARD, CARD), 56)
 
     images = [prepare_product(os.path.join(base_dir, p), CARD) for p in cfg["images"]]
+    if not images:  # ohne eigene Fotos: Karte im Text-Design, der Rabatt steht dann gross darin
+        images = [make_text_card(cfg, brand, CARD)]
+        show_discount = False
     seg = dur * 0.82 / len(images)  # Bildwechsel im Hauptteil, letztes Bild bleibt bis Ende
     xfade = 0.45
 
@@ -402,7 +436,8 @@ def render(cfg, base_dir, out_path, brand):
 
     ff.stdin.close()
     if ff.wait() != 0:
-        sys.exit("ffmpeg ist fehlgeschlagen.")
+        raise RuntimeError("ffmpeg ist fehlgeschlagen.")
+    return total
 
 
 def main():

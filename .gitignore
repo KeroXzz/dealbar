@@ -1,6 +1,8 @@
-videos/
-website/
-website_beispiel/
 __pycache__/
 *_sicherung_*
 ~$*
+videos/
+website/
+website_beispiel/
+.deals.lock
+*.tmp
