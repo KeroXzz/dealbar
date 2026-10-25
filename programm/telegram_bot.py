@@ -1,7 +1,8 @@
 """
 dealbar: Telegram-Briefkasten fuer neue Deals. Laeuft in der Cloud (GitHub Actions), siehe .github/workflows.
 
-    python telegram_bot.py eingang   # neue Nachrichten abholen, Deals in deals.xlsx eintragen
+    python telegram_bot.py lauschen  # Dauerbetrieb in GitHub Actions (bis MAX_MINUTES)
+    python telegram_bot.py eingang   # einmal neue Nachrichten abholen, Deals in deals.xlsx eintragen
     python telegram_bot.py ausgang   # fertige Videos + Beschreibung an dich zurueckschicken
 
 Umgebungsvariablen:
@@ -20,6 +21,7 @@ import io
 import json
 import os
 import re
+import subprocess
 import sys
 import time
 import urllib.parse
@@ -352,14 +354,16 @@ def handle_command(cmd, arg, chat, st):
         ws.cell(r, head["Status"]).value = "abgelaufen"
         wb.save(TABLE)
         send(chat, f"Von der Website genommen: {ws.cell(r, head['Produktname']).value}")
+        return True
     else:
         send(chat, "Unbekannter Befehl. /hilfe zeigt alle Befehle.")
 
 
 def finalize(st, chat, now, force=False):
+    """Angefangenen Deal speichern, sobald er vollstaendig ist. True, wenn gespeichert."""
     p = st.get("pending")
     if not p:
-        return
+        return False
     quiet = now - p["last"]
     if force or (p["photos"] and (quiet >= PHOTO_WAIT or len(p["photos"]) >= 4)) or quiet >= PENDING_MAX:
         st.pop("pending")
@@ -368,14 +372,13 @@ def finalize(st, chat, now, force=False):
         except Exception as e:
             send(chat, f"Fehler beim Speichern des Deals: {e}")
             raise
+        return True
+    return False
 
 
-def eingang():
-    if not TOKEN:
-        sys.exit("TELEGRAM_BOT_TOKEN fehlt.")
-    st = load_state()
-    updates = api("getUpdates", {"offset": st.get("offset", 0), "timeout": 0, "allowed_updates": ["message"]})
-    now = time.time()
+def process(updates, st):
+    """Nachrichten verarbeiten. True, wenn sich Deals geaendert haben."""
+    changed = False
     chat = CHAT_ID
     for u in updates:
         st["offset"] = u["update_id"] + 1
@@ -397,11 +400,11 @@ def eingang():
 
         if text.startswith("/"):
             cmd, _, arg = text.partition(" ")
-            handle_command(cmd.split("@")[0].lower(), arg.strip(), chat, st)
+            changed |= bool(handle_command(cmd.split("@")[0].lower(), arg.strip(), chat, st))
             continue
         fields = parse(text)
         if "link" in fields:
-            finalize(st, chat, now, force=True)
+            changed |= finalize(st, chat, time.time(), force=True)
             loose = [x["id"] for x in st.get("loose", []) if t - x["time"] < PENDING_MAX]
             st["pending"] = dict(fields, photos=loose, time=t, last=t)
             st["loose"] = []
@@ -414,13 +417,77 @@ def eingang():
             st.setdefault("loose", []).append({"id": photo, "time": t})
         elif text:
             send(chat, "Ich habe keinen Amazon-Link gefunden. /hilfe zeigt, wie ein Deal aussieht.")
-        if photo:
-            if st.get("pending"):
-                st["pending"]["photos"].append(photo)
-                st["pending"]["last"] = t
-    finalize(st, chat, now)
+        if photo and st.get("pending"):
+            st["pending"]["photos"].append(photo)
+            st["pending"]["last"] = t
+    return changed
+
+
+def eingang():
+    """Einmal abholen (fuer Tests und lokale Nutzung)."""
+    if not TOKEN:
+        sys.exit("TELEGRAM_BOT_TOKEN fehlt.")
+    st = load_state()
+    updates = api("getUpdates", {"offset": st.get("offset", 0), "timeout": 0, "allowed_updates": ["message"]})
+    process(updates, st)
+    finalize(st, CHAT_ID, time.time())
     save_state(st)
     print(f"{len(updates)} Nachrichten verarbeitet.")
+
+
+def sh(*cmd):
+    print("$", " ".join(cmd))
+    return subprocess.run(cmd, cwd=ROOT).returncode
+
+
+def git_save(message):
+    sh("git", "add", "-A", "deals", "deals.xlsx", "programm")
+    if subprocess.run(["git", "diff", "--cached", "--quiet"], cwd=ROOT).returncode == 0:
+        return False
+    sh("git", "commit", "-q", "-m", message)
+    sh("git", "pull", "-q", "--rebase", "--autostash")
+    return sh("git", "push", "-q") == 0
+
+
+def publish_website():
+    """Website-Workflow anstossen (Pushes mit dem Actions-Token loesen selbst keinen Workflow aus)."""
+    repo, gh_token = os.environ.get("GITHUB_REPOSITORY"), os.environ.get("GITHUB_TOKEN")
+    if not (repo and gh_token):
+        return
+    req = urllib.request.Request(
+        f"https://api.github.com/repos/{repo}/actions/workflows/website.yml/dispatches",
+        data=json.dumps({"ref": os.environ.get("GITHUB_REF_NAME", "main")}).encode(), method="POST",
+        headers={"Authorization": f"Bearer {gh_token}", "Accept": "application/vnd.github+json"})
+    try:
+        urllib.request.urlopen(req, timeout=30)
+    except Exception as e:
+        print("Website-Workflow nicht gestartet:", e)
+
+
+def lauschen():
+    """Dauerbetrieb: wartet per Long-Polling auf Nachrichten und verarbeitet neue Deals sofort."""
+    if not TOKEN:
+        sys.exit("TELEGRAM_BOT_TOKEN fehlt.")
+    end = time.time() + float(os.environ.get("MAX_MINUTES", "340")) * 60
+    st = load_state()
+    while time.time() < end:
+        try:
+            updates = api("getUpdates", {"offset": st.get("offset", 0), "allowed_updates": ["message"],
+                                         "timeout": int(max(1, min(50, end - time.time())))})
+        except Exception as e:
+            print("Telegram nicht erreichbar:", e)
+            time.sleep(10)
+            continue
+        changed = process(updates, st)
+        changed |= finalize(st, CHAT_ID, time.time())
+        save_state(st)
+        if changed:
+            sh(sys.executable, os.path.join(HERE, "run.py"))
+            ausgang()
+            git_save("Neue Deals aus Telegram")
+            publish_website()
+    git_save("Telegram-Status")
+    print("Lauf beendet, der nächste übernimmt.")
 
 
 def ausgang():
@@ -446,4 +513,4 @@ def ausgang():
 
 
 if __name__ == "__main__":
-    {"eingang": eingang, "ausgang": ausgang}[sys.argv[1] if len(sys.argv) > 1 else "eingang"]()
+    {"eingang": eingang, "ausgang": ausgang, "lauschen": lauschen}[sys.argv[1] if len(sys.argv) > 1 else "eingang"]()
