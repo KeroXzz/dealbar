@@ -230,11 +230,19 @@ def shorten(text, limit=70):
     return out or text[:limit]
 
 
+# Preisangaben in weitergeleiteten Deal-Posts ("fuer 49,99 statt 89,99", "49,99€", "-44%"), nicht im Titel
+PRICE_FRAG = re.compile(r"(?:\b(?:für|nur|statt|ab|jetzt|uvp)\s+)?(?:\d{1,3}(?:\.\d{3})*,\d{2}|\d+(?:\.\d{2})?)\s*(?:€|eur\b|euro\b)"
+                        r"|\b(?:für|nur|statt|ab|jetzt|uvp)\s+\d{1,3}(?:\.\d{3})*(?:,\d{2})?\b|[-−–]\s?\d{1,2}\s?%", re.I)
+PRICE_PAIR = re.compile(r"(\d{1,3}(?:\.\d{3})*,\d{2}|\d+\.\d{2})\s*(?:€|eur(?:o)?)?\s*(?:statt|anstatt|vorher|uvp)\s*"
+                        r"(\d{1,3}(?:\.\d{3})*,\d{2}|\d+\.\d{2})", re.I)
+
+
 def clean_share(text):
     """Geteilten Text aus der Amazon-App/Browser -> (Titel, Kategorie-Hinweis)."""
     t = re.sub(r"\s+", " ", text).strip(" -:|–")
     for pat in SHARE_JUNK:
         t = re.sub(pat, "", t, flags=re.I).strip(" -:|–\"'")
+    t = re.sub(r"^[^\wÄÖÜäöü„\"']+", "", PRICE_FRAG.sub(" ", t)).strip()
     cat = None
     parts = [p.strip() for p in re.split(r"\s+:\s+", t) if p.strip()]
     if len(parts) > 1:
@@ -325,6 +333,11 @@ def parse(text):
             d["share_title"] = title
         if cat:
             d.setdefault("cat", cat)
+    m = PRICE_PAIR.search(" ".join(x for x, _ in lines)) if "new" not in d else None
+    if m:  # "... fuer 49,99 statt 89,99 ..." mitten im Text (weitergeleitete Deals)
+        new, old = daten.num(m.group(1)), daten.num(m.group(2))
+        if new and old and old > new:
+            d["new"], d["old"] = new, old
     if rest:
         d["rest"] = rest
     return d
@@ -640,6 +653,11 @@ class Bot:
         if sender != CHAT_ID:
             return
         text = msg.get("text") or msg.get("caption") or ""
+        if not text.startswith("/") and not daten.find_link(text):  # weitergeleitete Posts: Link hinter einem Wort
+            hidden = [x.get("url", "") for x in (msg.get("entities") or msg.get("caption_entities") or [])
+                      if x.get("type") == "text_link" and daten.is_amazon(x.get("url", ""))]
+            if hidden:
+                text = (text + "\n" + hidden[0]).strip()
         photo = msg["photo"][-1]["file_id"] if msg.get("photo") else None
         doc = msg.get("document") or {}
         if not photo and str(doc.get("mime_type", "")).startswith("image/"):
