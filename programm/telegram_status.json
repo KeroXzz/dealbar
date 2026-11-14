@@ -1,5 +1,5 @@
 {
- "offset": 221843672,
+ "offset": 221843675,
  "loose": [],
  "posted": [],
  "vs": {
@@ -43,7 +43,7 @@
    "asin": "B0H9YVLRKS",
    "link": "https://www.amazon.de/dp/B0H9YVLRKS",
    "t": 1794649424.5556202,
-   "state": "",
+   "state": "offen",
    "list": 21,
    "ids": [
     "2871096",
@@ -232,11 +232,5 @@
   "2871094",
   "2869191"
  ],
- "vs_slot": "2026-11-14 08:00",
- "await": {
-  "what": "title",
-  "nr": null,
-  "t": 1794649647.4189153,
-  "msg": 26
- }
+ "vs_slot": "2026-11-14 08:00"
 }
