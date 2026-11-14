@@ -8,26 +8,29 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - run: |
-          for f in hot neu "gruppe/haushalt" "gruppe/kuche"; do
-            echo "=== $f"; curl -sS -m 20 -A "Mozilla/5.0 (compatible; dealbar/1.0)" -w "\nHTTP %{http_code}\n" "https://www.mydealz.de/rss/$f" -o out.xml; head -c 200 out.xml; echo; grep -c "<item>" out.xml || true
+          A="Mozilla/5.0 (compatible; dealbar/1.0)"
+          for f in trending new neu hot-deals new-deals "groups/haushalt" "gruppe/haushalt-garten" "groups/kuche" "group/haushalt" "deals" "amazon" "merchant/amazon" "haendler/amazon"; do
+            curl -sSL -m 20 -A "$A" -o out.xml -w "=== $f HTTP %{http_code} %{url_effective} " "https://www.mydealz.de/rss/$f" || true; echo "items=$(grep -c '<item>' out.xml)"
           done
-          curl -sS -m 20 -A "Mozilla/5.0 (compatible; dealbar/1.0)" "https://www.mydealz.de/rss/hot" -o hot.xml
+          curl -sSL -m 20 -A "$A" "https://www.mydealz.de/rss/trending" -o hot.xml
           python3 - <<'PY'
           s=open("hot.xml",encoding="utf-8",errors="replace").read()
           items=s.split("<item>")
-          print(items[0][:1500])
+          print(items[0][:1200])
           for it in items[1:3]: print("----ITEM----"); print(it[:2500])
           am=[it for it in items[1:] if "amazon" in it.lower()]
           print("AMAZON ITEMS", len(am))
-          if am: print(am[0][:3000])
+          for a in am[:2]: print("----AMZ----"); print(a[:3000])
           PY
-          L=$(python3 -c "
+          python3 - <<'PY' > ids.txt
           import re;s=open('hot.xml').read()
           for it in s.split('<item>')[1:]:
-              if 'Amazon' in it:
-                  print(re.search(r'<link>(.*?)</link>',it).group(1));break")
-          echo "LINK $L"
-          ID=$(echo "$L" | grep -oE '[0-9]+$'); echo ID $ID
-          for u in "https://www.mydealz.de/visit/thread/$ID" "https://www.mydealz.de/visit/threadmain/$ID"; do
-            echo "== $u"; curl -sS -m 20 -A "Mozilla/5.0 (compatible; dealbar/1.0)" -o /dev/null -w "%{http_code} -> %{redirect_url}\n" "$u"
+              if 'amazon' in it.lower():
+                  print(re.search(r'<link>(.*?)</link>',it).group(1))
+          PY
+          for L in $(head -2 ids.txt); do
+            ID=$(echo "$L" | grep -oE '[0-9]+$'); echo "ID $ID"
+            for u in "https://www.mydealz.de/visit/thread/$ID" "https://www.mydealz.de/visit/threadmain/$ID"; do
+              curl -sS -m 20 -A "$A" -o /dev/null -w "$u %{http_code} -> %{redirect_url}\n" "$u" || true
+            done
           done
