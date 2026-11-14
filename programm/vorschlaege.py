@@ -233,3 +233,4 @@ if __name__ == "__main__":
     for v in found:
         print(f"{v['grad']:>4}°  {daten.euro(v['price']) if v['price'] else '?':>9}  {v['asin']}  "
               f"{v['cat'] or '-':<18} {v['title']}  {', '.join(v['hints'])}")
+        print(f"{'':>17}aus: {v['raw']}")
