@@ -26,11 +26,75 @@ NS = {"pepper": "http://www.pepper.com/rss"}
 DEFAULTS = {
     "aktiv": True,
     "zeiten": ["08:00", "18:00"],   # Uhrzeiten (Berlin), zu denen der Bot Vorschlaege schickt
-    "anzahl": 8,                    # hoechstens so viele pro Liste
+    "anzahl": 6,                    # hoechstens so viele pro Liste: lieber wenige gute als viele
     "feeds": ["trending", "alles"],  # mydealz: heiss gerade / alle neuen
-    "min_grad": 30,                 # mindestens so "heiss" auf mydealz
+    "min_grad": 50,                 # mindestens so "heiss" auf mydealz
     "nische": [],                   # dealbar-Kategorien, leer = alle
+    "nur_marken": True,             # nur Produkte bekannter Qualitaetsmarken (MARKEN + marken_plus)
+    "marken_plus": [],              # eigene Marken dazu (per /marken + Name)
+    "marken_minus": [],             # Marken nie vorschlagen (per /marken - Name)
 }
+
+# Bekannte Qualitaetsmarken: Produkte, denen man ohne Erklaerung vertraut. No-Name-Ware faellt raus.
+MARKEN = """
+WMF, Fissler, Zwilling, Le Creuset, Rösle, Silit, Tefal, Emile Henry, Wüsthof, Victorinox, Opinel,
+KitchenAid, Kenwood, Bosch, Siemens, Miele, AEG, Neff, Gaggenau, Liebherr, Braun, Philips, De'Longhi, Krups,
+Jura, Melitta, Nespresso, Sage, Smeg, Russell Hobbs, Severin, Rommelsbacher, Graef, Ninja, Cosori, Tefal,
+Vorwerk, Kärcher, Dyson, Vileda, Leifheit, Rowenta, iRobot, Roborock, Ecovacs, Dreame, Shark, Vitamix,
+Brita, SodaStream, Emsa, Rotpunkt, Villeroy & Boch, Rosenthal, Hutschenreuther, Leonardo, Riedel,
+Schott Zwiesel, Spiegelau, Kahla, Asa Selection, Blomus, Stelton, Eva Solo, Alessi, Joseph Joseph,
+OXO, Lodge, Petromax, Weber, Napoleon, Outdoorchef, Gardena, Fiskars, Stihl, Einhell, Makita, Metabo,
+Festool, Fein, Milwaukee, DeWalt, Black+Decker, Wera, Wiha, Knipex, Gedore, Hazet, Stabila, Leatherman,
+Sony, Bose, Sennheiser, Beyerdynamic, JBL, Teufel, Sonos, Bang & Olufsen, Marshall, Apple, Samsung, LG,
+Panasonic, Canon, Nikon, Fujifilm, GoPro, DJI, Garmin, Polar, Suunto, Withings, Logitech, Anker, Ugreen,
+Belkin, AVM, Fritz, Netgear, TP-Link, Eufy, Google Nest, Google, Amazon Echo, Kindle, Fire TV, Tado, Netatmo,
+Philips Hue, Nanoleaf, Ledvance, Osram, Varta, Duracell, Eneloop, Microsoft, Nintendo, PlayStation, Xbox,
+Razer, SteelSeries, Corsair, Elgato, Western Digital, SanDisk, Crucial, Kingston, Lenovo, Asus, Acer, HP,
+Dell, Brother, Epson, Oral-B, Philips Sonicare, Panasonic, Remington, Wahl, Babyliss, ghd, Dyson,
+Nivea, Eucerin, La Roche-Posay, Vichy, Weleda, Clinique, Lancôme, L'Oréal, Kiehl's, Paula's Choice,
+The Ordinary, Rituals, Tom Ford, Hugo Boss, Calvin Klein, Ralph Lauren, Tommy Hilfiger, Levi's, Lacoste,
+Adidas, Nike, Puma, Asics, New Balance, Saucony, Brooks, Hoka, On Running, Salomon, Lowa, Meindl, Hanwag,
+Birkenstock, Ecco, Timberland, Dr. Martens, Converse, Vans, Helly Hansen, The North Face, Patagonia,
+Jack Wolfskin, Mammut, Arc'teryx, Vaude, Fjällräven, Columbia, Schöffel, Bergans, Deuter, Osprey, Ortlieb,
+Thule, Samsonite, Rimowa, Eastpak, Herschel, Casio, Seiko, Citizen, Tissot, Fossil, Lego, Playmobil, Ravensburger,
+Haba, Schleich, Hape, Brio, Tonies, Tiptoi, Kosmos, Carrera, Hot Wheels, Mattel, Hasbro, Märklin, Steiff,
+Cybex, Maxi-Cosi, Britax, Römer, Stokke, Joie, Hauck, Avent, MAM, NUK, Pampers, Royal Canin, Trixie, Kong,
+Tchibo, Kitchenaid, Hario, Bialetti, Moccamaster, Rancilio, Gaggia, Lavazza, Illy, Dallmayr, Tassimo,
+Concept2, Kettler, Technogym, Garmin, Wahoo, Shimano, SRAM, Abus, Bosch eBike, Cube, Canyon, Schwalbe,
+Continental, Michelin, Thermos, Stanley, Yeti, Hydro Flask, Klean Kanteen, Sigg, Chilly's, Dopper,
+Coleman, Campingaz, Primus, MSR, Tatonka, Gerber, Morakniv, Ledlenser, Fenix, Bodum, Le Parfait, Weck,
+Tupperware, Lock & Lock, Curver, Wenko, Zeller, Brabantia, Simplehuman, Hailo, Kesper, Continenta,
+Ikea, Muji, Hay, Muuto, Vitra, Tempur, Emma, Dormando, Kneer, Estella, Möve, Vossen,
+Frottana, Cawö, Bassetti, Erwin Müller, Irisette, Lattoflex, Swiss Sense
+"""
+
+
+def _norm(x):
+    x = str(x or "").lower().replace("’", "'")
+    x = x.translate(str.maketrans({"ä": "a", "ö": "o", "ü": "u", "ß": "ss", "é": "e", "è": "e", "ô": "o"}))
+    return re.sub(r"[^a-z0-9+&]+", " ", x.replace("'", "")).strip()
+
+
+def brand_list(cfg):
+    minus = {_norm(b) for b in cfg.get("marken_minus") or []}
+    names = [b.strip() for b in MARKEN.replace("\n", " ").split(",")] + list(cfg.get("marken_plus") or [])
+    out = {}
+    for b in names:
+        n = _norm(b)
+        if n and n not in minus:
+            out.setdefault(n, b.strip())
+    return out
+
+
+def find_brand(title, brands):
+    """Erste bekannte Marke im Produktnamen (oder None). Laengere Namen gewinnen ('Philips Hue' vor 'Philips')."""
+    t = f" {_norm(title)} "
+    best = None
+    for n, name in brands.items():
+        i = t.find(f" {n} ")
+        if i >= 0 and (best is None or (i, -len(n)) < best[0]):
+            best = ((i, -len(n)), name)
+    return best[1] if best else None
 
 # Woerter im mydealz-Titel, die nichts mit dem Produkt zu tun haben
 TITLE_JUNK = [
@@ -198,8 +262,14 @@ def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None)
             ids.add(it["id"])
             items.append(it)
     nische = set(cfg.get("nische") or [])
+    brands = brand_list(cfg)
+    minus = {_norm(b) for b in cfg.get("marken_minus") or []}
+    for it in items:
+        it["marke"] = find_brand(it["title"], brands) or find_brand(it["raw"], brands)
     items = [it for it in items if it["grad"] >= cfg["min_grad"] and now - it["pub"] < 36 * 3600
-             and it["title"] and (not nische or it["cat"] in nische)]
+             and it["title"] and (not nische or it["cat"] in nische)
+             and (it["marke"] or not cfg.get("nur_marken"))
+             and not any(f" {m} " in f" {_norm(it['raw'])} " for m in minus)]
     items.sort(key=lambda it: it["grad"], reverse=True)
     out = []
     for it in items:
@@ -239,4 +309,4 @@ if __name__ == "__main__":
     for v in found:
         print(f"{v['grad']:>4}°  {daten.euro(v['price']) if v['price'] else '?':>9}  {v['asin']}  "
               f"{v['cat'] or '-':<18} {v['title']}  {', '.join(v['hints'])}")
-        print(f"{'':>17}aus: {v['raw']}")
+        print(f"{'':>17}Marke: {v.get('marke') or '-'} · aus: {v['raw']}")

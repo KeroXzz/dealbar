@@ -178,12 +178,15 @@ FEED = """<?xml version="1.0" encoding="UTF-8"?>
 <item><category><![CDATA[Garten & Baumarkt]]></category><pepper:merchant name="Amazon" price="12,44€"/>
 <title><![CDATA[120° - Bosch Wasserpumpenzange 250mm - Amazon Prime]]></title><description><![CDATA[x]]></description>
 <link>https://www.mydealz.de/deals/bosch-wasserpumpenzange-250mm-amazon-prime-2871097</link><pubDate>{date}</pubDate></item>
+<item><category><![CDATA[Home & Living]]></category><pepper:merchant name="Amazon" price="19,99€"/>
+<title><![CDATA[250° - HOMEFANTASY Pfannenset 5-teilig Antihaft]]></title><description><![CDATA[x]]></description>
+<link>https://www.mydealz.de/deals/homefantasy-2871300</link><pubDate>{date}</pubDate></item>
 <item><category><![CDATA[Elektronik]]></category><pepper:merchant name="Amazon" price="5€"/>
 <title><![CDATA[3° - Kabel USB-C]]></title><description><![CDATA[x]]></description>
 <link>https://www.mydealz.de/deals/kabel-2871200</link><pubDate>{date}</pubDate></item>
 </channel></rss>"""
 
-ASINS = {"2871001": "B0TEFAL001", "2871097": "B0DRZ2HDC2", "2871200": "B0KABEL001"}
+ASINS = {"2871001": "B0TEFAL001", "2871097": "B0DRZ2HDC2", "2871200": "B0KABEL001", "2871300": "B0NONAME01"}
 
 
 def fake_feed(name):
@@ -200,7 +203,7 @@ def test_vorschlaege():
     import vorschlaege as vs
     from datetime import datetime
     items = vs.parse_feed(fake_feed("trending"))
-    assert [it["id"] for it in items] == ["2871001", "2871097", "2871200"], items  # nur Amazon
+    assert [it["id"] for it in items] == ["2871001", "2871097", "2871300", "2871200"], items  # nur Amazon
     tefal = items[0]
     assert (tefal["title"], tefal["grad"], tefal["price"], tefal["cat"]) == (
         "Tefal Ingenio Pfannenset 3-teilig", 312, 39.99, "Haushalt"), tefal
@@ -208,8 +211,17 @@ def test_vorschlaege():
     assert tefal["hints"] == ["nur im Spar-Abo"] and items[1]["title"] == "Bosch Wasserpumpenzange 250mm"
     out, err = vs.collect({"vorschlaege": {"feeds": ["trending"]}}, known_asins={"B0DRZ2HDC2"},
                           fetch=fake_feed, resolve=fake_visit)
-    assert [it["asin"] for it in out] == ["B0TEFAL001"] and not err, out  # zu kalt bzw. schon vorhanden
-    assert out[0]["link"] == "https://www.amazon.de/dp/B0TEFAL001"
+    assert [it["asin"] for it in out] == ["B0TEFAL001"] and not err, out  # No-Name, zu kalt, schon vorhanden
+    assert out[0]["link"] == "https://www.amazon.de/dp/B0TEFAL001" and out[0]["marke"] == "Tefal"
+    out, _ = vs.collect({"vorschlaege": {"feeds": ["trending"], "nur_marken": False}}, fetch=fake_feed,
+                        resolve=fake_visit)
+    assert [it["asin"] for it in out] == ["B0TEFAL001", "B0NONAME01", "B0DRZ2HDC2"], out  # heisseste zuerst
+    out, _ = vs.collect({"vorschlaege": {"feeds": ["trending"], "marken_minus": ["tefal"],
+                                         "marken_plus": ["Homefantasy"]}}, fetch=fake_feed, resolve=fake_visit)
+    assert [it["asin"] for it in out] == ["B0NONAME01", "B0DRZ2HDC2"], out
+    b = vs.brand_list(vs.settings({}))
+    assert vs.find_brand("DeLonghi Magnifica S", b) == "De'Longhi" and vs.find_brand("Philips Hue E27", b) == "Philips Hue"
+    assert vs.find_brand("Pure Living Weihnachtsbaum", b) is None and vs.find_brand("Staubsauger Akku", b) is None
     out, _ = vs.collect({"vorschlaege": {"feeds": ["trending"], "nische": ["Küche"]}}, fetch=fake_feed,
                         resolve=fake_visit)
     assert out == [], out
@@ -369,6 +381,7 @@ def test_bot():
     bot.handle_batch([fake.msg("/vorschlaege")])
     listing = fake.calls[-1][1]
     assert "Tefal Ingenio Pfannenset" in listing["text"] and "Bosch" not in listing["text"], listing["text"]
+    assert "HOMEFANTASY" not in listing["text"] and "Marken-Deal-Vorschläge" in listing["text"]
     assert "B0TEFAL001" in json.dumps(listing["reply_markup"])
     bot.handle_batch([fake.msg("/vorschlaege")])
     assert "keine neuen Vorschläge" in fake.texts()  # schon gezeigte kommen nicht nochmal
@@ -393,6 +406,18 @@ def test_bot():
     assert "draft" not in bot.st
     assert bot.post_channel(n2)
     assert "Preis vom" in fake.calls[-1][1]["text"] and daten.DISCLOSURE in fake.calls[-1][1]["text"]
+    bot.handle_batch([fake.msg("/marken + Rösle, Hario")])
+    bot.handle_batch([fake.msg("/marken - Tefal")])
+    v = daten.load_settings()["vorschlaege"]
+    assert v["marken_plus"] == ["Rösle", "Hario"] and v["marken_minus"] == ["Tefal"], v
+    bot.handle_batch([fake.msg("/marken + tefal")])
+    v = daten.load_settings()["vorschlaege"]
+    assert v["marken_minus"] == [] and "tefal" in v["marken_plus"], v
+    bot.handle_batch([fake.msg("/marken alle")])
+    assert daten.load_settings()["vorschlaege"]["nur_marken"] is False
+    bot.handle_batch([fake.msg("/marken nur")])
+    bot.handle_batch([fake.msg("/marken")])
+    assert "nur bekannte Qualitätsmarken" in fake.texts()
     # Vorschlag offen, dann eigener Link -> Vorschlag wird zurueckgestellt, nicht ungeprueft gespeichert
     bot.st["vs"]["2871001"]["state"] = ""
     with daten.open_table(write=True) as t:

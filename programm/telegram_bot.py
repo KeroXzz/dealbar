@@ -80,13 +80,15 @@ Alles in einer Nachricht geht auch:
 /kanal – Telegram-Kanal verbinden
 /vorschlaege – Deal-Vorschläge jetzt holen (oder Uhrzeiten, an/aus)
 /nische – Vorschläge auf Kategorien beschränken
+/marken – Markenliste für Vorschläge anpassen
 /abbrechen – Entwurf verwerfen"""
 
 COMMANDS = [("liste", "Deals verwalten"), ("status", "Einrichtung und Status prüfen"),
             ("hilfe", "So schickst du einen Deal"), ("abbrechen", "Entwurf verwerfen"),
             ("impressum", "Impressum eintragen"), ("partnerid", "Amazon-Partner-ID eintragen"),
             ("kanal", "Telegram-Kanal verbinden"), ("vorschlaege", "Deal-Vorschläge jetzt holen"),
-            ("nische", "Vorschläge auf Kategorien beschränken"), ("id", "Deine Telegram-ID")]
+            ("nische", "Vorschläge auf Kategorien beschränken"), ("marken", "Markenliste für Vorschläge"),
+            ("id", "Deine Telegram-ID")]
 
 
 def esc(s):
@@ -1228,8 +1230,10 @@ class Bot:
                 send("⚠️ Vorschläge konnten nicht geladen werden: <code>" + esc("; ".join(errors))[:300] +
                      "</code>\nIch versuche es zur nächsten Uhrzeit wieder, oder jetzt mit /vorschlaege.")
             elif not quiet:
-                send("💡 Gerade keine neuen Vorschläge" + (" in deiner Nische" if
-                     vorschlaege.settings(self.settings)["nische"] else "") + ". Schau später nochmal vorbei.")
+                v = vorschlaege.settings(self.settings)
+                where = [x for x, on in (("bekannter Marken", v["nur_marken"]), ("in deiner Nische", v["nische"])) if on]
+                send("💡 Gerade keine neuen Vorschläge" + (" " + " ".join(where) if where else "") +
+                     ". Schau später nochmal vorbei.")
             return 0
         for it in items:
             it["state"] = ""
@@ -1244,13 +1248,16 @@ class Bot:
 
     def suggestion_list(self, ids, label=""):
         items = [self.st["vs"][i] for i in ids if i in self.st["vs"]]
-        L = [f"💡 <b>{len(items)} Deal-Vorschläge</b>" + (f" · {esc(label)} Uhr" if label else ""),
+        L = [f"💡 <b>{len(items)} Marken-Deal-Vorschläge</b>" + (f" · {esc(label)} Uhr" if label else "")
+             if vorschlaege.settings(self.settings)["nur_marken"] else
+             f"💡 <b>{len(items)} Deal-Vorschläge</b>" + (f" · {esc(label)} Uhr" if label else ""),
              "Tippe ✅ zum Übernehmen. Den Preis prüfst du danach kurz in der Amazon-App.", ""]
         rows = []
         for n, it in enumerate(items, 1):
             mark = {"ok": "✔️ ", "weg": "✖️ ", "offen": "✏️ "}.get(it.get("state"), "")
             cat = it.get("cat")
-            meta = [f"{CATEGORIES[cat][0]} {cat}" if cat in CATEGORIES else "",
+            meta = [f"🏷 {it['marke']}" if it.get("marke") else "",
+                    f"{CATEGORIES[cat][0]} {cat}" if cat in CATEGORIES else "",
                     f"ca. {eur(it['price'])}" if it.get("price") else "", f"{it.get('grad', 0)}°"]
             meta += it.get("hints") or []
             L.append(f"{mark}{n}. <b>{esc(it['title'])}</b>")
@@ -1373,6 +1380,51 @@ class Bot:
         self.commit("Vorschläge: Nische geändert", site=False)
         send(f"✅ Vorschläge ab jetzt aus: <b>{esc(', '.join(cats)) if cats else 'allen Kategorien'}</b>")
 
+    def cmd_marken(self, arg):
+        a = arg.strip()
+        v = vorschlaege.settings(self.settings)
+        plus, minus = list(v["marken_plus"]), list(v["marken_minus"])
+        low = a.lower()
+        if not a:
+            send("🏷 <b>Marken-Fokus</b>: " + ("an, ich schlage nur bekannte Qualitätsmarken vor."
+                                              if v["nur_marken"] else "aus, auch No-Name-Produkte kommen.") +
+                 (f"\nEigene Marken: {esc(', '.join(plus))}" if plus else "") +
+                 (f"\nNie vorschlagen: {esc(', '.join(minus))}" if minus else "") +
+                 f"\n\nIn der Liste stehen {len(vorschlaege.brand_list(v))} Marken, z. B. WMF, Fissler, Zwilling, "
+                 "Le Creuset, KitchenAid, Bosch, Miele, De'Longhi, Dyson, Sony, Bose, Lego, Helly Hansen.\n\n"
+                 "<code>/marken + Rösle, Hario</code> – Marken dazunehmen\n"
+                 "<code>/marken - Tefal</code> – Marke nie vorschlagen\n"
+                 "<code>/marken alle</code> – auch No-Name zeigen · <code>/marken nur</code> – nur Marken")
+            return
+        if low in ("alle", "aus", "off"):
+            changes = {"nur_marken": False}
+        elif low in ("nur", "an", "on"):
+            changes = {"nur_marken": True}
+        elif a[0] in "+-":
+            names = [x.strip() for x in re.split(r"[,;\n]+", a[1:]) if x.strip()]
+            if not names:
+                send("Bitte Marken nennen, z. B. <code>/marken + Rösle, Hario</code>")
+                return
+            keys = {vorschlaege._norm(x) for x in names}
+            if a[0] == "+":
+                plus = plus + [x for x in names if vorschlaege._norm(x) not in {vorschlaege._norm(p) for p in plus}]
+                minus = [x for x in minus if vorschlaege._norm(x) not in keys]
+            else:
+                minus = minus + [x for x in names if vorschlaege._norm(x) not in {vorschlaege._norm(m) for m in minus}]
+                plus = [x for x in plus if vorschlaege._norm(x) not in keys]
+            changes = {"marken_plus": plus, "marken_minus": minus}
+        else:
+            send("So geht's: <code>/marken + Rösle</code>, <code>/marken - Tefal</code>, "
+                 "<code>/marken alle</code> oder <code>/marken nur</code>")
+            return
+        daten.save_settings({"vorschlaege": changes})
+        self.settings = daten.load_settings()
+        self.commit("Vorschläge: Marken geändert", site=False)
+        v = vorschlaege.settings(self.settings)
+        send("✅ Gespeichert. " + ("Nur bekannte Marken." if v["nur_marken"] else "Auch No-Name-Produkte.") +
+             (f"\nEigene Marken: {esc(', '.join(v['marken_plus']))}" if v["marken_plus"] else "") +
+             (f"\nNie vorschlagen: {esc(', '.join(v['marken_minus']))}" if v["marken_minus"] else ""))
+
     # ------------------------------------------------------------ Befehle
 
     def on_command(self, cmd, arg):
@@ -1411,6 +1463,8 @@ class Bot:
             self.cmd_vorschlaege(arg)
         elif cmd == "/nische":
             self.cmd_nische(arg)
+        elif cmd == "/marken":
+            self.cmd_marken(arg)
         else:
             send("Unbekannter Befehl. /hilfe zeigt alle Befehle.")
 
@@ -1435,6 +1489,7 @@ class Bot:
         if v["aktiv"]:
             L.append(f"💡 Vorschläge um {', '.join(v['zeiten'])} Uhr · Nische: "
                      f"{esc(', '.join(v['nische'])) if v['nische'] else 'alle Kategorien'} → /nische")
+            L.append("🏷 Nur bekannte Marken → /marken" if v["nur_marken"] else "🏷 Alle Marken, auch No-Name → /marken")
         else:
             L.append("➖ Vorschläge ausgeschaltet → <code>/vorschlaege an</code>")
         L += ["", "📷 Erinnerung: nur eigene Fotos, keine Screenshots oder Bilder von Amazon."]

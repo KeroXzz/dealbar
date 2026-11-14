@@ -1,0 +1,16 @@
+name: probe-mydealz
+on:
+  push:
+    branches: [claude/project-thread-psty7v]
+    paths: [.github/workflows/probe.yml]
+jobs:
+  p:
+    runs-on: ubuntu-latest
+    env: {TZ: Europe/Berlin, PYTHONIOENCODING: utf-8}
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.12"}
+      - run: pip install -r programm/requirements.txt
+      - run: python programm/vorschlaege.py
+      - run: python -c "import sys;sys.path.insert(0,'programm');import vorschlaege as v;import json;o,e=v.collect({'vorschlaege':{'nur_marken':False,'anzahl':40}});print('ohne Markenfilter:',len(o));[print(x['grad'],x.get('marke'),x['title']) for x in o]"
