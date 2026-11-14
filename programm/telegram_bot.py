@@ -1216,6 +1216,12 @@ class Bot:
         cfg = vorschlaege.settings(self.settings)
         if not (CHAT_ID and cfg["aktiv"]):
             return
+        if now - self.st.get("vs_poll", 0) >= vorschlaege.POLL_EVERY:  # im Hintergrund sammeln
+            self.st["vs_poll"] = now
+            items, errors = vorschlaege.gather(self.settings)
+            vorschlaege.merge_pool(self.st.setdefault("vs_pool", {}), items, now)
+            if errors:
+                print("Vorschläge sammeln:", errors)
         slot = vorschlaege.due_slot(cfg, self.st.get("vs_slot"), datetime.fromtimestamp(now))
         if slot:
             self.st["vs_slot"] = slot
@@ -1224,7 +1230,8 @@ class Bot:
     def send_suggestions(self, label="", quiet=False, now=None):
         with daten.open_table() as t:
             known = {t.text(r, "ASIN") for r in t.rows() if t.text(r, "ASIN")}
-        items, errors = vorschlaege.collect(self.settings, seen=set(self.st["vs_seen"]), known_asins=known, now=now)
+        items, errors = vorschlaege.collect(self.settings, seen=set(self.st["vs_seen"]), known_asins=known, now=now,
+                                            pool=self.st.setdefault("vs_pool", {}))
         if not items:
             if errors:
                 send("⚠️ Vorschläge konnten nicht geladen werden: <code>" + esc("; ".join(errors))[:300] +

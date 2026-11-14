@@ -219,6 +219,10 @@ def test_vorschlaege():
     out, _ = vs.collect({"vorschlaege": {"feeds": ["trending"], "marken_minus": ["tefal"],
                                          "marken_plus": ["Homefantasy"]}}, fetch=fake_feed, resolve=fake_visit)
     assert [it["asin"] for it in out] == ["B0NONAME01", "B0DRZ2HDC2"], out
+    pool = {}
+    vs.collect({"vorschlaege": {"feeds": ["trending"]}}, fetch=fake_feed, resolve=fake_visit, pool=pool)
+    out, _ = vs.collect({"vorschlaege": {"feeds": ["trending"]}}, fetch=lambda n: "", resolve=fake_visit, pool=pool)
+    assert [it["asin"] for it in out] == ["B0TEFAL001", "B0DRZ2HDC2"], out  # aus dem Sammelbecken
     b = vs.brand_list(vs.settings({}))
     assert vs.find_brand("DeLonghi Magnifica S", b) == "De'Longhi" and vs.find_brand("Philips Hue E27", b) == "Philips Hue"
     assert vs.find_brand("Pure Living Weihnachtsbaum", b) is None and vs.find_brand("Staubsauger Akku", b) is None

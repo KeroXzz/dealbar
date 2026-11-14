@@ -35,6 +35,8 @@ DEFAULTS = {
     "marken_minus": [],             # Marken nie vorschlagen (per /marken - Name)
 }
 
+POLL_EVERY = 30 * 60  # so oft sammelt der Bot im Hintergrund, damit zu den Uhrzeiten genug Auswahl da ist
+
 # Bekannte Qualitaetsmarken: Produkte, denen man ohne Erklaerung vertraut. No-Name-Ware faellt raus.
 MARKEN = """
 WMF, Fissler, Zwilling, Le Creuset, Rösle, Silit, Tefal, Emile Henry, Wüsthof, Victorinox, Opinel,
@@ -56,7 +58,11 @@ The Ordinary, Rituals, Tom Ford, Hugo Boss, Calvin Klein, Ralph Lauren, Tommy Hi
 Adidas, Nike, Puma, Asics, New Balance, Saucony, Brooks, Hoka, On Running, Salomon, Lowa, Meindl, Hanwag,
 Birkenstock, Ecco, Timberland, Dr. Martens, Converse, Vans, Helly Hansen, The North Face, Patagonia,
 Jack Wolfskin, Mammut, Arc'teryx, Vaude, Fjällräven, Columbia, Schöffel, Bergans, Deuter, Osprey, Ortlieb,
-Thule, Samsonite, Rimowa, Eastpak, Herschel, Casio, Seiko, Citizen, Tissot, Fossil, Lego, Playmobil, Ravensburger,
+Thule, Samsonite, Gant, Marc O'Polo, Esprit, s.Oliver, Superdry, Barbour, Carhartt, Napapijri,
+Wrangler, Lee, G-Star, Diesel, Armani, Michael Kors, Guess, Pandora, Swarovski, Thomas Sabo, Skagen,
+Daniel Wellington, Ray-Ban, Oakley, Polaroid, Leica, Kodak, Bowers & Wilkins, Denon, Marantz, Yamaha, Onkyo,
+Nubert, Canton, Audio-Technica, Shure, Rode, Kobo, Tolino, reMarkable, Moleskine, Leuchtturm1917, Lamy,
+Montblanc, Faber-Castell, Stabilo, Staedtler, Parker, Rimowa, Eastpak, Herschel, Casio, Seiko, Citizen, Tissot, Fossil, Lego, Playmobil, Ravensburger,
 Haba, Schleich, Hape, Brio, Tonies, Tiptoi, Kosmos, Carrera, Hot Wheels, Mattel, Hasbro, Märklin, Steiff,
 Cybex, Maxi-Cosi, Britax, Römer, Stokke, Joie, Hauck, Avent, MAM, NUK, Pampers, Royal Canin, Trixie, Kong,
 Tchibo, Kitchenaid, Hario, Bialetti, Moccamaster, Rancilio, Gaggia, Lavazza, Illy, Dallmayr, Tassimo,
@@ -244,11 +250,10 @@ def amazon_url(thread_id, timeout=15):
     return None
 
 
-def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None):
-    """Neue Vorschlaege holen, filtern und sortieren (heisseste zuerst). Gibt (liste, fehler) zurueck."""
+def gather(s=None, fetch=None):
+    """Alle Feeds abrufen -> (Amazon-Eintraege, fehler). Noch ungefiltert."""
     cfg = settings(s)
-    fetch, resolve = fetch or fetch_feed, resolve or amazon_url
-    now = now or time.time()
+    fetch = fetch or fetch_feed
     items, errors, ids = [], [], set()
     for feed in cfg["feeds"]:
         try:
@@ -257,22 +262,32 @@ def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None)
             errors.append(f"{feed}: {e}")
             continue
         for it in got:
-            if it["id"] in ids or it["id"] in seen:
-                continue
-            ids.add(it["id"])
-            items.append(it)
+            if it["id"] not in ids:
+                ids.add(it["id"])
+                items.append(it)
+    return items, errors
+
+
+def pick(items, s=None, seen=(), known_asins=(), resolve=None, now=None):
+    """Filtern (Marke, Nische, Hitze, Alter), heisseste zuerst, ASIN ermitteln, hoechstens 'anzahl'."""
+    cfg = settings(s)
+    resolve = resolve or amazon_url
+    now = now or time.time()
     nische = set(cfg.get("nische") or [])
     brands = brand_list(cfg)
     minus = {_norm(b) for b in cfg.get("marken_minus") or []}
+    keep = []
     for it in items:
+        it = dict(it)
         it["marke"] = find_brand(it["title"], brands) or find_brand(it["raw"], brands)
-    items = [it for it in items if it["grad"] >= cfg["min_grad"] and now - it["pub"] < 36 * 3600
-             and it["title"] and (not nische or it["cat"] in nische)
-             and (it["marke"] or not cfg.get("nur_marken"))
-             and not any(f" {m} " in f" {_norm(it['raw'])} " for m in minus)]
-    items.sort(key=lambda it: it["grad"], reverse=True)
+        if (it["id"] not in seen and it["grad"] >= cfg["min_grad"] and now - it["pub"] < 36 * 3600
+                and it["title"] and (not nische or it["cat"] in nische)
+                and (it["marke"] or not cfg.get("nur_marken"))
+                and not any(f" {m} " in f" {_norm(it['raw'])} " for m in minus)):
+            keep.append(it)
+    keep.sort(key=lambda it: it["grad"], reverse=True)
     out = []
-    for it in items:
+    for it in keep:
         if len(out) >= int(cfg["anzahl"]):
             break
         url = resolve(it["id"])
@@ -281,7 +296,28 @@ def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None)
             continue  # nur amazon.de, dort gilt die Partner-ID
         it.update(asin=asin, link=f"https://{daten.amazon_domain(url)}/dp/{asin}", t=now)
         out.append(it)
-    return out, errors
+    return out
+
+
+def merge_pool(pool, items, now=None):
+    """Gesammelte Feed-Eintraege der letzten 36 Stunden; die Hitze (Grad) wird aktualisiert."""
+    now = now or time.time()
+    for it in items:
+        pool[it["id"]] = dict(pool.get(it["id"], {}), **it)
+    for k in [k for k, v in pool.items() if now - v.get("pub", now) >= 36 * 3600]:
+        del pool[k]
+    for k in sorted(pool, key=lambda k: pool[k].get("pub", 0))[:-300]:  # Zustandsdatei klein halten
+        del pool[k]
+    return pool
+
+
+def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None, pool=None):
+    """Neue Vorschlaege holen, filtern und sortieren (heisseste zuerst). Gibt (liste, fehler) zurueck.
+    Mit pool (dict) werden auch frueher gesehene Feed-Eintraege beruecksichtigt."""
+    items, errors = gather(s, fetch)
+    if pool is not None:
+        items = list(merge_pool(pool, items, now).values())
+    return pick(items, s, seen, known_asins, resolve, now), errors
 
 
 def due_slot(cfg, last, now=None, catch_up=timedelta(hours=3)):
