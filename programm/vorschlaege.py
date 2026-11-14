@@ -88,9 +88,15 @@ def product_title(raw, limit=70):
     t = tb.PRICE_FRAG.sub(" ", t)
     for pat in TITLE_JUNK[1:]:
         t = re.sub(pat, " ", t, flags=re.I)
-    t = re.sub(r"\(\s*\)|\[\s*\]", " ", t)
-    t = re.sub(r"\s+", " ", t).strip(" -–|:,;/+")
-    t = re.split(r"\s+[|–]\s+|\s+-\s+(?=[A-ZÄÖÜa-zäöü])", t)[0]
+    t = re.sub(r"\(\s*\)|\[\s*\]|[►▶★☆✓✔→]", " ", t)
+    t = re.sub(r"\s+", " ", t)
+    parts = [p.strip(" -–|:,;/+") for p in re.split(r"\s+[|–]\s+|\s+-\s+|\s*\|\s*", t)]
+    parts = [p for p in parts if re.search(r"[A-Za-zÄÖÜäöü]{2}", p)]
+    if not parts:
+        return ""
+    t = parts[0]
+    if len(t.split()) <= 2 and len(parts) > 1:  # "Marke - Produkt" zusammenhalten
+        t = f"{t} {parts[1]}"
     return tb.shorten(t, limit)
 
 
@@ -201,8 +207,8 @@ def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None)
             break
         url = resolve(it["id"])
         asin = daten.asin_of(url) if url else None
-        if not asin or asin in known_asins:
-            continue
+        if not asin or asin in known_asins or daten.amazon_domain(url) != "www.amazon.de":
+            continue  # nur amazon.de, dort gilt die Partner-ID
         it.update(asin=asin, link=f"https://{daten.amazon_domain(url)}/dp/{asin}", t=now)
         out.append(it)
     return out, errors
