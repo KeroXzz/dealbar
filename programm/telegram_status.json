@@ -1,5 +1,5 @@
 {
- "offset": 221843686,
+ "offset": 221843690,
  "loose": [],
  "posted": [
   1,
@@ -225,6 +225,26 @@
     "2869191"
    ],
    "label": "08:00"
+  },
+  "2871044": {
+   "id": "2871044",
+   "raw": "115° - Daft Punk - Random Access Memories (Vinyl) (Prime)",
+   "title": "Daft Punk Random Access Memories",
+   "grad": 115,
+   "price": 22.39,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1794649896.0,
+   "quelle": "https://www.mydealz.de/deals/daft-punk-random-access-memories-vinyl-2871044",
+   "asin": "B00C061HZY",
+   "link": "https://www.amazon.de/dp/B00C061HZY",
+   "t": 1794652156.8140907,
+   "state": "",
+   "list": 57,
+   "ids": [
+    "2871044"
+   ],
+   "label": "11:29"
   }
  },
  "vs_seen": [
@@ -235,13 +255,8 @@
   "2871116",
   "2871097",
   "2871094",
-  "2869191"
+  "2869191",
+  "2871044"
  ],
- "vs_slot": "2026-11-14 08:00",
- "await": {
-  "what": "preis",
-  "nr": null,
-  "t": 1794649857.2296758,
-  "msg": 36
- }
+ "vs_slot": "2026-11-14 08:00"
 }
