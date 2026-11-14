@@ -1,0 +1,235 @@
+"""
+dealbar: Deal-Vorschlaege fuer den Telegram-Bot.
+
+Quelle ist der oeffentliche RSS-Feed von mydealz, nur als Hinweisgeber: Wir uebernehmen Produktname,
+Kategorie und den genannten Preis als Startwert, aber keine Texte und keine Bilder von dort. Amazon-Seiten
+werden nie abgerufen. Die Produktnummer (ASIN) kommt aus der Weiterleitung von mydealz zu Amazon, die wir
+nur lesen und nicht verfolgen. Den Preis prueft Johannes vor dem Posten selbst in der Amazon-App.
+
+    python programm/vorschlaege.py      # zum Ausprobieren: aktuelle Vorschlaege anzeigen
+"""
+
+import re
+import time
+import urllib.error
+import urllib.parse
+import urllib.request
+import xml.etree.ElementTree as ET
+from datetime import datetime, timedelta
+
+import daten
+
+FEED_URL = "https://www.mydealz.de/rss/{}"
+VISIT_URL = "https://www.mydealz.de/visit/thread/{}"
+NS = {"pepper": "http://www.pepper.com/rss"}
+
+DEFAULTS = {
+    "aktiv": True,
+    "zeiten": ["08:00", "18:00"],   # Uhrzeiten (Berlin), zu denen der Bot Vorschlaege schickt
+    "anzahl": 8,                    # hoechstens so viele pro Liste
+    "feeds": ["trending", "alles"],  # mydealz: heiss gerade / alle neuen
+    "min_grad": 30,                 # mindestens so "heiss" auf mydealz
+    "nische": [],                   # dealbar-Kategorien, leer = alle
+}
+
+# Woerter im mydealz-Titel, die nichts mit dem Produkt zu tun haben
+TITLE_JUNK = [
+    r"^\s*-?\d+\s*°\s*-\s*",                                          # "116° - "
+    r"\[[^\]]*\]", r"\((?:[^()]*(?:prime|spar-?abo|amazon|gutschein|coupon|personalisiert|bestpreis|"
+    r"tiefstpreis|eur|€|%)[^()]*)\)",
+    r"\b(?:amazon(?:\.de)?|prime|spar-?abo|bestpreis|tiefstpreis|bestpreis|neuer\s+bestpreis|gutschein|"
+    r"coupon|deal|angebot|knaller|preisfehler)\b[!:]?",
+    r"\b(?:für|fuer|nur|ab|statt|jetzt|zum)\s+(?=\d)",
+]
+HINTS = (("spar-abo", "nur im Spar-Abo"), ("spar abo", "nur im Spar-Abo"), ("gutschein", "mit Gutschein"),
+         ("coupon", "mit Coupon"), ("personalisiert", "personalisierter Preis"), ("prime exklusiv", "nur für Prime"),
+         ("prime-exklusiv", "nur für Prime"),
+         ("marketplace", "Marketplace-Händler"), ("warehouse", "Amazon Warehouse (gebraucht)"))
+
+# mydealz-Kategorien, die match_category nicht kennt
+EXTRA_CATS = {"home": "Haushalt", "living": "Haushalt", "wohnen": "Haushalt", "haushalt": "Haushalt",
+              "küche": "Küche", "kueche": "Küche", "lebensmittel": "Küche", "getränke": "Küche",
+              "elektronik": "Technik", "computer": "Technik", "telefon": "Technik", "handy": "Technik",
+              "audio": "Technik", "tv": "Technik", "gaming": "Gaming", "spiele": "Gaming",
+              "mode": "Mode", "fashion": "Mode", "accessoires": "Mode", "beauty": "Beauty & Pflege",
+              "drogerie": "Beauty & Pflege", "gesundheit": "Beauty & Pflege", "sport": "Sport & Freizeit",
+              "freizeit": "Sport & Freizeit", "fahrrad": "Sport & Freizeit", "spielzeug": "Spielzeug",
+              "familie": "Baby & Kind", "kinder": "Baby & Kind", "baby": "Baby & Kind",
+              "garten": "Garten & Baumarkt", "baumarkt": "Garten & Baumarkt", "heimwerk": "Garten & Baumarkt",
+              "auto": "Garten & Baumarkt", "tier": "Tierbedarf"}
+
+
+def settings(s=None):
+    out = dict(DEFAULTS)
+    out.update((s or daten.load_settings()).get("vorschlaege") or {})
+    return out
+
+
+def map_category(text):
+    low = str(text or "").lower()
+    cat = daten.match_category(low)
+    if cat:
+        return cat
+    for part in re.split(r"\s*(?:&|,|und)\s*", low):
+        cat = daten.match_category(part)
+        if cat:
+            return cat
+    for k, v in EXTRA_CATS.items():
+        if k in low:
+            return v
+    return None
+
+
+def product_title(raw, limit=70):
+    """mydealz-Titel -> nur der Produktname (ohne Grad, Preise, Shop, Werbewoerter)."""
+    import telegram_bot as tb  # shorten() und PRICE_FRAG wohnen im Bot
+    t = str(raw or "")
+    t = re.sub(TITLE_JUNK[0], "", t)
+    t = tb.PRICE_FRAG.sub(" ", t)
+    for pat in TITLE_JUNK[1:]:
+        t = re.sub(pat, " ", t, flags=re.I)
+    t = re.sub(r"\(\s*\)|\[\s*\]", " ", t)
+    t = re.sub(r"\s+", " ", t).strip(" -–|:,;/+")
+    t = re.split(r"\s+[|–]\s+|\s+-\s+(?=[A-ZÄÖÜa-zäöü])", t)[0]
+    return tb.shorten(t, limit)
+
+
+def hints_for(raw):
+    low = str(raw or "").lower()
+    out = []
+    for k, v in HINTS:
+        if k in low and v not in out:
+            out.append(v)
+    return out
+
+
+def _text(el, tag):
+    x = el.find(tag, NS)
+    return (x.text or "").strip() if x is not None else ""
+
+
+def parse_feed(xml_text):
+    """RSS -> Liste von Vorschlaegen (nur Amazon). Keine Beschreibungstexte, keine Bilder."""
+    out = []
+    try:
+        root = ET.fromstring(xml_text)
+    except ET.ParseError as e:
+        print("mydealz-Feed nicht lesbar:", e)
+        return out
+    for it in root.iter("item"):
+        merchant = it.find("pepper:merchant", NS)
+        name = (merchant.get("name") if merchant is not None else "") or ""
+        if not name.lower().startswith("amazon"):
+            continue
+        link = _text(it, "link")
+        m = re.search(r"-(\d{5,})/?$", link)
+        if not m:
+            continue
+        raw = _text(it, "title")
+        g = re.match(r"\s*(-?\d+)\s*°", raw)
+        try:
+            pub = datetime.strptime(_text(it, "pubDate"), "%a, %d %b %Y %H:%M:%S %z").timestamp()
+        except ValueError:
+            pub = time.time()
+        out.append({
+            "id": m.group(1), "raw": raw, "title": product_title(raw), "grad": int(g.group(1)) if g else 0,
+            "price": daten.num(merchant.get("price")) if merchant is not None else None,
+            "cat": map_category(_text(it, "category")), "hints": hints_for(raw), "pub": pub, "quelle": link,
+        })
+    return out
+
+
+def fetch_feed(name, timeout=20):
+    req = urllib.request.Request(FEED_URL.format(name), headers=daten.UA)
+    with urllib.request.urlopen(req, timeout=timeout) as r:
+        return r.read().decode("utf-8", "replace")
+
+
+def amazon_url(thread_id, timeout=15):
+    """Ziel-Link eines mydealz-Deals lesen, ohne der Weiterleitung zu folgen (keine Amazon-Abrufe)."""
+    opener = urllib.request.build_opener(daten._NoRedirect)
+    url = VISIT_URL.format(thread_id)
+    for _ in range(3):
+        loc = None
+        try:
+            with opener.open(urllib.request.Request(url, headers=daten.UA), timeout=timeout) as r:
+                loc = r.headers.get("Location")
+        except urllib.error.HTTPError as e:
+            loc = e.headers.get("Location")
+        except Exception as e:
+            print("mydealz-Weiterleitung nicht lesbar:", e)
+            return None
+        if not loc:
+            return None
+        loc = urllib.parse.urljoin(url, loc)
+        if daten.is_amazon(loc):
+            return loc
+        q = urllib.parse.parse_qs(urllib.parse.urlparse(loc).query)
+        inner = (q.get("url") or [""])[0]
+        if daten.is_amazon(inner):
+            return inner
+        if "mydealz" not in daten.host_of(loc):
+            return None  # anderer Shop
+        url = loc
+    return None
+
+
+def collect(s=None, seen=(), known_asins=(), fetch=None, resolve=None, now=None):
+    """Neue Vorschlaege holen, filtern und sortieren (heisseste zuerst). Gibt (liste, fehler) zurueck."""
+    cfg = settings(s)
+    fetch, resolve = fetch or fetch_feed, resolve or amazon_url
+    now = now or time.time()
+    items, errors, ids = [], [], set()
+    for feed in cfg["feeds"]:
+        try:
+            got = parse_feed(fetch(feed))
+        except Exception as e:
+            errors.append(f"{feed}: {e}")
+            continue
+        for it in got:
+            if it["id"] in ids or it["id"] in seen:
+                continue
+            ids.add(it["id"])
+            items.append(it)
+    nische = set(cfg.get("nische") or [])
+    items = [it for it in items if it["grad"] >= cfg["min_grad"] and now - it["pub"] < 36 * 3600
+             and it["title"] and (not nische or it["cat"] in nische)]
+    items.sort(key=lambda it: it["grad"], reverse=True)
+    out = []
+    for it in items:
+        if len(out) >= int(cfg["anzahl"]):
+            break
+        url = resolve(it["id"])
+        asin = daten.asin_of(url) if url else None
+        if not asin or asin in known_asins:
+            continue
+        it.update(asin=asin, link=f"https://{daten.amazon_domain(url)}/dp/{asin}", t=now)
+        out.append(it)
+    return out, errors
+
+
+def due_slot(cfg, last, now=None, catch_up=timedelta(hours=3)):
+    """Welche geplante Uhrzeit ist gerade dran? -> 'JJJJ-MM-TT HH:MM' oder None."""
+    now = now or datetime.now()
+    best = None
+    for z in cfg.get("zeiten") or []:
+        try:
+            h, m = (int(x) for x in str(z).split(":"))
+        except ValueError:
+            continue
+        for day in (now.date(), now.date() - timedelta(days=1)):
+            at = datetime(day.year, day.month, day.day, h, m)
+            if at <= now < at + catch_up:
+                key = at.strftime("%Y-%m-%d %H:%M")
+                if key != last and (not last or key > last) and (best is None or key > best):
+                    best = key
+    return best
+
+
+if __name__ == "__main__":
+    found, errs = collect()
+    for e in errs:
+        print("Fehler:", e)
+    for v in found:
+        print(f"{v['grad']:>4}°  {daten.euro(v['price']) if v['price'] else '?':>9}  {v['asin']}  "
+              f"{v['cat'] or '-':<18} {v['title']}  {', '.join(v['hints'])}")

@@ -166,9 +166,65 @@ class FakeTelegram:
             "id": f"q{self.uid}", "data": data, "message": {"message_id": message_id, "chat": {"id": chat}}}}
 
 
+FEED = """<?xml version="1.0" encoding="UTF-8"?>
+<rss xmlns:pepper="http://www.pepper.com/rss" version="2.0"><channel><title>mydealz</title>
+<item><category><![CDATA[Urlaub & Reisen]]></category><pepper:merchant name="Google Flights" price="945€"/>
+<title><![CDATA[135° - Direktflüge nach Tokio ab 945€]]></title><description><![CDATA[x]]></description>
+<link>https://www.mydealz.de/deals/direktfluge-2871128</link><pubDate>{date}</pubDate></item>
+<item><category><![CDATA[Home & Living]]></category><pepper:merchant name="Amazon" price="39,99€"/>
+<title><![CDATA[312° - [Amazon] Tefal Ingenio Pfannenset 3-teilig für 39,99€ statt 69,99€ (Prime Spar-Abo)]]></title>
+<description><![CDATA[<strong>Fremder Text, der nicht übernommen werden darf</strong>]]></description>
+<link>https://www.mydealz.de/deals/tefal-ingenio-2871001</link><pubDate>{date}</pubDate></item>
+<item><category><![CDATA[Garten & Baumarkt]]></category><pepper:merchant name="Amazon" price="12,44€"/>
+<title><![CDATA[120° - Bosch Wasserpumpenzange 250mm - Amazon Prime]]></title><description><![CDATA[x]]></description>
+<link>https://www.mydealz.de/deals/bosch-wasserpumpenzange-250mm-amazon-prime-2871097</link><pubDate>{date}</pubDate></item>
+<item><category><![CDATA[Elektronik]]></category><pepper:merchant name="Amazon" price="5€"/>
+<title><![CDATA[3° - Kabel USB-C]]></title><description><![CDATA[x]]></description>
+<link>https://www.mydealz.de/deals/kabel-2871200</link><pubDate>{date}</pubDate></item>
+</channel></rss>"""
+
+ASINS = {"2871001": "B0TEFAL001", "2871097": "B0DRZ2HDC2", "2871200": "B0KABEL001"}
+
+
+def fake_feed(name):
+    from email.utils import formatdate
+    return FEED.format(date=formatdate(localtime=True)) if name == "trending" else ""
+
+
+def fake_visit(tid):
+    a = ASINS.get(tid)
+    return f"https://www.amazon.de/dp/{a}?smid=A3JWKAKR8XB7XF" if a else None
+
+
+def test_vorschlaege():
+    import vorschlaege as vs
+    from datetime import datetime
+    items = vs.parse_feed(fake_feed("trending"))
+    assert [it["id"] for it in items] == ["2871001", "2871097", "2871200"], items  # nur Amazon
+    tefal = items[0]
+    assert (tefal["title"], tefal["grad"], tefal["price"], tefal["cat"]) == (
+        "Tefal Ingenio Pfannenset 3-teilig", 312, 39.99, "Haushalt"), tefal
+    assert "Fremder Text" not in json.dumps(items, ensure_ascii=False)  # keine Texte von mydealz
+    assert tefal["hints"] == ["nur im Spar-Abo"] and items[1]["title"] == "Bosch Wasserpumpenzange 250mm"
+    out, err = vs.collect({"vorschlaege": {"feeds": ["trending"]}}, known_asins={"B0DRZ2HDC2"},
+                          fetch=fake_feed, resolve=fake_visit)
+    assert [it["asin"] for it in out] == ["B0TEFAL001"] and not err, out  # zu kalt bzw. schon vorhanden
+    assert out[0]["link"] == "https://www.amazon.de/dp/B0TEFAL001"
+    out, _ = vs.collect({"vorschlaege": {"feeds": ["trending"], "nische": ["Küche"]}}, fetch=fake_feed,
+                        resolve=fake_visit)
+    assert out == [], out
+    cfg = {"zeiten": ["08:00", "18:00"]}
+    assert vs.due_slot(cfg, None, datetime(2026, 11, 14, 8, 30)) == "2026-11-14 08:00"
+    assert vs.due_slot(cfg, "2026-11-14 08:00", datetime(2026, 11, 14, 9, 0)) is None
+    assert vs.due_slot(cfg, "2026-11-14 08:00", datetime(2026, 11, 14, 12, 0)) is None  # zu spaet zum Nachholen
+    assert vs.due_slot(cfg, "2026-11-14 08:00", datetime(2026, 11, 14, 18, 1)) == "2026-11-14 18:00"
+
+
 def make_bot():
     import daten
     import telegram_bot as tb
+    import vorschlaege
+    vorschlaege.fetch_feed, vorschlaege.amazon_url = fake_feed, fake_visit
     fake = FakeTelegram()
     tb.api = fake.api
     tb.download = lambda fid: photo_bytes((hash(fid) % 200, 90, 160))
@@ -189,6 +245,7 @@ def row_of(nr):
 
 def test_bot():
     import daten
+    from datetime import datetime
     import telegram_bot as tb
     bot, fake = make_bot()
     assert any(m == "setMyCommands" for m, _, _ in fake.calls)
@@ -304,6 +361,46 @@ def test_bot():
     method, params, _ = fake.calls[-1]
     assert method == "sendPhoto" and params["chat_id"] == "@dealbar_test", (method, params)
     assert daten.DISCLOSURE in params["caption"] and "tag=dealbar-21" in json.dumps(params)
+
+    # 11b. Vorschlaege: Liste, uebernehmen, Preis aendern, bestaetigen -> Deal mit Pruef-Zeit, Kanal-Post
+    bot.handle_batch([fake.msg("/nische Haushalt, Küche")])
+    assert daten.load_settings()["vorschlaege"]["nische"] == ["Haushalt", "Küche"]
+    bot.st["vs"], bot.st["vs_seen"] = {}, []  # evtl. schon zur geplanten Uhrzeit gezeigt
+    bot.handle_batch([fake.msg("/vorschlaege")])
+    listing = fake.calls[-1][1]
+    assert "Tefal Ingenio Pfannenset" in listing["text"] and "Bosch" not in listing["text"], listing["text"]
+    assert "B0TEFAL001" in json.dumps(listing["reply_markup"])
+    bot.handle_batch([fake.msg("/vorschlaege")])
+    assert "keine neuen Vorschläge" in fake.texts()  # schon gezeigte kommen nicht nochmal
+    bot.handle_batch([fake.button("vs:2871001", 600)])
+    d = bot.st["draft"]
+    assert d["src"] == "vorschlag" and d["url"] == "https://www.amazon.de/dp/B0TEFAL001?tag=dealbar-21", d
+    assert "ungeprüft" in fake.texts(3) and "nur im Spar-Abo" in fake.texts(3)
+    bot.tick(now=time.time() + tb.DRAFT_MAX + 5)  # ohne Bestaetigung wird nichts gespeichert
+    assert bot.st.get("draft") is d
+    bot.handle_batch([fake.button("dr:preis", d["msg"])])
+    bot.handle_batch([fake.msg("34,99 statt 59,99")])
+    assert (d["new"], d["old"], d["price_set"]) == (34.99, 59.99, True)
+    with daten.open_table() as t:
+        n2 = t.next_nr()
+    bot.handle_batch([fake.button("dr:ok", d["msg"])])
+    row = row_of(n2)
+    assert row and row["ASIN"] == "B0TEFAL001" and row["Kategorie"] == "Haushalt", row
+    checked = daten.parse_dt(row["Preis geprüft am"])
+    assert checked and abs((checked - datetime.now()).total_seconds()) < 120, row["Preis geprüft am"]
+    assert bot.st["vs"]["2871001"]["state"] == "ok"
+    bot.handle_batch([fake.button("vs:2871001", 600)])
+    assert "draft" not in bot.st
+    assert bot.post_channel(n2)
+    assert "Preis vom" in fake.calls[-1][1]["text"] and daten.DISCLOSURE in fake.calls[-1][1]["text"]
+    # Vorschlag offen, dann eigener Link -> Vorschlag wird zurueckgestellt, nicht ungeprueft gespeichert
+    bot.st["vs"]["2871001"]["state"] = ""
+    with daten.open_table(write=True) as t:
+        t.set(t.find(nr=n2), "ASIN", "")
+    bot.handle_batch([fake.button("vs:2871001", 600)])
+    bot.handle_batch([fake.msg("https://www.amazon.de/dp/B0TEST0007")])
+    assert bot.st["draft"]["asin"] == "B0TEST0007" and row_of(n2 + 1) is None
+    bot.handle_batch([fake.msg("/abbrechen")])
 
     # 12. Zustand ueberlebt einen Neustart (inkl. altem Format der ersten Bot-Version)
     tb.save_state({"offset": 7, "pending": {"link": "https://www.amazon.de/dp/B0TEST0004", "title": "Alt"},
@@ -426,7 +523,7 @@ def test_video():
 
 def run_tests():
     sys.path.insert(0, HERE)
-    tests = [test_parse, test_links, test_dates, test_table, test_bot, test_website, test_git_conflict]
+    tests = [test_parse, test_links, test_dates, test_table, test_vorschlaege, test_bot, test_website, test_git_conflict]
     if "--video" in sys.argv:
         tests.append(test_video)
     failed = 0

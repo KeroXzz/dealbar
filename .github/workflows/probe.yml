@@ -2,35 +2,17 @@ name: probe-mydealz
 on:
   push:
     branches: [claude/project-thread-psty7v]
-    paths: [.github/workflows/probe.yml]
+    paths: [.github/workflows/probe.yml, programm/vorschlaege.py]
 jobs:
   p:
     runs-on: ubuntu-latest
+    env:
+      TZ: Europe/Berlin
+      PYTHONIOENCODING: utf-8
     steps:
-      - run: |
-          A="Mozilla/5.0 (compatible; dealbar/1.0)"
-          for f in trending new neu hot-deals new-deals "groups/haushalt" "gruppe/haushalt-garten" "groups/kuche" "group/haushalt" "deals" "amazon" "merchant/amazon" "haendler/amazon"; do
-            curl -sSL -m 20 -A "$A" -o out.xml -w "=== $f HTTP %{http_code} %{url_effective} " "https://www.mydealz.de/rss/$f" || true; echo "items=$(grep -c '<item>' out.xml)"
-          done
-          curl -sSL -m 20 -A "$A" "https://www.mydealz.de/rss/trending" -o hot.xml
-          python3 - <<'PY'
-          s=open("hot.xml",encoding="utf-8",errors="replace").read()
-          items=s.split("<item>")
-          print(items[0][:1200])
-          for it in items[1:3]: print("----ITEM----"); print(it[:2500])
-          am=[it for it in items[1:] if "amazon" in it.lower()]
-          print("AMAZON ITEMS", len(am))
-          for a in am[:2]: print("----AMZ----"); print(a[:3000])
-          PY
-          python3 - <<'PY' > ids.txt
-          import re;s=open('hot.xml').read()
-          for it in s.split('<item>')[1:]:
-              if 'amazon' in it.lower():
-                  print(re.search(r'<link>(.*?)</link>',it).group(1))
-          PY
-          for L in $(head -2 ids.txt); do
-            ID=$(echo "$L" | grep -oE '[0-9]+$'); echo "ID $ID"
-            for u in "https://www.mydealz.de/visit/thread/$ID" "https://www.mydealz.de/visit/threadmain/$ID"; do
-              curl -sS -m 20 -A "$A" -o /dev/null -w "$u %{http_code} -> %{redirect_url}\n" "$u" || true
-            done
-          done
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - run: pip install -r programm/requirements.txt
+      - run: python programm/vorschlaege.py

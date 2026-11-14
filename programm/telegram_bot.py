@@ -38,6 +38,7 @@ sys.path.insert(0, HERE)
 from PIL import Image, ImageOps  # noqa: E402
 
 import daten  # noqa: E402
+import vorschlaege  # noqa: E402
 from daten import CATEGORIES, DEALS_DIR, ROOT, VIDEO_DIR, euro  # noqa: E402
 
 STATE = os.path.join(HERE, "telegram_status.json")
@@ -53,6 +54,8 @@ AWAIT_MAX = 30 * 60     # so lange gilt eine offene Frage ("Schick mir den Titel
 MAX_PHOTOS = 4
 LIST_PAGE = 8
 SYNC_EVERY = 180        # Sekunden: neue Programmversion / Tabellenaenderungen von GitHub holen
+SUGGEST_DRAFT_MAX = 2 * 3600  # so lange wartet ein uebernommener Vorschlag auf deine Bestaetigung
+SUGGEST_KEEP = 48 * 3600      # so lange bleiben Vorschlaege antippbar
 
 HELP = """<b>So schickst du einen Deal</b>
 
@@ -60,6 +63,9 @@ HELP = """<b>So schickst du einen Deal</b>
 2️⃣ Den Preis dazuschreiben, z. B. <code>19,99 statt 34,99</code>
 3️⃣ Optional: Kategorie, kurzer Vorteil und 1–4 <b>eigene</b> Fotos. Keine Screenshots oder Bilder von Amazon, das verbietet Amazon. Ohne Fotos gibt es ein Video im Text-Design.
 4️⃣ Im Entwurf auf <b>✅ Speichern</b> tippen.
+
+<b>Vorschläge</b>
+Zweimal am Tag schicke ich dir Deal-Vorschläge. Tippe ✅, prüfe den Preis kurz in der Amazon-App und bestätige. Dann poste ich den Deal.
 
 Den Rest mache ich: Website-Eintrag, Video mit fertigem Text zum Posten und, falls verbunden, den Post im Telegram-Kanal.
 
@@ -72,12 +78,15 @@ Alles in einer Nachricht geht auch:
 /impressum – Impressum eintragen
 /partnerid – Amazon-Partner-ID eintragen
 /kanal – Telegram-Kanal verbinden
+/vorschlaege – Deal-Vorschläge jetzt holen (oder Uhrzeiten, an/aus)
+/nische – Vorschläge auf Kategorien beschränken
 /abbrechen – Entwurf verwerfen"""
 
 COMMANDS = [("liste", "Deals verwalten"), ("status", "Einrichtung und Status prüfen"),
             ("hilfe", "So schickst du einen Deal"), ("abbrechen", "Entwurf verwerfen"),
             ("impressum", "Impressum eintragen"), ("partnerid", "Amazon-Partner-ID eintragen"),
-            ("kanal", "Telegram-Kanal verbinden"), ("id", "Deine Telegram-ID")]
+            ("kanal", "Telegram-Kanal verbinden"), ("vorschlaege", "Deal-Vorschläge jetzt holen"),
+            ("nische", "Vorschläge auf Kategorien beschränken"), ("id", "Deine Telegram-ID")]
 
 
 def esc(s):
@@ -492,6 +501,8 @@ def load_state():
             st["draft"] = p
     st.setdefault("loose", [])
     st.setdefault("posted", [])
+    st.setdefault("vs", {})
+    st.setdefault("vs_seen", [])
     st.pop("sent", None)
     return st
 
@@ -581,7 +592,10 @@ class Bot:
     def tick(self, now=None):
         now = now or time.time()
         d = self.st.get("draft")
-        if d and not self.st.get("await"):
+        if d and d.get("src") == "vorschlag":  # nie ohne deine Preisbestaetigung speichern
+            if now - d.get("last", now) >= SUGGEST_DRAFT_MAX:
+                self.drop_suggestion(d, "⌛ Vorschlag zurückgestellt, weil keine Bestätigung kam")
+        elif d and not self.st.get("await"):
             quiet = now - d.get("last", now)
             if (d.get("photos") and quiet >= PHOTO_WAIT) or quiet >= DRAFT_MAX:
                 self.save_draft(auto=True)
@@ -591,6 +605,7 @@ class Bot:
             if aw.get("what") == "photos":
                 edit(aw.get("msg"), "⌛ Keine neuen Fotos bekommen, alles bleibt wie es war.")
         self.st["loose"] = [x for x in self.st.get("loose", []) if now - x["time"] < DRAFT_MAX]
+        self.suggest_tick(now)
         self.pipeline()
         if self.repo.push() and self.site_dirty and now >= self.site_retry:
             if dispatch("website.yml") or not os.environ.get("GITHUB_ACTIONS"):
@@ -710,6 +725,7 @@ class Bot:
                     d["title_src"] = "text"
         if f.get("new"):
             d["new"], d["old"] = f["new"], f.get("old")
+            d["price_set"] = True
         rest = f.get("rest") or []
         if rest and d.get("title_src") == "auto":
             d["title"], d["title_src"] = shorten(rest.pop(0), 80), "text"
@@ -717,7 +733,10 @@ class Bot:
             d["hook"] = " ".join(rest)[:90]
 
     def new_draft(self, f, photo, t):
-        if self.st.get("draft"):
+        old = self.st.get("draft")
+        if old and old.get("src") == "vorschlag":
+            self.drop_suggestion(old, "↩️ Vorschlag zurückgestellt")
+        elif old:
             self.save_draft(auto=True)
         self.st.pop("await", None)
         full = daten.resolve_short(f["link"])
@@ -748,6 +767,8 @@ class Bot:
     # ------------------------------------------------------------ Entwurf
 
     def draft_text(self, d):
+        if d.get("src") == "vorschlag":
+            return self.suggestion_text(d)
         L = ["📝 <b>Neuer Deal</b> · Entwurf", ""]
         L.append(f"<b>{esc(d['title'])}</b>")
         if d.get("title_src") in ("auto", "url"):
@@ -781,6 +802,8 @@ class Bot:
 
     def draft_buttons(self, d):
         rows = []
+        if d.get("src") == "vorschlag" and daten.valid_link(d.get("url")):
+            rows.append([("🔍 Bei Amazon prüfen", "url:" + daten.plain_link(d["url"]))])
         if not d.get("cat") or d.get("pick"):
             names = list(CATEGORIES)
             for i in range(0, len(names), 3):
@@ -788,7 +811,11 @@ class Bot:
                              for j, c in enumerate(names[i:i + 3], i)])
         rows.append([("✏️ Titel", "dr:titel"), ("💶 Preis", "dr:preis")])
         rows.append([("💬 Vorteil", "dr:hook")] + ([("🏷 Kategorie", "dr:kat")] if d.get("cat") else []))
-        rows.append([("🗑 Verwerfen", "dr:weg"), ("✅ Speichern", "dr:ok")])
+        if d.get("src") == "vorschlag":
+            ok = "✅ Preis stimmt · posten" if self.settings.get("telegram_kanal") else "✅ Preis stimmt · speichern"
+            rows.append([("🗑 Verwerfen", "dr:weg"), (ok, "dr:ok")])
+        else:
+            rows.append([("🗑 Verwerfen", "dr:weg"), ("✅ Speichern", "dr:ok")])
         return rows
 
     def save_draft(self, auto=False):
@@ -835,12 +862,18 @@ class Bot:
             return "Schon erledigt"
         d["last"] = time.time()
         if action == "ok":
+            if d.get("src") == "vorschlag":
+                d["time"] = time.time()  # "Preis geprueft am" = jetzt, du hast ihn eben bestaetigt
             self.save_draft()
+            if d.get("src") == "vorschlag":
+                self.mark_suggestion(d.get("vs_id"), "ok")
             return "Gespeichert"
         if action == "weg":
             self.st.pop("draft")
             self.st["loose"] = []
             edit(mid, f"🗑 Entwurf verworfen: {esc(d.get('title'))}")
+            if d.get("src") == "vorschlag":
+                self.mark_suggestion(d.get("vs_id"), "weg")
             return "Verworfen"
         if action == "c":
             d["cat"] = list(CATEGORIES)[int(arg)]
@@ -881,6 +914,7 @@ class Bot:
                 d["hook"] = text.strip()[:90]
             else:
                 d["new"], d["old"] = prices
+                d["price_set"] = True
             d["last"] = time.time()
             self.show_draft = True
             return
@@ -927,6 +961,8 @@ class Bot:
             toast = self.deal_action(int(nr), action, mid)
         elif kind == "aw":
             toast = self.on_await_button(rest, mid)
+        elif kind == "vs":
+            toast = self.take_suggestion(rest)
         answer(q["id"], toast or "")
 
     # ------------------------------------------------------------ Deals verwalten
@@ -1169,6 +1205,174 @@ class Bot:
             self.st["posted"] = (self.st["posted"] + [nr])[-500:]
         return True
 
+    # ------------------------------------------------------------ Vorschlaege
+
+    def suggest_tick(self, now=None):
+        """Zu den eingestellten Uhrzeiten Vorschlaege schicken; alte Vorschlaege aufraeumen."""
+        now = now or time.time()
+        self.st["vs"] = {k: v for k, v in self.st.get("vs", {}).items() if now - v.get("t", now) < SUGGEST_KEEP}
+        cfg = vorschlaege.settings(self.settings)
+        if not (CHAT_ID and cfg["aktiv"]):
+            return
+        slot = vorschlaege.due_slot(cfg, self.st.get("vs_slot"), datetime.fromtimestamp(now))
+        if slot:
+            self.st["vs_slot"] = slot
+            self.send_suggestions(slot[-5:], quiet=True, now=now)
+
+    def send_suggestions(self, label="", quiet=False, now=None):
+        with daten.open_table() as t:
+            known = {t.text(r, "ASIN") for r in t.rows() if t.text(r, "ASIN")}
+        items, errors = vorschlaege.collect(self.settings, seen=set(self.st["vs_seen"]), known_asins=known, now=now)
+        if not items:
+            if errors:
+                send("⚠️ Vorschläge konnten nicht geladen werden: <code>" + esc("; ".join(errors))[:300] +
+                     "</code>\nIch versuche es zur nächsten Uhrzeit wieder, oder jetzt mit /vorschlaege.")
+            elif not quiet:
+                send("💡 Gerade keine neuen Vorschläge" + (" in deiner Nische" if
+                     vorschlaege.settings(self.settings)["nische"] else "") + ". Schau später nochmal vorbei.")
+            return 0
+        for it in items:
+            it["state"] = ""
+            self.st["vs"][it["id"]] = it
+        self.st["vs_seen"] = (self.st["vs_seen"] + [it["id"] for it in items])[-1000:]
+        ids = [it["id"] for it in items]
+        mid = send(*self.suggestion_list(ids, label))
+        for it in items:
+            it["list"], it["ids"], it["label"] = mid, ids, label
+        save_state(self.st)
+        return len(items)
+
+    def suggestion_list(self, ids, label=""):
+        items = [self.st["vs"][i] for i in ids if i in self.st["vs"]]
+        L = [f"💡 <b>{len(items)} Deal-Vorschläge</b>" + (f" · {esc(label)} Uhr" if label else ""),
+             "Tippe ✅ zum Übernehmen. Den Preis prüfst du danach kurz in der Amazon-App.", ""]
+        rows = []
+        for n, it in enumerate(items, 1):
+            mark = {"ok": "✔️ ", "weg": "✖️ ", "offen": "✏️ "}.get(it.get("state"), "")
+            cat = it.get("cat")
+            meta = [f"{CATEGORIES[cat][0]} {cat}" if cat in CATEGORIES else "",
+                    f"ca. {eur(it['price'])}" if it.get("price") else "", f"{it.get('grad', 0)}°"]
+            meta += it.get("hints") or []
+            L.append(f"{mark}{n}. <b>{esc(it['title'])}</b>")
+            L.append("    " + " · ".join(x for x in meta if x))
+            if not it.get("state") or it["state"] == "weg":
+                rows.append([(f"✅ {n} · {shorten(it['title'], 26)}", f"vs:{it['id']}"),
+                             (f"🔍 {n}", "url:" + it["link"])])
+        if not self.settings.get("telegram_kanal"):
+            L += ["", "<i>Noch kein Telegram-Kanal verbunden, Deals landen nur auf der Website → /kanal</i>"]
+        L += ["", "<i>Quelle: mydealz-Feed als Hinweis. Preise ungeprüft, bitte vor dem Posten prüfen.</i>"]
+        return "\n".join(L), rows
+
+    def mark_suggestion(self, vid, state):
+        it = self.st.get("vs", {}).get(vid)
+        if not it:
+            return
+        it["state"] = state
+        if it.get("list"):
+            text, rows = self.suggestion_list(it.get("ids") or [vid], it.get("label", ""))
+            edit(it["list"], text, rows)
+
+    def drop_suggestion(self, d, text):
+        if self.st.get("draft") is d:
+            self.st.pop("draft")
+        edit(d.get("msg"), f"{text}: {esc(d.get('title'))}\nIn der Vorschlagsliste kannst du ihn wieder antippen.")
+        self.mark_suggestion(d.get("vs_id"), "")
+
+    def take_suggestion(self, vid):
+        it = self.st.get("vs", {}).get(vid)
+        if not it:
+            return "Dieser Vorschlag ist abgelaufen"
+        if it.get("state") == "ok":
+            return "Schon übernommen"
+        with daten.open_table() as t:
+            dup = next((t.nr(x) for x in t.rows() if t.text(x, "ASIN") == it["asin"]), None)
+        if dup:
+            return f"Gibt es schon als Deal #{dup}"
+        self.new_draft({"link": it["link"], "title": it["title"], "cat": it.get("cat"), "new": it.get("price")},
+                       None, int(time.time()))
+        d = self.st["draft"]
+        d.update(src="vorschlag", title_src="vorschlag", vs_id=vid, hints=it.get("hints") or [])
+        self.mark_suggestion(vid, "offen")
+        return "Übernommen, bitte Preis prüfen"
+
+    def suggestion_text(self, d):
+        L = ["💡 <b>Vorschlag übernehmen</b>", "", f"<b>{esc(d['title'])}</b>"]
+        if d.get("title_src") == "vorschlag":
+            L.append("<i>✏️ Titel automatisch gekürzt, bei Bedarf ändern.</i>")
+        if d.get("new"):
+            off = daten.discount(d.get("old"), d["new"])
+            L.append(f"💶 {eur(d['new'])}" + (f" statt {eur(d['old'])}" if d.get("old") else "") +
+                     (f" <b>(−{off} %)</b>" if off else "") +
+                     (" <i>(laut Vorschlag, ungeprüft)</i>" if not d.get("price_set") else ""))
+        else:
+            L.append("💶 <i>Kein Preis im Vorschlag</i>")
+        cat = d.get("cat")
+        L.append(f"{CATEGORIES.get(cat, ('🏷',))[0]} {esc(cat)}" if cat else "🏷 <i>Kategorie wählen</i> ↓")
+        if d.get("hook"):
+            L.append(f"💬 {esc(d['hook'])}")
+        for h in d.get("hints") or []:
+            L.append(f"⚠️ {esc(h)}")
+        if not self.tag():
+            L.append("⚠️ Partner-ID fehlt, ohne sie gibt es keine Provision → /partnerid")
+        L += ["", "<b>So geht's:</b>", "1. 🔍 Bei Amazon öffnen und den Preis prüfen.",
+              "2. Anderer Preis oder Streichpreis? 💶 Preis tippen, z. B. <code>19,99 statt 34,99</code>",
+              "3. Optional 💬 Vorteil in ein paar Worten.",
+              "4. ✅ tippen." + (" Dann poste ich den Deal im Kanal (mit Uhrzeit der Prüfung)."
+                                 if self.settings.get("telegram_kanal") else " Dann kommt er auf die Website.")]
+        return "\n".join(L)
+
+    def cmd_vorschlaege(self, arg):
+        a = arg.strip().lower()
+        if a in ("aus", "off", "stop"):
+            daten.save_settings({"vorschlaege": {"aktiv": False}})
+        elif a in ("an", "ein", "on"):
+            daten.save_settings({"vorschlaege": {"aktiv": True}})
+        elif re.fullmatch(r"(\d{1,2}(:\d{2})?[\s,]*)+", a):
+            zeiten = sorted({f"{int(h):02d}:{int(m or 0):02d}" for h, m in re.findall(r"(\d{1,2})(?::(\d{2}))?", a)
+                             if int(h) < 24 and int(m or 0) < 60})
+            daten.save_settings({"vorschlaege": {"zeiten": zeiten, "aktiv": True}})
+        elif a:
+            send("So geht's:\n<code>/vorschlaege</code> – jetzt Vorschläge holen\n"
+                 "<code>/vorschlaege 8 12 18</code> – Uhrzeiten festlegen\n"
+                 "<code>/vorschlaege aus</code> bzw. <code>an</code>")
+            return
+        else:
+            send("🔎 Ich suche Vorschläge, einen Moment …")
+            self.send_suggestions(datetime.now().strftime("%H:%M"))
+            return
+        self.settings = daten.load_settings()
+        self.commit("Vorschläge: Einstellungen geändert", site=False)
+        v = vorschlaege.settings(self.settings)
+        send(f"✅ Vorschläge kommen um {', '.join(v['zeiten'])} Uhr." if v["aktiv"] else
+             "⏸ Automatische Vorschläge sind aus. Mit <code>/vorschlaege an</code> wieder einschalten.")
+
+    def cmd_nische(self, arg):
+        a = arg.strip()
+        if not a:
+            cur = vorschlaege.settings(self.settings)["nische"]
+            send(f"Aktuell: <b>{esc(', '.join(cur)) if cur else 'alle Kategorien'}</b>\n\n"
+                 "Schick mir die Kategorien, aus denen du Vorschläge willst, z. B.\n"
+                 "<code>/nische Haushalt, Küche</code>\noder <code>/nische alle</code>\n\n"
+                 "Möglich: " + ", ".join(CATEGORIES))
+            return
+        if a.lower() in ("alle", "alles", "aus"):
+            cats = []
+        else:
+            cats, bad = [], []
+            for part in re.split(r"[,;\n]+|\s+und\s+", a):
+                part = part.strip()
+                if part:
+                    c = daten.match_category(part)
+                    (cats if c else bad).append(c or part)
+            if bad:
+                send(f"Diese Kategorie kenne ich nicht: {esc(', '.join(bad))}\nMöglich: " + ", ".join(CATEGORIES))
+                return
+            cats = list(dict.fromkeys(cats))
+        daten.save_settings({"vorschlaege": {"nische": cats}})
+        self.settings = daten.load_settings()
+        self.commit("Vorschläge: Nische geändert", site=False)
+        send(f"✅ Vorschläge ab jetzt aus: <b>{esc(', '.join(cats)) if cats else 'allen Kategorien'}</b>")
+
     # ------------------------------------------------------------ Befehle
 
     def on_command(self, cmd, arg):
@@ -1203,6 +1407,10 @@ class Bot:
             self.cmd_impressum(arg)
         elif cmd == "/kanal":
             self.cmd_kanal(arg)
+        elif cmd in ("/vorschlaege", "/vorschläge", "/vorschlag"):
+            self.cmd_vorschlaege(arg)
+        elif cmd == "/nische":
+            self.cmd_nische(arg)
         else:
             send("Unbekannter Befehl. /hilfe zeigt alle Befehle.")
 
@@ -1223,6 +1431,12 @@ class Bot:
                  "⚠️ <b>Impressum fehlt</b> (Pflicht für die Website) → /impressum")
         k = s.get("telegram_kanal")
         L.append(f"✅ Telegram-Kanal: {esc(k)}" if k else "➖ Telegram-Kanal nicht verbunden (optional) → /kanal")
+        v = vorschlaege.settings(s)
+        if v["aktiv"]:
+            L.append(f"💡 Vorschläge um {', '.join(v['zeiten'])} Uhr · Nische: "
+                     f"{esc(', '.join(v['nische'])) if v['nische'] else 'alle Kategorien'} → /nische")
+        else:
+            L.append("➖ Vorschläge ausgeschaltet → <code>/vorschlaege an</code>")
         L += ["", "📷 Erinnerung: nur eigene Fotos, keine Screenshots oder Bilder von Amazon."]
         return "\n".join(L)
 
