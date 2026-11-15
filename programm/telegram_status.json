@@ -389,7 +389,7 @@
   "2871189"
  ],
  "vs_slot": "2026-11-14 18:00",
- "vs_poll": 1794703017.2633648,
+ "vs_poll": 1794722943.8435972,
  "vs_pool": {
   "2861275": {
    "id": "2861275",
@@ -1030,13 +1030,13 @@
   },
   "2871408": {
    "id": "2871408",
-   "raw": "Philips Espressomaschine Barista Brew, Bronze",
+   "raw": "101° - Philips Espressomaschine Barista Brew, Bronze",
    "title": "Philips Espressomaschine Barista Brew",
-   "grad": 0,
+   "grad": 101,
    "price": 238.0,
    "cat": "Haushalt",
    "hints": [],
-   "pub": 1794678813.0,
+   "pub": 1794720032.0,
    "quelle": "https://www.mydealz.de/deals/philips-espressomaschine-barista-brew-bronze-2871408"
   },
   "2871403": {
@@ -1478,9 +1478,9 @@
   },
   "2871503": {
    "id": "2871503",
-   "raw": "133° - Prime: The Clash London Calling Vinyl 2 LP",
+   "raw": "137° - Prime: The Clash London Calling Vinyl 2 LP",
    "title": "The Clash London Calling Vinyl 2 LP",
-   "grad": 133,
+   "grad": 137,
    "price": 22.39,
    "cat": "Sport & Freizeit",
    "hints": [],
@@ -1511,9 +1511,9 @@
   },
   "2871495": {
    "id": "2871495",
-   "raw": "107° - ICY BOX Thunderbolt 4 Type-C Hub zu 3X Thunderbolt 4 IB-HUB801-TB4 - Lieferung Dezember",
+   "raw": "125° - ICY BOX Thunderbolt 4 Type-C Hub zu 3X Thunderbolt 4 IB-HUB801-TB4 - Lieferung Dezember",
    "title": "ICY BOX Thunderbolt 4 Type-C Hub zu 3X Thunderbolt 4 IB-HUB801-TB4",
-   "grad": 107,
+   "grad": 125,
    "price": 132.95,
    "cat": "Technik",
    "hints": [],
@@ -1522,9 +1522,9 @@
   },
   "2871515": {
    "id": "2871515",
-   "raw": "167° - 1917 (Blu-ray) IMDb 8,2/10 (Amazon Prlme) | Prime Video kostenlos",
+   "raw": "184° - 1917 (Blu-ray) IMDb 8,2/10 (Amazon Prlme) | Prime Video kostenlos",
    "title": "1917 (Blu-ray) IMDb 8,2/10",
-   "grad": 167,
+   "grad": 184,
    "price": 6.4,
    "cat": "Sport & Freizeit",
    "hints": [],
@@ -1592,20 +1592,20 @@
   },
   "2871519": {
    "id": "2871519",
-   "raw": "Fireball Cinnamon Whisky Liqueur - Amazon Prime",
+   "raw": "115° - Fireball Cinnamon Whisky Liqueur - Amazon Prime",
    "title": "Fireball Cinnamon Whisky Liqueur",
-   "grad": 0,
+   "grad": 115,
    "price": 8.79,
    "cat": "Haushalt",
    "hints": [],
-   "pub": 1794695083.0,
+   "pub": 1794713775.0,
    "quelle": "https://www.mydealz.de/deals/fireball-cinnamon-whisky-liqueur-amazon-2871519"
   },
   "2860089": {
    "id": "2860089",
-   "raw": "116° - VAUDE Ayla 6 Kinderrucksack | 6 Liter Volumen | Höhe 30 cm Breite 20 cm Tiefe 16 cm | 0,23 kg | Brustgurt | Hüftgurt | Regenhülle",
+   "raw": "118° - VAUDE Ayla 6 Kinderrucksack | 6 Liter Volumen | Höhe 30 cm Breite 20 cm Tiefe 16 cm | 0,23 kg | Brustgurt | Hüftgurt | Regenhülle",
    "title": "VAUDE Ayla 6 Kinderrucksack",
-   "grad": 116,
+   "grad": 118,
    "price": 20.2,
    "cat": null,
    "hints": [],
@@ -1614,9 +1614,9 @@
   },
   "2863903": {
    "id": "2863903",
-   "raw": "108° - Amazon Prime] Hot Wheels Car Culture Eurospeed Aston Martin Vantage GTE 1:64 für 7,29 € statt 9,48 €",
+   "raw": "107° - Amazon Prime] Hot Wheels Car Culture Eurospeed Aston Martin Vantage GTE 1:64 für 7,29 € statt 9,48 €",
    "title": "] Hot Wheels Car Culture Eurospeed Aston Martin Vantage GTE 1:64",
-   "grad": 108,
+   "grad": 107,
    "price": 7.29,
    "cat": null,
    "hints": [],
@@ -1625,9 +1625,9 @@
   },
   "2833841": {
    "id": "2833841",
-   "raw": "116° - [Prime Spar-Abo] Schwiizer Schüümli Crema Mild, 100% edle Arabica Kaffeebohnen,Stärke 2/5, 1kg - Crema intenso und Espresso ebenso",
+   "raw": "115° - [Prime Spar-Abo] Schwiizer Schüümli Crema Mild, 100% edle Arabica Kaffeebohnen,Stärke 2/5, 1kg - Crema intenso und Espresso ebenso",
    "title": "Schwiizer Schüümli Crema Mild",
-   "grad": 116,
+   "grad": 115,
    "price": 16.73,
    "cat": "Haushalt",
    "hints": [
@@ -1770,13 +1770,13 @@
   },
   "2871543": {
    "id": "2871543",
-   "raw": "EASTPAK Unisex Wyoming Rucksack verschiedene Farben z.B. Grau für 35€ (Prime)",
+   "raw": "111° - EASTPAK Unisex Wyoming Rucksack verschiedene Farben z.B. Grau für 35€ (Prime)",
    "title": "EASTPAK Unisex Wyoming Rucksack verschiedene Farben z.B. Grau",
-   "grad": 0,
+   "grad": 111,
    "price": 35.0,
    "cat": "Mode",
    "hints": [],
-   "pub": 1794698088.0,
+   "pub": 1794721381.0,
    "quelle": "https://www.mydealz.de/deals/eastpak-unisex-wyoming-rucksack-verschiedene-farben-zb-grau-fur-35eur-prime-2871543"
   },
   "2871539": {
@@ -1792,13 +1792,13 @@
   },
   "2871538": {
    "id": "2871538",
-   "raw": "(Amazon Kindle) Three Lessons in Seduction (Shadows and Silk Book 1) (English Edition) 4,3 Sterne 1,7k Reviews",
+   "raw": "110° - (Amazon Kindle) Three Lessons in Seduction (Shadows and Silk Book 1) (English Edition) 4,3 Sterne 1,7k Reviews",
    "title": "Three Lessons in Seduction",
-   "grad": 0,
+   "grad": 110,
    "price": null,
    "cat": "Sport & Freizeit",
    "hints": [],
-   "pub": 1794697810.0,
+   "pub": 1794721733.0,
    "quelle": "https://www.mydealz.de/deals/amazon-kindle-three-lessons-in-seduction-shadows-and-silk-book-1-english-edition-43-sterne-17k-reviews-2871538"
   },
   "2871536": {
@@ -1811,6 +1811,94 @@
    "hints": [],
    "pub": 1794697690.0,
    "quelle": "https://www.mydealz.de/deals/prime-metallica-s-m-3-vinyl-lp-2871536"
+  },
+  "2871215": {
+   "id": "2871215",
+   "raw": "112° - WORKPRO Werkzeugkoffer gefüllt, Aluminum, 119tlg. (Prime)",
+   "title": "WORKPRO Werkzeugkoffer gefüllt",
+   "grad": 112,
+   "price": 88.79,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1794704821.0,
+   "quelle": "https://www.mydealz.de/deals/workpro-werkzeugkoffer-gefullt-aluminum-119tlg-prime-2871215"
+  },
+  "2871580": {
+   "id": "2871580",
+   "raw": "Attack on Titan - Staffel 2 - Gesamtausgabe - Blu-Ray - (Steelbook 34,39€) - 300 Min - dt./jap. @ Prime",
+   "title": "Attack on Titan",
+   "grad": 0,
+   "price": 27.2,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1794709550.0,
+   "quelle": "https://www.mydealz.de/deals/attack-on-titan-staffel-2-gesamtausgabe-blu-ray-steelbook-3439eur-300-min-dtjap-at-prime-2871580"
+  },
+  "2871583": {
+   "id": "2871583",
+   "raw": "Sammeldeal COMPEED zB Blasenpflaster Mixpack - 12x Hydrokolloid-Pflaster - 3 Größen / Ballenpflaster 4,45€ / Anti-Blasen Stick 5,08€",
+   "title": "Sammeldeal COMPEED zB Blasenpflaster Mixpack",
+   "grad": 0,
+   "price": 5.65,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1794711895.0,
+   "quelle": "https://www.mydealz.de/deals/sammeldeal-compeed-zb-blasenpflaster-mixpack-12x-hydrokolloid-pflaster-3-grossen-ballenpflaster-445eur-anti-blasen-stick-508eur-2871583"
+  },
+  "2871582": {
+   "id": "2871582",
+   "raw": "Madonna The Immaculate Collection [Vinyl LP] Compilation Doppelvinyl",
+   "title": "Madonna The Immaculate Collection Compilation Doppelvinyl",
+   "grad": 0,
+   "price": 25.59,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1794711643.0,
+   "quelle": "https://www.mydealz.de/deals/madonna-the-immaculate-collection-vinyl-lp-compilation-doppelvinyl-2871582"
+  },
+  "2871581": {
+   "id": "2871581",
+   "raw": "Dire Straits - Brothers in Arms (Vinyl)",
+   "title": "Dire Straits Brothers in Arms",
+   "grad": 0,
+   "price": 23.99,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1794710682.0,
+   "quelle": "https://www.mydealz.de/deals/dire-straits-brothers-in-arms-vinyl-2871581"
+  },
+  "2871586": {
+   "id": "2871586",
+   "raw": "Elden Ring Tarnished Edition Nintendo Switch 2 | Amazon Frankreich",
+   "title": "Elden Ring Tarnished Edition Nintendo Switch 2",
+   "grad": 0,
+   "price": 49.62,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1794717144.0,
+   "quelle": "https://www.mydealz.de/deals/elden-ring-tarnished-edition-nintendo-switch-2-amazon-frankreich-2871586"
+  },
+  "2871588": {
+   "id": "2871588",
+   "raw": "Hazet Klappmesser, Outdoor Taschenmesser mit hochwertiger Edelstahl-Klinge I Aluminium-Griff mit Fingermulden (Prime)",
+   "title": "Hazet Klappmesser",
+   "grad": 0,
+   "price": 10.35,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1794718363.0,
+   "quelle": "https://www.mydealz.de/deals/hazet-klappmesser-outdoor-taschenmesser-mit-hochwertiger-edelstahl-klinge-i-aluminium-griff-mit-fingermulden-prime-2871588"
+  },
+  "2871596": {
+   "id": "2871596",
+   "raw": "Levi's Herren Gürtel schwarz div. Größen",
+   "title": "Levi's Herren Gürtel schwarz div. Größen",
+   "grad": 0,
+   "price": 12.72,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1794721323.0,
+   "quelle": "https://www.mydealz.de/deals/levis-herren-gurtel-schwarz-div-grossen-2871596"
   }
  }
 }
