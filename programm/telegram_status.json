@@ -722,19 +722,8 @@
   "2850452"
  ],
  "vs_slot": "2026-11-20 18:00",
- "vs_poll": 1795221896.1719153,
+ "vs_poll": 1795241937.2333627,
  "vs_pool": {
-  "2876371": {
-   "id": "2876371",
-   "raw": "112° - [Amazon Prime „Top Black Friday Angebot“] SKS GERMANY SAM Dämpferpumpe",
-   "title": "SKS GERMANY SAM Dämpferpumpe",
-   "grad": 112,
-   "price": 24.41,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795169028.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-prime-top-black-friday-angebot-sks-germany-sam-dampferpumpe-2876371"
-  },
   "2876357": {
    "id": "2876357",
    "raw": "109° - [Prime] Getränkekistenregal für 6 Kisten – Wein-, Wasser- & Bierkistenregal aus Stahl - Tragfähigkeit bis 150kg",
@@ -878,39 +867,6 @@
    "pub": 1795193090.0,
    "quelle": "https://www.mydealz.de/deals/tatonka-edc-pack-30l-bc-rucksack-in-schwarz-2876896"
   },
-  "2847100": {
-   "id": "2847100",
-   "raw": "181° - Nintendo Switch - Lets School - Physisch",
-   "title": "Nintendo Switch Lets School",
-   "grad": 181,
-   "price": 9.8,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795168812.0,
-   "quelle": "https://www.mydealz.de/deals/nintendo-switch-lets-school-physisch-2847100"
-  },
-  "2876964": {
-   "id": "2876964",
-   "raw": "jarolift Elektronischer TDEP 10/13 Rollladenmotor Rohrmotor, SW60, Zugkraft 27 kg, Komplettset mit 8 Kant-Wellenadapter u. Lager",
-   "title": "jarolift Elektronischer TDEP 10/13 Rollladenmotor Rohrmotor",
-   "grad": 0,
-   "price": 44.19,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795169179.0,
-   "quelle": "https://www.mydealz.de/deals/jarolift-elektronischer-tdep-1013-rollladenmotor-rohrmotor-sw60-zugkraft-27-kg-komplettset-mit-8-kant-wellenadapter-u-lager-2876964"
-  },
-  "2876960": {
-   "id": "2876960",
-   "raw": "X-Sense Smart Rauchmelder mit 10-Jahres-Batterie, SD19-MN61, 6 Stück",
-   "title": "X-Sense Smart Rauchmelder mit 10-Jahres-Batterie",
-   "grad": 0,
-   "price": 121.59,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795168904.0,
-   "quelle": "https://www.mydealz.de/deals/x-sense-smart-rauchmelder-mit-10-jahres-batterie-sd19-mn61-6-stuck-2876960"
-  },
   "2876959": {
    "id": "2876959",
    "raw": "150° - Bosch Professional Werkzeugtasche groß für 20€ (Prime/Böttcher)",
@@ -921,17 +877,6 @@
    "hints": [],
    "pub": 1795171247.0,
    "quelle": "https://www.mydealz.de/deals/bosch-professional-werkzeugtasche-gross-fur-20eur-primebottcher-2876959"
-  },
-  "2876958": {
-   "id": "2876958",
-   "raw": "Ravensburger 3D-Puzzle »Allianz Arena bei Nacht« für 34,18€ (statt 39€) (Prime)",
-   "title": "Ravensburger 3D-Puzzle »Allianz Arena bei Nacht«",
-   "grad": 0,
-   "price": 34.18,
-   "cat": null,
-   "hints": [],
-   "pub": 1795168839.0,
-   "quelle": "https://www.mydealz.de/deals/ravensburger-3d-puzzle-allianz-arena-bei-nacht-fur-3418eur-statt-39eur-2876958"
   },
   "2876957": {
    "id": "2876957",
@@ -944,17 +889,6 @@
    "pub": 1795179339.0,
    "quelle": "https://www.mydealz.de/deals/bosch-7x-expert-self-cut-speed-flachfrasbohrer-sets-fur-weichholz-spanplatte-o-16-32-mm-prime-2876957"
   },
-  "2876955": {
-   "id": "2876955",
-   "raw": "Paladone Angel Lampe | Experiment 624 | offiziell lizenziert | Lilo und Stitch | Lampe Disney [Prime]",
-   "title": "Paladone Angel Lampe",
-   "grad": 0,
-   "price": 15.62,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795168807.0,
-   "quelle": "https://www.mydealz.de/deals/paladone-angel-lampe-experiment-624-offiziell-lizenziert-lilo-und-stitch-lampe-disney-prime-2876955"
-  },
   "2876954": {
    "id": "2876954",
    "raw": "102° - Midea Wärmepumpentrockner 8 kg (MD20EH80WB-A3, EEK C) | App-Steuerung, BLDC Inverter, UV Hygiene, Auto Dry, Woolmark & Knitterschutz | Prime",
@@ -965,28 +899,6 @@
    "hints": [],
    "pub": 1795174717.0,
    "quelle": "https://www.mydealz.de/deals/midea-warmepumpentrockner-8-kg-md20eh80wb-a3-eek-c-app-steuerung-bldc-inverter-uv-hygiene-auto-dry-woolmark-knitterschutz-prime-2876954"
-  },
-  "2876951": {
-   "id": "2876951",
-   "raw": "Nuki Smart Lock Go",
-   "title": "Nuki Smart Lock Go",
-   "grad": 0,
-   "price": 109.0,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795168638.0,
-   "quelle": "https://www.mydealz.de/deals/nuki-smart-lock-go-2876951"
-  },
-  "2876950": {
-   "id": "2876950",
-   "raw": "Einfach überall frische Shakes & Smoothies mixen: Ninja Blast, tragbarer Mixer (Prime)",
-   "title": "Einfach überall frische Shakes & Smoothies mixen: Ninja Blast",
-   "grad": 0,
-   "price": 35.0,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795168624.0,
-   "quelle": "https://www.mydealz.de/deals/einfach-uberall-frische-shakes-smoothies-mixen-ninja-blast-tragbarer-mixer-ab-nur-noch-35eur-2876950"
   },
   "2876949": {
    "id": "2876949",
@@ -1021,28 +933,6 @@
    "pub": 1795175682.0,
    "quelle": "https://www.mydealz.de/deals/lego-grosse-weihnachtsmann-minifigur-40820-fur-3999-euro-amazon-prime-2876935"
   },
-  "2843904": {
-   "id": "2843904",
-   "raw": "321° - Absolum - Nintendo Switch - Physisch AMAZON/Otto UP",
-   "title": "Absolum Nintendo Switch",
-   "grad": 321,
-   "price": 27.99,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795169874.0,
-   "quelle": "https://www.mydealz.de/deals/absolum-nintendo-switch-physisch-2843904"
-  },
-  "2876799": {
-   "id": "2876799",
-   "raw": "115° - [Prime] Mattel Brick Shop - Masters of the Universe - Havoc-Stab-Bausatz | 966 Klemmbausteine, Lichteffekt „Böses Leuchten“, 101 cm lang",
-   "title": "Mattel Brick Shop",
-   "grad": 115,
-   "price": 47.99,
-   "cat": null,
-   "hints": [],
-   "pub": 1795169193.0,
-   "quelle": "https://www.mydealz.de/deals/prime-mattel-brick-shop-masters-of-the-universe-havoc-stab-bausatz-966-klemmbausteine-lichteffekt-boses-leuchten-101-cm-lang-2876799"
-  },
   "2877001": {
    "id": "2877001",
    "raw": "112° - Blink Black Friday | z. B. Blink Außenkamera mit Flutlicht & Sync-Modul für 37,99 € | u. a. auch Solaris 2K+, Video-Türklingel 2K+, Mini 2K+",
@@ -1075,28 +965,6 @@
    "hints": [],
    "pub": 1795169974.0,
    "quelle": "https://www.mydealz.de/deals/philips-sonicare-diamondclean-9900-prestige-schallzahnburste-2876983"
-  },
-  "2876933": {
-   "id": "2876933",
-   "raw": "Baby Brezza Formula Pro Advanced Automatischer Flaschenzubereiter (Baby Wunschliste)",
-   "title": "Baby Brezza Formula Pro Advanced Automatischer Flaschenzubereiter",
-   "grad": 0,
-   "price": 203.91,
-   "cat": null,
-   "hints": [],
-   "pub": 1795169918.0,
-   "quelle": "https://www.mydealz.de/deals/baby-brezza-formula-pro-advanced-automatischer-flaschenzubereiter-2876933"
-  },
-  "2876982": {
-   "id": "2876982",
-   "raw": "2er-Set LED-Nachtlicht, Orientierungslicht mit Bewegungsmelder, dimmbar, für 8,54€ (statt 13€)",
-   "title": "2er-Set LED-Nachtlicht",
-   "grad": 0,
-   "price": 8.54,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795169907.0,
-   "quelle": "https://www.mydealz.de/deals/2er-set-led-nachtlicht-orientierungslicht-mit-bewegungsmelder-dimmbar-fur-854eur-statt-13eur-2876982"
   },
   "2876969": {
    "id": "2876969",
@@ -2731,13 +2599,13 @@
   },
   "2877357": {
    "id": "2877357",
-   "raw": "Canon EOS R50 V Vlog-Kamera (Body, ohne Objektiv), APS-C, 24,2 MP, 4K, RF-Mount, Dual Pixel CMOS AF II, WLAN/Bluetooth",
+   "raw": "103° - Canon EOS R50 V Vlog-Kamera (Body, ohne Objektiv), APS-C, 24,2 MP, 4K, RF-Mount, Dual Pixel CMOS AF II, WLAN/Bluetooth",
    "title": "Canon EOS R50 V Vlog-Kamera",
-   "grad": 0,
+   "grad": 103,
    "price": 459.0,
    "cat": "Technik",
    "hints": [],
-   "pub": 1795191587.0,
+   "pub": 1795227624.0,
    "quelle": "https://www.mydealz.de/deals/canon-eos-r50-v-vlog-kamera-gehause-aps-c-242-mp-4k-rf-mount-dual-pixel-cmos-af-ii-wlanbluetooth-2877357"
   },
   "2877344": {
@@ -2797,13 +2665,13 @@
   },
   "2877386": {
    "id": "2877386",
-   "raw": "Thermaltake Toughpower GT 1000W [schwarz oder weiß] ATX-Netzteil, ATX 3.1, 80 PLUS Gold, voll modular, PCIe 5.1 12V-2x6, Smart Zero Fan",
+   "raw": "113° - Thermaltake Toughpower GT 1000W [schwarz oder weiß] ATX-Netzteil, ATX 3.1, 80 PLUS Gold, voll modular, PCIe 5.1 12V-2x6, Smart Zero Fan",
    "title": "Thermaltake Toughpower GT 1000W ATX-Netzteil",
-   "grad": 0,
+   "grad": 113,
    "price": 99.0,
    "cat": "Technik",
    "hints": [],
-   "pub": 1795193617.0,
+   "pub": 1795230937.0,
    "quelle": "https://www.mydealz.de/deals/thermaltake-toughpower-gt-1000w-schwarz-oder-weiss-atx-netzteil-atx-31-80-plus-gold-voll-modular-pcie-51-12v-2x6-smart-zero-fan-2877386"
   },
   "2877385": {
@@ -2918,13 +2786,13 @@
   },
   "2877414": {
    "id": "2877414",
-   "raw": "UGREEN Nexode Air USB C Ladegerät 65W Mini mit AVS | GaNInfinity, TÜV-zertifiziert - Prime",
+   "raw": "113° - UGREEN Nexode Air USB C Ladegerät 65W Mini mit AVS | GaNInfinity, TÜV-zertifiziert - Prime",
    "title": "UGREEN Nexode Air USB C Ladegerät 65W Mini mit AVS",
-   "grad": 0,
+   "grad": 113,
    "price": 23.73,
    "cat": "Technik",
    "hints": [],
-   "pub": 1795195860.0,
+   "pub": 1795239719.0,
    "quelle": "https://www.mydealz.de/deals/ugreen-nexode-air-usb-c-ladegerat-65w-mini-mit-avs-ganinfinity-tuv-zertifiziert-prime-2877414"
   },
   "2877412": {
@@ -2954,13 +2822,13 @@
   },
   "2877409": {
    "id": "2877409",
-   "raw": "GXTrust Emita II USB-Mikrofon mit Arm, Pop- und Windfilter, Niere, 192 kHz/24 Bit, für PC/PS4/PS5, Schwarz",
+   "raw": "121° - GXTrust Emita II USB-Mikrofon mit Arm, Pop- und Windfilter, Niere, 192 kHz/24 Bit, für PC/PS4/PS5, Schwarz",
    "title": "GXTrust Emita II USB-Mikrofon mit Arm",
-   "grad": 0,
+   "grad": 121,
    "price": 59.99,
    "cat": "Gaming",
    "hints": [],
-   "pub": 1795195683.0,
+   "pub": 1795228302.0,
    "quelle": "https://www.mydealz.de/deals/gxtrust-emita-ii-usb-mikrofon-mit-arm-pop-und-windfilter-niere-192-khz24-bit-fur-pcps4ps5-schwarz-2877409"
   },
   "2877407": {
@@ -3141,9 +3009,9 @@
   },
   "2877438": {
    "id": "2877438",
-   "raw": "110° - Adidas Essentials 3-Streifen French Terry Sweatshirt | Gr. XS/S/L/XXL (PRIME)",
+   "raw": "113° - Adidas Essentials 3-Streifen French Terry Sweatshirt | Gr. XS/S/L/XXL (PRIME)",
    "title": "Adidas Essentials 3-Streifen French Terry Sweatshirt",
-   "grad": 110,
+   "grad": 113,
    "price": 19.92,
    "cat": "Mode",
    "hints": [],
@@ -3297,13 +3165,13 @@
   },
   "2877493": {
    "id": "2877493",
-   "raw": "[Prime] [Black Friday] Victorinox Okulier und Hakenmesser",
+   "raw": "116° - [Prime] [Black Friday] Victorinox Okulier und Hakenmesser",
    "title": "Victorinox Okulier und Hakenmesser",
-   "grad": 0,
+   "grad": 116,
    "price": 27.49,
    "cat": "Sport & Freizeit",
    "hints": [],
-   "pub": 1795200912.0,
+   "pub": 1795231069.0,
    "quelle": "https://www.mydealz.de/deals/prime-black-friday-victorinox-okulier-und-hakenmesser-2877493"
   },
   "2877481": {
@@ -3544,9 +3412,9 @@
   },
   "2877538": {
    "id": "2877538",
-   "raw": "130° - Bluey: Das Videospiel PS4 & PS5 (Amazon Prime)",
+   "raw": "141° - Bluey: Das Videospiel PS4 & PS5 (Amazon Prime)",
    "title": "Bluey: Das Videospiel PS4 & PS5",
-   "grad": 130,
+   "grad": 141,
    "price": 14.99,
    "cat": "Gaming",
    "hints": [],
@@ -3588,9 +3456,9 @@
   },
   "2877566": {
    "id": "2877566",
-   "raw": "136° - NIGRIN 6190 Eiskratzer - Prime",
+   "raw": "137° - NIGRIN 6190 Eiskratzer - Prime",
    "title": "NIGRIN 6190 Eiskratzer",
-   "grad": 136,
+   "grad": 137,
    "price": 7.58,
    "cat": "Garten & Baumarkt",
    "hints": [],
@@ -3610,13 +3478,13 @@
   },
   "2877563": {
    "id": "2877563",
-   "raw": "Pampers Gr. 3 Sparabo 16ct pro Windel (Prime)",
+   "raw": "113° - Pampers Gr. 3 Sparabo 16ct pro Windel (Prime)",
    "title": "Pampers Gr. 3 16ct pro Windel",
-   "grad": 0,
+   "grad": 113,
    "price": 34.37,
    "cat": null,
    "hints": [],
-   "pub": 1795207874.0,
+   "pub": 1795239614.0,
    "quelle": "https://www.mydealz.de/deals/pampers-gr-3-sparabo-16ct-pro-windel-2877563"
   },
   "2877561": {
@@ -3632,24 +3500,24 @@
   },
   "2877560": {
    "id": "2877560",
-   "raw": "PLAYMOBIL 71862 –Western Promo Pack: Postkutschenüberfall im Wilden Westen Postkutsche, 3 Pferden & 2 Figuren bei Amazon für 17,09€ - Prime",
+   "raw": "111° - PLAYMOBIL 71862 –Western Promo Pack: Postkutschenüberfall im Wilden Westen Postkutsche, 3 Pferden & 2 Figuren bei Amazon für 17,09€ - Prime",
    "title": "PLAYMOBIL 71862 –Western Promo Pack: Postkutschenüberfall im Wilden",
-   "grad": 0,
+   "grad": 111,
    "price": 17.09,
    "cat": null,
    "hints": [],
-   "pub": 1795207672.0,
+   "pub": 1795239617.0,
    "quelle": "https://www.mydealz.de/deals/playmobil-71862-western-promo-pack-postkutschenuberfall-im-wilden-westen-mit-postkutsche-3-pferden-2-figuren-bei-amazon-fur-1709-euro-2877560"
   },
   "2877558": {
    "id": "2877558",
-   "raw": "Playmobil Asterix Römischer Streitwagen mit Senator Brutus, Soldat & 2 Pferden jetzt für 17,12 Euro bei Amazon!",
+   "raw": "109° - Playmobil Asterix Römischer Streitwagen mit Senator Brutus, Soldat & 2 Pferden jetzt für 17,12 Euro bei Amazon!",
    "title": "Playmobil Asterix Römischer Streitwagen mit Senator Brutus",
-   "grad": 0,
+   "grad": 109,
    "price": 17.12,
    "cat": null,
    "hints": [],
-   "pub": 1795207423.0,
+   "pub": 1795239996.0,
    "quelle": "https://www.mydealz.de/deals/playmobil-asterix-romischer-streitwagen-mit-senator-brutus-soldat-2-pferden-jetzt-fur-1712-euro-bei-amazon-2877558"
   },
   "2875229": {
@@ -3709,9 +3577,9 @@
   },
   "2877589": {
    "id": "2877589",
-   "raw": "228° - Metroid Prime 4: Beyond ~ 24,66€ | Nintendo Switch | Physisch (Modul) | Amazon Prime",
+   "raw": "245° - Metroid Prime 4: Beyond ~ 24,66€ | Nintendo Switch | Physisch (Modul) | Amazon Prime",
    "title": "Metroid 4: Beyond ~",
-   "grad": 228,
+   "grad": 245,
    "price": 24.66,
    "cat": "Gaming",
    "hints": [],
@@ -3720,9 +3588,9 @@
   },
   "2877587": {
    "id": "2877587",
-   "raw": "119° - Sigma Aura 80 USB + Blaze LED-Fahrradbeleuchtung Set (80 Lux, StVZO, Bremslicht) für 39,99 € inkl. Versand (Prime)",
+   "raw": "135° - Sigma Aura 80 USB + Blaze LED-Fahrradbeleuchtung Set (80 Lux, StVZO, Bremslicht) für 39,99 € inkl. Versand (Prime)",
    "title": "Sigma Aura 80 USB + Blaze LED-Fahrradbeleuchtung Set",
-   "grad": 119,
+   "grad": 135,
    "price": 39.99,
    "cat": "Sport & Freizeit",
    "hints": [],
@@ -3731,9 +3599,9 @@
   },
   "2877586": {
    "id": "2877586",
-   "raw": "168° - Gothic Classic - PS5 Playstation - Disc - Pirania/THQ Nordic - USK 12 @ Prime",
+   "raw": "177° - Gothic Classic - PS5 Playstation - Disc - Pirania/THQ Nordic - USK 12 @ Prime",
    "title": "Gothic Classic PS5 Playstation",
-   "grad": 168,
+   "grad": 177,
    "price": 19.99,
    "cat": "Gaming",
    "hints": [],
@@ -3753,9 +3621,9 @@
   },
   "2877583": {
    "id": "2877583",
-   "raw": "101° - LEGO City 60503 Hubschrauber der Küstenwache für 34,99 € bei Amazon (Prime)",
+   "raw": "103° - LEGO City 60503 Hubschrauber der Küstenwache für 34,99 € bei Amazon (Prime)",
    "title": "LEGO City 60503 Hubschrauber der Küstenwache bei",
-   "grad": 101,
+   "grad": 103,
    "price": 34.99,
    "cat": null,
    "hints": [],
@@ -3896,13 +3764,13 @@
   },
   "2877612": {
    "id": "2877612",
-   "raw": "Red Bull Sugarfree Energy Drink Kirsche-Sakura Cherry Edition 250 ml, 24-Pack",
+   "raw": "118° - Red Bull Sugarfree Energy Drink Kirsche-Sakura Cherry Edition 250 ml, 24-Pack",
    "title": "Red Bull Sugarfree Energy Drink Kirsche-Sakura Cherry Edition 250 ml",
-   "grad": 0,
+   "grad": 118,
    "price": 23.76,
    "cat": "Haushalt",
    "hints": [],
-   "pub": 1795214234.0,
+   "pub": 1795222443.0,
    "quelle": "https://www.mydealz.de/deals/red-bull-sugarfree-energy-drink-kirsche-sakura-cherry-edition-250-ml-24-pack-2877612"
   },
   "2877611": {
@@ -3995,9 +3863,9 @@
   },
   "2835910": {
    "id": "2835910",
-   "raw": "1243° - Oclean Elektrische Zahnbürste Flow TravelGo Set, Schallzahnbürste mit Reiseetui & 6 Bürstenköpfen, 180 Tage Akkulaufzei (Prime)",
+   "raw": "Oclean Elektrische Zahnbürste Flow TravelGo Set, Schallzahnbürste mit Reiseetui & 6 Bürstenköpfen, 180 Tage Akkulaufzei (Prime)",
    "title": "Oclean Elektrische Zahnbürste Flow TravelGo Set",
-   "grad": 1243,
+   "grad": 0,
    "price": 37.05,
    "cat": "Beauty & Pflege",
    "hints": [],
@@ -4010,7 +3878,7 @@
    "title": "Meta Glasses",
    "grad": 0,
    "price": 215.0,
-   "cat": "Haushalt",
+   "cat": "Technik",
    "hints": [],
    "pub": 1795219285.0,
    "quelle": "https://www.mydealz.de/deals/meta-glasses-adventurer-ai-glasses-standard-schwarz-glaser-transparent-2877652"
@@ -4028,7 +3896,7 @@
   },
   "2877660": {
    "id": "2877660",
-   "raw": "Würfelkönig von Haba - Neuauflage mit extra Karten",
+   "raw": "Würfelkönig von Haba - Neuauflage mit extra Karten (Prime)",
    "title": "Würfelkönig von Haba",
    "grad": 0,
    "price": 8.47,
@@ -4047,6 +3915,140 @@
    "hints": [],
    "pub": 1795221215.0,
    "quelle": "https://www.mydealz.de/deals/games-planet-7-ft-billardtisch-premium-zubehor-9-farbvarianten-214x122x82-cm-lxbxh-2877657"
+  },
+  "2877666": {
+   "id": "2877666",
+   "raw": "Schleich (14816) - Panzernashorn - WILD LIFE - Spielfigur - Amazon (Prime)",
+   "title": "Schleich (14816) Panzernashorn",
+   "grad": 0,
+   "price": 3.59,
+   "cat": null,
+   "hints": [],
+   "pub": 1795223566.0,
+   "quelle": "https://www.mydealz.de/deals/schleich-14816-panzernashorn-wild-life-spielfigur-amazon-prime-2877666"
+  },
+  "2877665": {
+   "id": "2877665",
+   "raw": "200° - Levi's Herren New Duncan Gürtel aus 100 % Leder • Hergestellt in Italien in 70, 80, 105 & 120 cm (Prime)",
+   "title": "Levi's Herren New Duncan Gürtel aus 100 % Leder • Hergestellt in",
+   "grad": 200,
+   "price": 10.65,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795236555.0,
+   "quelle": "https://www.mydealz.de/deals/levis-herren-new-duncan-gurtel-aus-100-leder-hergestellt-in-italien-in-70-80-105-120-cm-prime-2877665"
+  },
+  "2877662": {
+   "id": "2877662",
+   "raw": "Prophete GENIESSER 5.0 (Diamant / 50 cm)",
+   "title": "Prophete GENIESSER 5.0",
+   "grad": 0,
+   "price": 1469.65,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795222444.0,
+   "quelle": "https://www.mydealz.de/deals/prophete-geniesser-50-diamant-50-cm-2877662"
+  },
+  "2877671": {
+   "id": "2877671",
+   "raw": "135° - Müsliriegel Corny Milch Dark & White | Mit Kakao & Milchcreme | 24 Stück (Prime)",
+   "title": "Müsliriegel Corny Milch Dark & White",
+   "grad": 135,
+   "price": 7.82,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795239408.0,
+   "quelle": "https://www.mydealz.de/deals/musliriegel-corny-milch-dark-white-mit-kakao-milchcreme-24-stuck-2877671"
+  },
+  "2874627": {
+   "id": "2874627",
+   "raw": "102° - Fjällräven Bergtagen Touring 30 Rucksack",
+   "title": "Fjällräven Bergtagen Touring 30 Rucksack",
+   "grad": 102,
+   "price": 156.91,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795231130.0,
+   "quelle": "https://www.mydealz.de/deals/fjallraven-bergtagen-touring-30-rucksack-2874627"
+  },
+  "2876057": {
+   "id": "2876057",
+   "raw": "100° - [Sammeldeal] HEAD Padelschläger bei Amazon: Evo Speed, Evo Extreme, Radical, Vibe | z.B. Padel Schläger Head Evo Speed 2025 für 60,19€",
+   "title": "HEAD Padelschläger bei Evo Speed",
+   "grad": 100,
+   "price": 60.19,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795231079.0,
+   "quelle": "https://www.mydealz.de/deals/sammeldeal-head-padelschlager-bei-amazon-evo-speed-evo-extreme-radical-vibe-zb-padel-schlager-head-evo-speed-2025-fur-6019eur-2876057"
+  },
+  "2876169": {
+   "id": "2876169",
+   "raw": "114° - Corsair iCUE LINK QX120 RGB 120 mm Gehäuselüfter, Magnetschwebelager, Zero RPM, PWM, 34 RGB-LEDs, Schwarz",
+   "title": "Corsair iCUE LINK QX120 RGB 120 mm Gehäuselüfter",
+   "grad": 114,
+   "price": 24.9,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795231034.0,
+   "quelle": "https://www.mydealz.de/deals/corsair-icue-link-qx120-rgb-120-mm-gehauselufter-magnetschwebelager-zero-rpm-pwm-34-rgb-leds-schwarz-2876169"
+  },
+  "2877431": {
+   "id": "2877431",
+   "raw": "135° - Lenovo L27-4r 27 Zoll FHD Monitor, IPS, 165 Hz, 99 % sRGB, AMD FreeSync, HDMI, VGA, Lautsprecher",
+   "title": "Lenovo L27-4r 27 Zoll FHD Monitor",
+   "grad": 135,
+   "price": 109.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795230928.0,
+   "quelle": "https://www.mydealz.de/deals/lenovo-l27-4r-27-zoll-fhd-monitor-ips-165-hz-99-srgb-amd-freesync-hdmi-vga-lautsprecher-2877431"
+  },
+  "2877677": {
+   "id": "2877677",
+   "raw": "FLYING GOOSE Sriracha Spicy Mayoo Sauce, extra scharfe Mayonnaise, sehr scharf, orange Kappe 455 ml (Spar-Abo Prime)",
+   "title": "FLYING GOOSE Sriracha Spicy Mayoo Sauce",
+   "grad": 0,
+   "price": 4.74,
+   "cat": "Haushalt",
+   "hints": [
+    "nur im Spar-Abo"
+   ],
+   "pub": 1795234258.0,
+   "quelle": "https://www.mydealz.de/deals/flying-goose-sriracha-spicy-mayoo-sauce-extra-scharfe-mayonnaise-sehr-scharf-orange-kappe-455-ml-spar-abo-prime-2877677"
+  },
+  "2877679": {
+   "id": "2877679",
+   "raw": "Figo Kinder-Pflaster \"Kleine Abenteurer\" 10 Stück 1€ /LISTERINE Cool Mint Mild Reisegröße 1,16€ 95 ml/Kamill Handcreme Balsam/Protect 100ml",
+   "title": "Figo Kinder-Pflaster \"Kleine Abenteurer\" 10 Stück /LISTERINE Cool Mint",
+   "grad": 0,
+   "price": 1.0,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1795237093.0,
+   "quelle": "https://www.mydealz.de/deals/figo-kinder-pflaster-kleine-abenteurer-10-stuck-1eur-listerine-cool-mint-mild-reisegrosse-116eur-95-mlkamill-handcreme-balsamprotect-100ml-2877679"
+  },
+  "2877688": {
+   "id": "2877688",
+   "raw": "Bosch Hochdruckreiniger EasyAquatak 120 Premium Kit (1500 W, 120 bar, inkl. Haus- und Auto-Kit)",
+   "title": "Bosch Hochdruckreiniger EasyAquatak 120 Premium Kit",
+   "grad": 0,
+   "price": 68.82,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795239863.0,
+   "quelle": "https://www.mydealz.de/deals/bosch-hochdruckreiniger-easyaquatak-120-premium-kit-1500-w-120-bar-inkl-haus-und-auto-kit-2877688"
+  },
+  "2877696": {
+   "id": "2877696",
+   "raw": "[Amazon] PUMA Damen Sneaker ab 19,49€ (Gr. 38,4)",
+   "title": "PUMA Damen Sneaker",
+   "grad": 0,
+   "price": 19.49,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795241650.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-puma-damen-sneaker-ab-1949eur-gr-384-2877696"
   }
  }
 }
