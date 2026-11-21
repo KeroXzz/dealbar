@@ -8,162 +8,6 @@
   4
  ],
  "vs": {
-  "2859613": {
-   "id": "2859613",
-   "raw": "448° - Metroid Prime 4: Beyond - [Nintendo Switch] @ PRIME",
-   "title": "Metroid 4: Beyond",
-   "grad": 448,
-   "price": 26.59,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795106885.0,
-   "quelle": "https://www.mydealz.de/deals/metroid-prime-4-beyond-nintendo-switch-at-prime-2859613",
-   "marke": "Nintendo",
-   "asin": "B071KBX7CM",
-   "link": "https://www.amazon.de/dp/B071KBX7CM",
-   "t": 1795107604.000666,
-   "state": "",
-   "list": 69,
-   "ids": [
-    "2859613",
-    "2863333",
-    "2849823",
-    "2864038",
-    "2866857",
-    "2848502"
-   ],
-   "label": "18:00"
-  },
-  "2863333": {
-   "id": "2863333",
-   "raw": "370° - UGREEN 80Gbps M.2 NVMe SSD Gehäuse mit passivem Kühlsystem | kompatibel mit Thunderbolt 5 / 4 / USB4, bis 7000MB/s, inkl. 50cm Kabel (Prime)",
-   "title": "UGREEN 80Gbps M.2 NVMe SSD Gehäuse mit passivem Kühlsystem",
-   "grad": 370,
-   "price": 148.79,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795086027.0,
-   "quelle": "https://www.mydealz.de/deals/ugreen-80gbps-m2-nvme-ssd-gehause-mit-passivem-kuhlsystem-kompatibel-mit-thunderbolt-5-4-usb4-bis-zu-7000mbs-inkl-50cm-kabel-2863333",
-   "marke": "Ugreen",
-   "asin": "B0GG9PS1F6",
-   "link": "https://www.amazon.de/dp/B0GG9PS1F6",
-   "t": 1795107604.000666,
-   "state": "",
-   "list": 69,
-   "ids": [
-    "2859613",
-    "2863333",
-    "2849823",
-    "2864038",
-    "2866857",
-    "2848502"
-   ],
-   "label": "18:00"
-  },
-  "2849823": {
-   "id": "2849823",
-   "raw": "295° - UGREEN FineCam Lite 4K • UHD Webcam 4K, Webcam mit Mikrofon und Objektivabdeckung • PC Kamera Autofokus • Prime",
-   "title": "UGREEN FineCam Lite 4K • UHD Webcam 4K",
-   "grad": 295,
-   "price": 27.67,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795094654.0,
-   "quelle": "https://www.mydealz.de/deals/ugreen-finecam-lite-4k-uhd-webcam-4k-webcam-mit-mikrofon-und-objektivabdeckung-pc-kamera-autofokus-prime-2849823",
-   "marke": "Ugreen",
-   "asin": "B0DT9MMZTL",
-   "link": "https://www.amazon.de/dp/B0DT9MMZTL",
-   "t": 1795107604.000666,
-   "state": "",
-   "list": 69,
-   "ids": [
-    "2859613",
-    "2863333",
-    "2849823",
-    "2864038",
-    "2866857",
-    "2848502"
-   ],
-   "label": "18:00"
-  },
-  "2864038": {
-   "id": "2864038",
-   "raw": "291° - LEGO Botanicals Fröhliche Pflanzen (10349) für 11,69 € mit Amazon Prime",
-   "title": "LEGO Botanicals Fröhliche Pflanzen",
-   "grad": 291,
-   "price": 11.69,
-   "cat": null,
-   "hints": [],
-   "pub": 1795098762.0,
-   "quelle": "https://www.mydealz.de/deals/lego-botanicals-frohliche-pflanzen-10349-fur-1169-eur-mit-amazon-prime-2864038",
-   "marke": "Lego",
-   "asin": "B0DWDRZDZC",
-   "link": "https://www.amazon.de/dp/B0DWDRZDZC",
-   "t": 1795107604.000666,
-   "state": "",
-   "list": 69,
-   "ids": [
-    "2859613",
-    "2863333",
-    "2849823",
-    "2864038",
-    "2866857",
-    "2848502"
-   ],
-   "label": "18:00"
-  },
-  "2866857": {
-   "id": "2866857",
-   "raw": "248° - [Prime] Aioneus 40W USB-C Ladegerät | 4 Ports (2x USB-C PD 20W, 2x USB-A) für z. B. iPhone, Samsung Galaxy, iPad, AirPods",
-   "title": "Aioneus 40W USB-C Ladegerät",
-   "grad": 248,
-   "price": 8.54,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795088610.0,
-   "quelle": "https://www.mydealz.de/deals/prime-aioneus-40w-usb-c-ladegerat-4-ports-2x-usb-c-pd-20w-2x-usb-a-fur-z-b-iphone-samsung-galaxy-ipad-airpods-2866857",
-   "marke": "Samsung",
-   "asin": "B0BVMMPN54",
-   "link": "https://www.amazon.de/dp/B0BVMMPN54",
-   "t": 1795107604.000666,
-   "state": "",
-   "list": 69,
-   "ids": [
-    "2859613",
-    "2863333",
-    "2849823",
-    "2864038",
-    "2866857",
-    "2848502"
-   ],
-   "label": "18:00"
-  },
-  "2848502": {
-   "id": "2848502",
-   "raw": "233° - [Prime] UGREEN 10.000mAh MagFlow Pro Magsafe Powerbank | Qi2 25W, USB-C 45W, Flüssigkeitskühlung, Smart-Display, Integriertes Kabel",
-   "title": "UGREEN 10.000mAh MagFlow Pro Magsafe Powerbank",
-   "grad": 233,
-   "price": 89.29,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795090735.0,
-   "quelle": "https://www.mydealz.de/deals/prime-ugreen-10000mah-magflow-pro-magsafe-powerbank-qi2-25w-usb-c-45w-flussigkeitskuhlung-smart-display-integriertes-kabel-2848502",
-   "marke": "Ugreen",
-   "asin": "B0GYYY5CW9",
-   "link": "https://www.amazon.de/dp/B0GYYY5CW9",
-   "t": 1795107604.000666,
-   "state": "",
-   "list": 69,
-   "ids": [
-    "2859613",
-    "2863333",
-    "2849823",
-    "2864038",
-    "2866857",
-    "2848502"
-   ],
-   "label": "18:00"
-  },
   "2869477": {
    "id": "2869477",
    "raw": "398° - Apple AirPods Pro 3 [Amazon / Joybuy]",
@@ -633,6 +477,162 @@
     "2877197"
    ],
    "label": "08:00"
+  },
+  "2864831": {
+   "id": "2864831",
+   "raw": "729° - Das eine Million-Dollar Date / Gratis Ebook / Amazon Kindle / Apple Books / 4.0* >800 Bewertungen",
+   "title": "Das eine Million-Dollar Date / Gratis Ebook / Kindle / Apple Books /",
+   "grad": 729,
+   "price": null,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795244895.0,
+   "quelle": "https://www.mydealz.de/deals/das-eine-million-dollar-date-gratis-ebook-amazon-kindle-40-800-bewertungen-2864831",
+   "marke": "Kindle",
+   "asin": "B083HPHK9K",
+   "link": "https://www.amazon.de/dp/B083HPHK9K",
+   "t": 1795280422.2746673,
+   "state": "",
+   "list": 73,
+   "ids": [
+    "2864831",
+    "2869550",
+    "2869870",
+    "2877665",
+    "2877981",
+    "2877318"
+   ],
+   "label": "18:00"
+  },
+  "2869550": {
+   "id": "2869550",
+   "raw": "288° - [Prime] UGREEN FineTrack Mini 2 Tracker für Apple Find My (nur iOS), 4 Pack 110dB Leuchtendes Design IP68 Schlüsselfinder",
+   "title": "UGREEN FineTrack Mini 2 Tracker für Apple Find My",
+   "grad": 288,
+   "price": 19.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795244941.0,
+   "quelle": "https://www.mydealz.de/deals/prime-ugreen-finetrack-mini-2-tracker-fur-apple-find-my-nur-ios-4-pack-gps-tracker-110db-leuchtendes-design-ip68-schlusselfinder-2869550",
+   "marke": "Ugreen",
+   "asin": "B0G64ZTDQD",
+   "link": "https://www.amazon.de/dp/B0G64ZTDQD",
+   "t": 1795280422.2746673,
+   "state": "",
+   "list": 73,
+   "ids": [
+    "2864831",
+    "2869550",
+    "2869870",
+    "2877665",
+    "2877981",
+    "2877318"
+   ],
+   "label": "18:00"
+  },
+  "2869870": {
+   "id": "2869870",
+   "raw": "223° - [Amazon / OTTO UP Basic] PLAYMOBIL 72112 Große Löwenritterburg – 183 Teile, 3 Ritter, ab 4 Jahren",
+   "title": "PLAYMOBIL 72112 Große Löwenritterburg",
+   "grad": 223,
+   "price": 85.48,
+   "cat": null,
+   "hints": [],
+   "pub": 1795244261.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-otto-up-basic-playmobil-72112-grosse-lowenritterburg-183-teile-3-ritter-ab-4-jahren-2869870",
+   "marke": "Playmobil",
+   "asin": "B0G7LFXY3N",
+   "link": "https://www.amazon.de/dp/B0G7LFXY3N",
+   "t": 1795280422.2746673,
+   "state": "",
+   "list": 73,
+   "ids": [
+    "2864831",
+    "2869550",
+    "2869870",
+    "2877665",
+    "2877981",
+    "2877318"
+   ],
+   "label": "18:00"
+  },
+  "2877665": {
+   "id": "2877665",
+   "raw": "216° - Levi's Herren New Duncan Gürtel aus 100 % Leder • Hergestellt in Italien in 70, 80, 105 & 120 cm (Prime)",
+   "title": "Levi's Herren New Duncan Gürtel aus 100 % Leder • Hergestellt in",
+   "grad": 216,
+   "price": 10.65,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795236555.0,
+   "quelle": "https://www.mydealz.de/deals/levis-herren-new-duncan-gurtel-aus-100-leder-hergestellt-in-italien-in-70-80-105-120-cm-prime-2877665",
+   "marke": "Levi's",
+   "asin": "B06XFNZ487",
+   "link": "https://www.amazon.de/dp/B06XFNZ487",
+   "t": 1795280422.2746673,
+   "state": "",
+   "list": 73,
+   "ids": [
+    "2864831",
+    "2869550",
+    "2869870",
+    "2877665",
+    "2877981",
+    "2877318"
+   ],
+   "label": "18:00"
+  },
+  "2877981": {
+   "id": "2877981",
+   "raw": "188° - Garmin Fenix 8, 47 mm, GPS-Multisport-Smartwatch, Schwarz/Schiefergrau (Prime)",
+   "title": "Garmin Fenix 8",
+   "grad": 188,
+   "price": 499.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795272069.0,
+   "quelle": "https://www.mydealz.de/deals/garmin-fenix-8-47-mm-gps-multisport-smartwatch-schwarzschiefergrau-prime-2877981",
+   "marke": "Garmin",
+   "asin": "B0DC6ZD31R",
+   "link": "https://www.amazon.de/dp/B0DC6ZD31R",
+   "t": 1795280422.2746673,
+   "state": "",
+   "list": 73,
+   "ids": [
+    "2864831",
+    "2869550",
+    "2869870",
+    "2877665",
+    "2877981",
+    "2877318"
+   ],
+   "label": "18:00"
+  },
+  "2877318": {
+   "id": "2877318",
+   "raw": "186° - (Amazon Kindle) R/N/A: Tödliche Sequenz | Medizin-Thriller; Science Fiction | eBook | 4,2*>965 Bew.",
+   "title": "R/N/A: Tödliche Sequenz",
+   "grad": 186,
+   "price": null,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795192853.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-kindle-rna-todliche-sequenz-medizin-thriller-science-fiction-ebook-42965-bew-2877318",
+   "marke": "Kindle",
+   "asin": "B0C6H779NX",
+   "link": "https://www.amazon.de/dp/B0C6H779NX",
+   "t": 1795280422.2746673,
+   "state": "",
+   "list": 73,
+   "ids": [
+    "2864831",
+    "2869550",
+    "2869870",
+    "2877665",
+    "2877981",
+    "2877318"
+   ],
+   "label": "18:00"
   }
  },
  "vs_seen": [
@@ -721,44 +721,17 @@
   "2832126",
   "2832289",
   "2877589",
-  "2877197"
+  "2877197",
+  "2864831",
+  "2869550",
+  "2869870",
+  "2877665",
+  "2877981",
+  "2877318"
  ],
- "vs_slot": "2026-11-21 08:00",
- "vs_poll": 1795261953.6648579,
+ "vs_slot": "2026-11-21 18:00",
+ "vs_poll": 1795283604.3251417,
  "vs_pool": {
-  "2876692": {
-   "id": "2876692",
-   "raw": "113° - (Prime) Brettspielerweiterung zu Dune: Imperium (Uprising) – Rise of Ix",
-   "title": "Brettspielerweiterung zu Dune: Imperium",
-   "grad": 113,
-   "price": 33.89,
-   "cat": null,
-   "hints": [],
-   "pub": 1795182172.0,
-   "quelle": "https://www.mydealz.de/deals/prime-dune-imperium-rise-of-ix-erweiterung-2876692"
-  },
-  "2876780": {
-   "id": "2876780",
-   "raw": "125° - Samsung Induktive Powerbank 10.000 mAh 25 Watt EB-U2510 [amazon prime] oder [OTTO UP] für effektiv 4,99 € möglich",
-   "title": "Samsung Induktive Powerbank 10.000 mAh 25 Watt EB-U2510 oder für",
-   "grad": 125,
-   "price": 14.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795189598.0,
-   "quelle": "https://www.mydealz.de/deals/samsung-induktive-powerbank-10000-mah-25-watt-eb-u2510-amazon-prime-oder-otto-up-fur-effektiv-499-eur-moglich-2876780"
-  },
-  "2876827": {
-   "id": "2876827",
-   "raw": "108° - tonies Hörfigur für Toniebox, Disney - Mickys großes Weihnachtsfest, Hörspiel für Kinder ab 4 Jahren, Spielzeit ca. 71 Minuten (Prime)",
-   "title": "tonies Hörfigur für Toniebox",
-   "grad": 108,
-   "price": 13.99,
-   "cat": null,
-   "hints": [],
-   "pub": 1795187541.0,
-   "quelle": "https://www.mydealz.de/deals/tonies-horfigur-fur-toniebox-disney-mickys-grosses-weihnachtsfest-horspiel-fur-kinder-ab-4-jahren-spielzeit-ca-71-minuten-2876827"
-  },
   "2876804": {
    "id": "2876804",
    "raw": "126° - [Prime] tonies Hörfigur für Toniebox, Weihnachtslieder: Rolf Zuckowski",
@@ -769,17 +742,6 @@
    "hints": [],
    "pub": 1795194595.0,
    "quelle": "https://www.mydealz.de/deals/primetonies-horfigur-fur-toniebox-weihnachtslieder-rolf-zuckowski-2876804"
-  },
-  "2876856": {
-   "id": "2876856",
-   "raw": "120° - [amazon] HAZET Adventskalender ADVENTSKALENDER26, 24-teilig, Akku-Kompressor 24-teilig, Akku-Luftkompressor, 5000 mAh, bis 10,3 bar,",
-   "title": "HAZET Adventskalender ADVENTSKALENDER26",
-   "grad": 120,
-   "price": 49.99,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795187519.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-hazet-adventskalender-adventskalender26-24-teilig-akku-kompressor-24-teilig-akku-luftkompressor-5000-mah-bis-103-bar-2876856"
   },
   "2876896": {
    "id": "2876896",
@@ -792,61 +754,6 @@
    "pub": 1795193090.0,
    "quelle": "https://www.mydealz.de/deals/tatonka-edc-pack-30l-bc-rucksack-in-schwarz-2876896"
   },
-  "2877001": {
-   "id": "2877001",
-   "raw": "112° - Blink Black Friday | z. B. Blink Außenkamera mit Flutlicht & Sync-Modul für 37,99 € | u. a. auch Solaris 2K+, Video-Türklingel 2K+, Mini 2K+",
-   "title": "Blink Black Friday",
-   "grad": 112,
-   "price": 37.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795182953.0,
-   "quelle": "https://www.mydealz.de/deals/blink-black-friday-z-b-blink-aussenkamera-mit-flutlicht-sync-modul-fur-3799-eur-u-a-auch-solaris-2k-video-turklingel-2k-mini-2k-2877001"
-  },
-  "2876969": {
-   "id": "2876969",
-   "raw": "109° - LG 75NU8E0B3LA Nano 4K UHD TV",
-   "title": "LG 75NU8E0B3LA Nano 4K UHD TV",
-   "grad": 109,
-   "price": 619.0,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795189197.0,
-   "quelle": "https://www.mydealz.de/deals/lg-75nu8e0b3la-nano-4k-uhd-tv-2876969"
-  },
-  "2877038": {
-   "id": "2877038",
-   "raw": "105° - Olivia Rodrigo - You Seem Pretty Sad For A Girl So In Love (Black Vinyl) [Prime]",
-   "title": "Olivia Rodrigo You Seem Pretty Sad For A Girl So In Love",
-   "grad": 105,
-   "price": 22.85,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795188787.0,
-   "quelle": "https://www.mydealz.de/deals/olivia-rodrigo-you-seem-pretty-sad-for-a-girl-so-in-love-black-vinyl-prime-2877038"
-  },
-  "2877029": {
-   "id": "2877029",
-   "raw": "117° - Die weiße Burg Brettspiel Kennerspiel | 1-4 Spieler, ab 12 Jahre I BGG 8.0 (Prime)",
-   "title": "Die weiße Burg Brettspiel Kennerspiel",
-   "grad": 117,
-   "price": 20.89,
-   "cat": null,
-   "hints": [],
-   "pub": 1795184505.0,
-   "quelle": "https://www.mydealz.de/deals/die-weisse-burg-brettspiel-kennerspiel-1-4-spieler-ab-12-jahre-i-bgg-80-prime-2877029"
-  },
-  "2877017": {
-   "id": "2877017",
-   "raw": "109° - Ravensburger Reisespiel Make ’n’ Break | kompaktes Geschicklichkeitsspiel für 2–4 Spieler, ab 8 Jahren (Prime)",
-   "title": "Ravensburger Reisespiel Make ’n’ Break",
-   "grad": 109,
-   "price": 4.74,
-   "cat": null,
-   "hints": [],
-   "pub": 1795189171.0,
-   "quelle": "https://www.mydealz.de/deals/ravensburger-reisespiel-make-n-break-kompaktes-geschicklichkeitsspiel-fur-2-4-spieler-ab-8-jahren-prime-2877017"
-  },
   "2877075": {
    "id": "2877075",
    "raw": "128° - Reduziert Filme und Serien ( 4K - Blu Rays - DVDs - Komplettboxen -) Mini Sammeldeal - Amazon Prime",
@@ -857,107 +764,6 @@
    "hints": [],
    "pub": 1795197970.0,
    "quelle": "https://www.mydealz.de/deals/amazon-prime-reduziert-filme-blu-ray-dvds-komplettboxen-sammeldeal-2877075"
-  },
-  "2877069": {
-   "id": "2877069",
-   "raw": "139° - Bosch Professional GBS 750 Bandschleifer, 850 W, 75 mm Band, Staubbeutel",
-   "title": "Bosch Professional GBS 750 Bandschleifer",
-   "grad": 139,
-   "price": 111.99,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795182477.0,
-   "quelle": "https://www.mydealz.de/deals/bosch-professional-gbs-750-bandschleifer-850-w-75-mm-band-staubbeutel-2877069"
-  },
-  "2877052": {
-   "id": "2877052",
-   "raw": "132° - Corsair MM500 v2 Hybrid-Stoff-Mauspad, 93 x 30 cm, spritzwassergeschützt, vernähte Ränder, rutschfest, Schwarz",
-   "title": "Corsair MM500 v2 Hybrid-Stoff-Mauspad",
-   "grad": 132,
-   "price": 22.49,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795182433.0,
-   "quelle": "https://www.mydealz.de/deals/corsair-mm500-v2-hybrid-stoff-mauspad-93-x-30-cm-spritzwassergeschutzt-vernahte-rander-rutschfest-schwarz-2877052"
-  },
-  "2877118": {
-   "id": "2877118",
-   "raw": "136° - Philips Sonicare 5500 elektrische Zahnbürste Schallzahnbürste 2-er Pack 2 Putzmodi Andruckkontrolle EasyStart SmarTimer BrushPacer HX7119/01",
-   "title": "Philips Sonicare 5500 elektrische Zahnbürste Schallzahnbürste 2-er",
-   "grad": 136,
-   "price": 119.99,
-   "cat": "Beauty & Pflege",
-   "hints": [],
-   "pub": 1795182219.0,
-   "quelle": "https://www.mydealz.de/deals/philips-sonicare-5500-elektrische-zahnburste-schallzahnburste-2-er-pack-2-putzmodi-andruckkontrolle-easystart-smartimer-brushpacer-hx711901-2877118"
-  },
-  "2877117": {
-   "id": "2877117",
-   "raw": "122° - ASUS TUF Gaming 850W Platinum ATX-Netzteil, ATX 3.1, PCIe 5.1, GaN MOSFET, 80 Plus Platinum, voll modular, Schwarz",
-   "title": "ASUS TUF Gaming 850W Platinum ATX-Netzteil",
-   "grad": 122,
-   "price": 99.99,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795187246.0,
-   "quelle": "https://www.mydealz.de/deals/asus-tuf-gaming-850w-platinum-atx-netzteil-atx-31-pcie-51-gan-mosfet-80-plus-platinum-voll-modular-schwarz-2877117"
-  },
-  "2877107": {
-   "id": "2877107",
-   "raw": "105° - Brother PT-N10 Handheld-Beschriftungsgerät, 12 mm Bänder, QWERTZ, LCD, 3 Schriften, 200 Symbole, Batteriebetrieb",
-   "title": "Brother PT-N10 Handheld-Beschriftungsgerät",
-   "grad": 105,
-   "price": 19.37,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795188904.0,
-   "quelle": "https://www.mydealz.de/deals/brother-pt-n10-handheld-beschriftungsgerat-12-mm-bander-qwertz-lcd-3-schriften-200-symbole-batteriebetrieb-2877107"
-  },
-  "2877103": {
-   "id": "2877103",
-   "raw": "122° - Hasbro Kroko Doc –Amazon Prime Black Friday Angebot",
-   "title": "Hasbro Kroko Doc",
-   "grad": 122,
-   "price": 12.49,
-   "cat": null,
-   "hints": [],
-   "pub": 1795189135.0,
-   "quelle": "https://www.mydealz.de/deals/hasbro-kroko-doc-amazon-prime-black-friday-angebot-2877103"
-  },
-  "2877099": {
-   "id": "2877099",
-   "raw": "143° - LG Fit&Max Kühl-/Gefrierkombination, 375 L, No Frost, FRESHConverter+, DoorCooling+, EEK C, Schwarz, GBBS322CEV",
-   "title": "LG Fit&Max Kühl-/Gefrierkombination",
-   "grad": 143,
-   "price": 544.0,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795182856.0,
-   "quelle": "https://www.mydealz.de/deals/lg-fitmax-kuhl-gefrierkombination-375-l-no-frost-freshconverter-doorcooling-eek-c-schwarz-gbbs322cev-2877099"
-  },
-  "2877140": {
-   "id": "2877140",
-   "raw": "154° - Philips Hue Go V2 tragbare Akzentleuchte (White & Color Ambiance, Bluetooth + Zigbee, Akku) weiß für 53,21 € mit 10 € Coupon [Amazon]",
-   "title": "Philips Hue Go V2 tragbare Akzentleuchte",
-   "grad": 154,
-   "price": 53.21,
-   "cat": "Technik",
-   "hints": [
-    "mit Coupon"
-   ],
-   "pub": 1795182456.0,
-   "quelle": "https://www.mydealz.de/deals/philips-hue-go-v2-tragbare-akzentleuchte-white-color-ambiance-bluetooth-zigbee-akku-weiss-fur-5321-eur-mit-10-eur-coupon-amazon-2877140"
-  },
-  "2877133": {
-   "id": "2877133",
-   "raw": "132° - Gorenje OptiBake BSA 6747 A04BG Einbau-Backofen, 77 L, Heißluft, SteamAssist, Bratenthermometer, EEK A+, Schwarz",
-   "title": "Gorenje OptiBake BSA 6747 A04BG Einbau-Backofen",
-   "grad": 132,
-   "price": 349.0,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795189111.0,
-   "quelle": "https://www.mydealz.de/deals/gorenje-optibake-bsa-6747-a04bg-einbau-backofen-77-l-heissluft-steamassist-bratenthermometer-eek-a-schwarz-2877133"
   },
   "2877123": {
    "id": "2877123",
@@ -970,105 +776,6 @@
    "pub": 1795192961.0,
    "quelle": "https://www.mydealz.de/deals/rowenta-x-pert-660-essential-akku-staubsauger-100-w-bis-45-min-kabellos-beutellos-led-duse-rh6838-2877123"
   },
-  "2876970": {
-   "id": "2876970",
-   "raw": "129° - ASUS ROG Strix B850-A Gaming WiFi Mainboard (AM5, ATX, Weiß) | B850, DDR5, PCIe 5.0, WiFi 7, 4x M.2, 14+2+2 Phasen, USB 20Gbps & RGB | Prime",
-   "title": "ASUS ROG Strix B850-A Gaming WiFi Mainboard",
-   "grad": 129,
-   "price": 199.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795185679.0,
-   "quelle": "https://www.mydealz.de/deals/asus-rog-strix-b850-a-gaming-wifi-mainboard-am5-atx-weiss-b850-ddr5-pcie-50-wifi-7-4x-m2-1422-phasen-usb-20gbps-rgb-prime-2876970"
-  },
-  "2877119": {
-   "id": "2877119",
-   "raw": "129° - Sonos Ace (weiß) bei mehreren Anbietern reduziert!",
-   "title": "Sonos Ace (weiß) bei mehreren Anbietern reduziert!",
-   "grad": 129,
-   "price": 178.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795185398.0,
-   "quelle": "https://www.mydealz.de/deals/sonos-ace-weiss-bei-mehreren-anbietern-reduziert-2877119"
-  },
-  "2877174": {
-   "id": "2877174",
-   "raw": "159° - NATURAL ELEMENTS - Proteinriegel | 12x50g (1,17€/Riegel) Dark Choc Mocca oder White Choc Coco Almond | vegetarisch & ohne Palmöl",
-   "title": "NATURAL ELEMENTS Proteinriegel",
-   "grad": 159,
-   "price": 14.0,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795183559.0,
-   "quelle": "https://www.mydealz.de/deals/natural-elements-proteinriegel-12x50g-117eurriegel-dark-choc-mocca-oder-white-choc-coco-almond-vegetarisch-ohne-palmol-2877174"
-  },
-  "2876037": {
-   "id": "2876037",
-   "raw": "130° - Samsung Odyssey G5 G55C 27\" Curved Monitor (2560x1440, 165 Hz, VA, 1000R, HDR10) für 118,06 € bei Amazon",
-   "title": "Samsung Odyssey G5 G55C 27\" Curved Monitor",
-   "grad": 130,
-   "price": 118.06,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795181299.0,
-   "quelle": "https://www.mydealz.de/deals/samsung-odyssey-g5-g55c-27-curved-2560x1440-165-hz-va-1000r-hdr10-fur-11806-eur-bei-amazon-bestpreis-2876037"
-  },
-  "2877190": {
-   "id": "2877190",
-   "raw": "Zeitschaltuhr Brennenstuhl MZ20, mechanische Ausführung für die Steckdose",
-   "title": "Zeitschaltuhr Brennenstuhl MZ20",
-   "grad": 0,
-   "price": 3.17,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795181660.0,
-   "quelle": "https://www.mydealz.de/deals/zeitschaltuhr-brennenstuhl-mz20-mechanische-ausfuhrung-fur-die-steckdose-2877190"
-  },
-  "2877197": {
-   "id": "2877197",
-   "raw": "233° - (Amazon Kindle) Erbarmungslos: Als Burgherr im Heiligen Land | Kreuzritter-Roman | eBook | 4,3*>1850 Bew.",
-   "title": "Erbarmungslos: Als Burgherr im Heiligen Land",
-   "grad": 233,
-   "price": null,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795185010.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-kindle-erbarmungslos-als-burgherr-im-heiligen-land-kreuzritter-roman-ebook-431850-bew-2877197"
-  },
-  "2877199": {
-   "id": "2877199",
-   "raw": "Hasbro Looping Louie Gesellschaftsspiel | Klassiker mit 3D-Aufbau für 2–4 Spieler ab 4 Jahren, Geschicklichkeitsspiel (Prime)",
-   "title": "Hasbro Looping Louie Gesellschaftsspiel",
-   "grad": 0,
-   "price": 19.49,
-   "cat": null,
-   "hints": [],
-   "pub": 1795181607.0,
-   "quelle": "https://www.mydealz.de/deals/hasbro-looping-louie-gesellschaftsspiel-klassiker-mit-3d-aufbau-fur-2-4-spieler-ab-4-jahren-geschicklichkeitsspiel-prime-2877199"
-  },
-  "2877198": {
-   "id": "2877198",
-   "raw": "Neutrogena (Augencreme) Retinol Boost (Prime)",
-   "title": "Neutrogena (Augencreme) Retinol Boost",
-   "grad": 0,
-   "price": 10.49,
-   "cat": "Beauty & Pflege",
-   "hints": [],
-   "pub": 1795181602.0,
-   "quelle": "https://www.mydealz.de/deals/neutrogena-augencreme-retinol-boost-2877198"
-  },
-  "2877193": {
-   "id": "2877193",
-   "raw": "[Prime] LEGO Ninjago Lloyds Actionflitzer 71828",
-   "title": "LEGO Ninjago Lloyds Actionflitzer 71828",
-   "grad": 0,
-   "price": 14.6,
-   "cat": null,
-   "hints": [],
-   "pub": 1795181500.0,
-   "quelle": "https://www.mydealz.de/deals/prime-lego-ninjago-lloyds-actionflitzer-71828-2877193"
-  },
   "2877183": {
    "id": "2877183",
    "raw": "107° - Diverse SpeedComfort Heizkörper Ventilatoren, Auto oder Control, zB Auto Trio",
@@ -1079,17 +786,6 @@
    "hints": [],
    "pub": 1795213724.0,
    "quelle": "https://www.mydealz.de/deals/diverse-speedcomfort-heizkorper-ventilator-auto-oder-control-zb-auto-trio-2877183"
-  },
-  "2877185": {
-   "id": "2877185",
-   "raw": "111° - [Prime] UGREEN USB C auf HDMI Adapter HDMI 2.1 8K 60Hz 4K 240/120H 1440P@144Hz Thunderbolt 5/4/3 auf HDMI Kabel HDR G-Sync 48Gbps",
-   "title": "UGREEN USB C auf HDMI Adapter HDMI 2.1 8K 60Hz 4K 240/120H 1440P@144Hz",
-   "grad": 111,
-   "price": 15.18,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795187731.0,
-   "quelle": "https://www.mydealz.de/deals/prime-ugreen-usb-c-auf-hdmi-adapter-hdmi-21-8k-60hz-4k-240120h-1440p-at-144hz-thunderbolt-543-auf-hdmi-kabel-hdr-g-sync-48gbps-2877185"
   },
   "2877184": {
    "id": "2877184",
@@ -1102,28 +798,6 @@
    "pub": 1795258995.0,
    "quelle": "https://www.mydealz.de/deals/wera-05134000001-kraftform-micro-big-pack-1-2877184"
   },
-  "2877178": {
-   "id": "2877178",
-   "raw": "114° - Bialetti New Venus Induction Espressokocher, 6 Tassen, Edelstahl, für alle Herdarten",
-   "title": "Bialetti New Venus Induction Espressokocher",
-   "grad": 114,
-   "price": 25.29,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795189855.0,
-   "quelle": "https://www.mydealz.de/deals/bialetti-new-venus-induction-espressokocher-6-tassen-edelstahl-fur-alle-herdarten-2877178"
-  },
-  "2877176": {
-   "id": "2877176",
-   "raw": "151° - Ballistol Universalöl Spray 400 ml",
-   "title": "Ballistol Universalöl Spray 400 ml",
-   "grad": 151,
-   "price": 8.87,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795183851.0,
-   "quelle": "https://www.mydealz.de/deals/ballistol-universalol-spray-400-ml-2877176"
-  },
   "2877175": {
    "id": "2877175",
    "raw": "109° - Multipacks Brennenstuhl Rauchmelder-Set RM C 9010, | z.B. 9er-Pack für 44,79 € | 2 Stk. für 10,39 € | austauschbare 9V-Batterie, EN 14604",
@@ -1134,52 +808,6 @@
    "hints": [],
    "pub": 1795192925.0,
    "quelle": "https://www.mydealz.de/deals/multipacks-brennenstuhl-rauchmelder-set-rm-c-9010-zb-9er-pack-fur-4479-eur-2-stk-fur-1039-eur-austauschbare-9v-batterie-en-14604-2877175"
-  },
-  "2876374": {
-   "id": "2876374",
-   "raw": "121° - LEIBNIZ Cream Choco, 2 knusprige Butterkekse mit zarter Schokoladencreme (18 x 38 g) [Spar-Abo Prime]",
-   "title": "LEIBNIZ Cream Choco",
-   "grad": 121,
-   "price": 7.26,
-   "cat": "Haushalt",
-   "hints": [
-    "nur im Spar-Abo"
-   ],
-   "pub": 1795183114.0,
-   "quelle": "https://www.mydealz.de/deals/leibniz-cream-choco-2-knusprige-butterkekse-mit-zarter-schokoladencreme-18-x-38-g-spar-abo-prime-2876374"
-  },
-  "2876966": {
-   "id": "2876966",
-   "raw": "131° - Victorinox Swiss Classic Gemüsemesser-Set (3-tlg., Farbig) | Schälmesser, Tomatenmesser mit Wellenschliff & Sparschäler | Swiss Made | Prime",
-   "title": "Victorinox Swiss Classic Gemüsemesser-Set",
-   "grad": 131,
-   "price": 12.79,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795182038.0,
-   "quelle": "https://www.mydealz.de/deals/victorinox-swiss-classic-gemusemesser-set-3-tlg-farbig-schalmesser-tomatenmesser-mit-wellenschliff-sparschaler-swiss-made-prime-2876966"
-  },
-  "2877229": {
-   "id": "2877229",
-   "raw": "133° - Paladone One Piece Logo Leuchte | offiziell lizenzierte LED Deko Lampe für Schreibtisch, Regal o. Gaming Setup, 6,5T x 30B x 12H cm (Prime)",
-   "title": "Paladone One Piece Logo Leuchte",
-   "grad": 133,
-   "price": 16.77,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795190822.0,
-   "quelle": "https://www.mydealz.de/deals/paladone-one-piece-logo-leuchte-offiziell-lizenzierte-led-deko-lampe-fur-schreibtisch-regal-o-gaming-setup-65t-x-30b-x-12h-cm-prime-2877229"
-  },
-  "2877225": {
-   "id": "2877225",
-   "raw": "HEAD Women's I-Peak 2.0 Joy Cross Bike, Matt Grey/Mint - Fahrrad",
-   "title": "HEAD Women's I-Peak 2.0 Joy Cross Bike",
-   "grad": 0,
-   "price": 274.26,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795183385.0,
-   "quelle": "https://www.mydealz.de/deals/head-womens-i-peak-20-joy-cross-bike-matt-greymint-fahrrad-2877225"
   },
   "2877224": {
    "id": "2877224",
@@ -1192,19 +820,6 @@
    "pub": 1795211884.0,
    "quelle": "https://www.mydealz.de/deals/sammeldeal-carrera-rc-mario-kart-pipe-kart-ab-2849eur-mario-peach-bowser-9-kmh-30min-fahrzeit-lifepo4-akku-24-ghz-ab-6-j-prime-2877224"
   },
-  "2877219": {
-   "id": "2877219",
-   "raw": "123° - [Prime] Autan Tropical Pumpspray 100ml nur 4,40€ im Spar-Abo Mückenschutz für Körper & Gesicht Travel Urlaub Essentials",
-   "title": "Autan Tropical Pumpspray 100ml im Mückenschutz für Körper & Gesicht",
-   "grad": 123,
-   "price": 4.4,
-   "cat": "Beauty & Pflege",
-   "hints": [
-    "nur im Spar-Abo"
-   ],
-   "pub": 1795187727.0,
-   "quelle": "https://www.mydealz.de/deals/prime-autan-tropical-pumpspray-100ml-nur-440eur-im-spar-abo-muckenschutz-fur-korper-gesicht-travel-urlaub-essentials-2877219"
-  },
   "2877218": {
    "id": "2877218",
    "raw": "116° - Haier FD 70 Serie 3 HFR3718ENMM French-Door-Kühl-/Gefrierkombi, 402 L, No Frost, Touch-Display, EEK E, Edelstahl",
@@ -1215,28 +830,6 @@
    "hints": [],
    "pub": 1795192899.0,
    "quelle": "https://www.mydealz.de/deals/haier-fd-70-serie-3-hfr3718enmm-french-door-kuhl-gefrierkombi-402-l-no-frost-touch-display-eek-e-edelstahl-2877218"
-  },
-  "2877214": {
-   "id": "2877214",
-   "raw": "NUK Perfect Match Perfect Start Babyflaschen-Set, 9-teilig, 4 Anti-Kolik-Flaschen mit Temperaturanzeige",
-   "title": "NUK Perfect Match Perfect Start Babyflaschen-Set",
-   "grad": 0,
-   "price": 20.81,
-   "cat": null,
-   "hints": [],
-   "pub": 1795182825.0,
-   "quelle": "https://www.mydealz.de/deals/nuk-perfect-match-perfect-start-babyflaschen-set-9-teilig-4-anti-kolik-flaschen-mit-temperaturanzeige-2877214"
-  },
-  "2877213": {
-   "id": "2877213",
-   "raw": "Verschiedene ECCO Schuhe bis zu 50 % reduziert – z. B. ULT-TRN M Low WP für 78 € / Irving Slip-On für 66 €",
-   "title": "Verschiedene ECCO Schuhe bis zu 50 % reduziert",
-   "grad": 0,
-   "price": 66.0,
-   "cat": "Mode",
-   "hints": [],
-   "pub": 1795182708.0,
-   "quelle": "https://www.mydealz.de/deals/verschiedene-ecco-schuhe-bis-zu-50-reduziert-z-b-ult-trn-m-low-wp-fur-78-eur-irving-slip-on-fur-66-eur-2877213"
   },
   "2877211": {
    "id": "2877211",
@@ -1249,94 +842,6 @@
    "pub": 1795208325.0,
    "quelle": "https://www.mydealz.de/deals/indiana-jones-und-das-rad-des-schicksals-blu-ray-2877211"
   },
-  "2877210": {
-   "id": "2877210",
-   "raw": "179° - KNIPEX Alligator Wasserpumpenzange, 250 mm, Muttern bis 46 mm, 88 01 250 (Prime)",
-   "title": "KNIPEX Alligator Wasserpumpenzange",
-   "grad": 179,
-   "price": 13.97,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795185388.0,
-   "quelle": "https://www.mydealz.de/deals/knipex-alligator-wasserpumpenzange-250-mm-muttern-bis-46-mm-88-01-250-prime-2877210"
-  },
-  "2877206": {
-   "id": "2877206",
-   "raw": "119° - [Prime] Drake - Views [Vinyl LP / 2 LPs] 2016 - mit \"One Dance\", \"Controlla\" & \"Hotline Bling\" | 20 Songs gesamt",
-   "title": "Drake Views 2016",
-   "grad": 119,
-   "price": 29.99,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795185482.0,
-   "quelle": "https://www.mydealz.de/deals/prime-drake-views-vinyl-lp-2-lps-2016-mit-one-dance-controlla-hotline-bling-20-songs-gesamt-2877206"
-  },
-  "2877205": {
-   "id": "2877205",
-   "raw": "Philips Smart Lighting HDMI 2.1 Sync Box 8K mit vierseitigem RGBIC-LED-Streifen für 55–65 Zoll TV-Hintergrundbeleuchtung",
-   "title": "Philips Smart Lighting HDMI 2.1 Sync Box 8K mit vierseitigem",
-   "grad": 0,
-   "price": 97.69,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795182005.0,
-   "quelle": "https://www.mydealz.de/deals/philips-smart-lighting-hdmi-21-sync-box-8k-mit-vierseitigem-rgbic-led-streifen-fur-55-65-zoll-2877205"
-  },
-  "2877203": {
-   "id": "2877203",
-   "raw": "Uvex Gravel X deep space/silver - Fahrradhelm",
-   "title": "Uvex Gravel X deep space/silver",
-   "grad": 0,
-   "price": 35.64,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795181915.0,
-   "quelle": "https://www.mydealz.de/deals/uvex-gravel-x-deep-spacesilver-fahrradhelm-2877203"
-  },
-  "2877252": {
-   "id": "2877252",
-   "raw": "Novilla Modulares Sofa 3 Sitzer 270cm Breit, Ecksofa Cord für Wohnzimmer",
-   "title": "Novilla Modulares Sofa 3 Sitzer 270cm Breit",
-   "grad": 0,
-   "price": 418.99,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795185487.0,
-   "quelle": "https://www.mydealz.de/deals/novilla-modulares-sofa-3-sitzer-270cm-breit-ecksofa-cord-fur-wohnzimmer-2877252"
-  },
-  "2877251": {
-   "id": "2877251",
-   "raw": "Hasbro Brettspiel Wer ist es? | Gesellschaftsspiel für Kinder, klassische Ausgabe mit Gesichtern & Superhelden für 2 Spieler, ab 6 J (Prime)",
-   "title": "Hasbro Brettspiel Wer ist es?",
-   "grad": 0,
-   "price": 13.49,
-   "cat": null,
-   "hints": [],
-   "pub": 1795185477.0,
-   "quelle": "https://www.mydealz.de/deals/hasbro-brettspiel-wer-ist-es-gesellschaftsspiel-fur-kinder-klassische-ausgabe-mit-gesichtern-superhelden-fur-2-spieler-ab-6-j-prime-2877251"
-  },
-  "2877238": {
-   "id": "2877238",
-   "raw": "Weber Traveler Compact Gasgrill [Prime]",
-   "title": "Weber Traveler Compact Gasgrill",
-   "grad": 0,
-   "price": 283.0,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795184769.0,
-   "quelle": "https://www.mydealz.de/deals/weber-traveler-compact-gasgrill-prime-2877238"
-  },
-  "2877236": {
-   "id": "2877236",
-   "raw": "Carrera FIRST Mario Kart Mario vs. Yoshi ►20,09€ | Rennbahn 1:50, 2,4m Strecke, ab 3 Jahren | Amazon Prime",
-   "title": "Carrera FIRST Mario Kart Mario vs. Yoshi",
-   "grad": 0,
-   "price": 20.09,
-   "cat": null,
-   "hints": [],
-   "pub": 1795184543.0,
-   "quelle": "https://www.mydealz.de/deals/carrera-first-mario-kart-mario-vs-yoshi-2009eur-rennbahn-150-24m-strecke-ab-3-jahren-amazon-prime-2877236"
-  },
   "2877230": {
    "id": "2877230",
    "raw": "145° - Apple iPad Air 11\" (2026), Apple M4, Liquid Retina Display, 128 GB, WLAN 7 mit Apple N1, Touch ID [Eff. 652€, 4fach Payback]",
@@ -1347,72 +852,6 @@
    "hints": [],
    "pub": 1795192603.0,
    "quelle": "https://www.mydealz.de/deals/apple-ipad-air-11-2026-apple-m4-liquid-retina-display-128-gb-wlan-7-mit-apple-n1-touch-id-eff-652eur-4fach-payback-2877230"
-  },
-  "2843852": {
-   "id": "2843852",
-   "raw": "401° - (Amazon Prime) Buff Lightweight Merino Wool Hat (100% Merinowolle) Wollmütze",
-   "title": "Buff Lightweight Merino Wool Hat Wollmütze",
-   "grad": 401,
-   "price": 14.35,
-   "cat": "Mode",
-   "hints": [],
-   "pub": 1795186710.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-prime-buff-lightweight-merino-wool-hat-100-merinowolle-wollmutze-2843852"
-  },
-  "2876496": {
-   "id": "2876496",
-   "raw": "120° - (prime) Spigen iPhone Air Hülle Ultra Hybrid MagFit - Classic Black",
-   "title": "Spigen iPhone Air Hülle Ultra Hybrid MagFit",
-   "grad": 120,
-   "price": 11.5,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795185981.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-spigen-iphone-air-hulle-ultra-hybrid-magfit-classic-black-2876496"
-  },
-  "2877282": {
-   "id": "2877282",
-   "raw": "(Prime) CYCPLUS AS2Ultra Tiny Elektrofahrradpumpe, 90g, Magnesiumgehäuse",
-   "title": "CYCPLUS AS2Ultra Tiny Elektrofahrradpumpe",
-   "grad": 0,
-   "price": 77.33,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795187308.0,
-   "quelle": "https://www.mydealz.de/deals/prime-cycplus-as2ultra-tiny-elektrofahrradpumpe-90g-magnesiumgehause-2877282"
-  },
-  "2877281": {
-   "id": "2877281",
-   "raw": "uvex Gravel x Fahrradhelm (52-57 cm) für 35,64€ (statt 62€)",
-   "title": "uvex Gravel x Fahrradhelm",
-   "grad": 0,
-   "price": 35.64,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795187235.0,
-   "quelle": "https://www.mydealz.de/deals/uvex-gravel-x-fahrradhelm-52-57-cm-fur-3564eur-statt-62eur-2877281"
-  },
-  "2877277": {
-   "id": "2877277",
-   "raw": "playvital Silikonhülle für ps5 Controller, Anti-Rutsch Schutzhülle case für ps5 Controller ab 11,99€ (Prime)",
-   "title": "playvital Silikonhülle für ps5 Controller",
-   "grad": 0,
-   "price": 11.99,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795187111.0,
-   "quelle": "https://www.mydealz.de/deals/playvital-silikonhulle-fur-ps5-controller-anti-rutsch-schutzhulle-case-fur-ps5-controller-ab-199-2877277"
-  },
-  "2877272": {
-   "id": "2877272",
-   "raw": "[Prime]Matter Wassermelder mit Hub Meross MSH450, 0,3 mm Erkennung, 100dB Alarm",
-   "title": "Matter Wassermelder mit Hub Meross MSH450",
-   "grad": 0,
-   "price": 25.49,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795186615.0,
-   "quelle": "https://www.mydealz.de/deals/primematter-wassermelder-mit-hub-meross-msh450-03-mm-erkennung-100db-alarm-2877272"
   },
   "2876976": {
    "id": "2876976",
@@ -1436,17 +875,6 @@
    "pub": 1795197435.0,
    "quelle": "https://www.mydealz.de/deals/hot-wheels-164-die-cast-20er-geschenkset-2185eur-amazon-prime-2877259"
   },
-  "2877258": {
-   "id": "2877258",
-   "raw": "138° - [Amazon Prime] Kosmos EXIT Adventskalender 2026 „Das versteckte Level“",
-   "title": "Kosmos EXIT Adventskalender 2026 „Das versteckte Level“",
-   "grad": 138,
-   "price": 17.99,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795189575.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-prime-kosmos-exit-adventskalender-2026-das-versteckte-level-2877258"
-  },
   "2877309": {
    "id": "2877309",
    "raw": "138° - KNIPEX KNIPEX CoBolt S Kompakt-Bolzenschneider, 160 mm, 71 01 160 (Prime)",
@@ -1469,28 +897,6 @@
    "pub": 1795199152.0,
    "quelle": "https://www.mydealz.de/deals/anker-nano-35-w-usb-c-ladegerat-mit-weiterem-usb-c-port-integriertes-ausziehbares-kabel-instacord-kompakt-fur-iphoneipad-weiss-2877308"
   },
-  "2877304": {
-   "id": "2877304",
-   "raw": "278° - Amazon Kombideal: 20% Rabatt auf Nintendo Switch Sports Resort beim Kauf von Legend of Zelda Ocarina of Time",
-   "title": "Kombideal: 20% Rabatt auf Nintendo Switch Sports Resort beim Kauf von",
-   "grad": 278,
-   "price": 95.18,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795190583.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-kombideal-20-rabatt-auf-nintendo-switch-sports-resort-beim-kauf-von-legend-of-zelda-ocarina-of-time-2877304"
-  },
-  "2877302": {
-   "id": "2877302",
-   "raw": "Dreifachobjektiv PoE Sicherheitskamera für Außenbereich,Reolink OMVI 3i PoE (Prime)",
-   "title": "Dreifachobjektiv PoE Sicherheitskamera für Außenbereich",
-   "grad": 0,
-   "price": 223.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795188913.0,
-   "quelle": "https://www.mydealz.de/deals/dreifachobjektiv-poe-sicherheitskamera-fur-aussenbereichreolink-omvi-3i-poe-prime-2877302"
-  },
   "2877300": {
    "id": "2877300",
    "raw": "104° - Anker Nano 10-in-1 USB-C Hub mit Smart Display & Dual Monitor Dock",
@@ -1501,28 +907,6 @@
    "hints": [],
    "pub": 1795209795.0,
    "quelle": "https://www.mydealz.de/deals/anker-nano-10-in-1-usb-c-hub-mit-smart-display-dual-monitor-dock-2877300"
-  },
-  "2877299": {
-   "id": "2877299",
-   "raw": "[amazon prime] Wera 05133163001 Winkelschlüsselsatz 950 PKS/9 SM N, metrisch, gestellverchromt",
-   "title": "Wera 05133163001 Winkelschlüsselsatz 950 PKS/9 SM N",
-   "grad": 0,
-   "price": 16.19,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795188536.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-prime-wera-05133163001-winkelschlusselsatz-950-pks9-sm-n-metrisch-gestellverchromt-2877299"
-  },
-  "2877295": {
-   "id": "2877295",
-   "raw": "[Prime] Skechers Herren Track Scloric – Sportschuhe mit Memory Foam & angenehmer Dämpfung – Größe 40–48",
-   "title": "Skechers Herren Track Scloric",
-   "grad": 0,
-   "price": 35.94,
-   "cat": "Mode",
-   "hints": [],
-   "pub": 1795188283.0,
-   "quelle": "https://www.mydealz.de/deals/prime-skechers-herren-track-scloric-sportschuhe-mit-memory-foam-angenehmer-dampfung-grosse-40-48-2877295"
   },
   "2877290": {
    "id": "2877290",
@@ -1535,139 +919,27 @@
    "pub": 1795193859.0,
    "quelle": "https://www.mydealz.de/deals/roborock-f25-bx-gen-2-nass-trockensauger-20000-pa-bis-60-min-180-lay-flat-90c-selbstreinigung-anti-tangle-2877290"
   },
-  "2876979": {
-   "id": "2876979",
-   "raw": "CHERRY MP 2000 XXL Mauspad (800 x 350 x 5 mm, Schwarz) | Stoff-Schreibtischunterlage, vernähte Kanten, rutschfest & abwaschbar, 5 mm | Prime",
-   "title": "CHERRY MP 2000 XXL Mauspad",
-   "grad": 0,
-   "price": 17.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795187520.0,
-   "quelle": "https://www.mydealz.de/deals/cherry-mp-2000-xxl-mauspad-800-x-350-x-5-mm-schwarz-stoff-schreibtischunterlage-vernahte-kanten-rutschfest-abwaschbar-5-mm-prime-2876979"
-  },
-  "2877285": {
-   "id": "2877285",
-   "raw": "[Amazon] PHYSIOGEL Scalp Care Mildes Shampoo 250ml für empfindliche Kopfhaut für 7,83€ (Spar-Abo 7,44€) -Prime",
-   "title": "PHYSIOGEL Scalp Care Mildes Shampoo 250ml für empfindliche Kopfhaut",
-   "grad": 0,
-   "price": 7.83,
-   "cat": "Beauty & Pflege",
-   "hints": [
-    "nur im Spar-Abo"
-   ],
-   "pub": 1795187443.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-physiogel-scalp-care-mildes-shampoo-250ml-fur-empfindliche-kopfhaut-fur-783eur-spar-abo-744eur-2877285"
-  },
-  "2870016": {
-   "id": "2870016",
-   "raw": "250° - BGS 3623 | Kapsel-Gehörschutz | Lärmschutz | Geräuschpegelminderung 26 dB gepolsterte Kapseln | stufenlose Schnellverstellung (Prime)",
-   "title": "BGS 3623 Kapsel-Gehörschutz",
-   "grad": 250,
-   "price": 4.06,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795190420.0,
-   "quelle": "https://www.mydealz.de/deals/bgs-3623-kapsel-gehorschutz-larmschutz-gerauschpegelminderung-26-db-gepolsterte-kapseln-stufenlose-schnellverstellung-prime-2870016"
-  },
-  "2876927": {
-   "id": "2876927",
-   "raw": "110° - Tabu Unzensiert | Partyspiel nur für Erwachsene mit Online-Tool, Quietscher & Sanduhr, unzensierte Tabu Variante (Prime)",
-   "title": "Tabu Unzensiert Partyspiel nur für Erwachsene mit Online-Tool",
-   "grad": 110,
-   "price": 14.49,
-   "cat": "Sport & Freizeit",
-   "hints": [],
-   "pub": 1795189222.0,
-   "quelle": "https://www.mydealz.de/deals/tabu-unzensiert-partyspiel-nur-fur-erwachsene-mit-online-tool-quietscher-sanduhr-unzensierte-tabu-variante-prime-2876927"
-  },
-  "2877346": {
-   "id": "2877346",
-   "raw": "SteelSeries Apex Pro Mini Wireless (DE Layout) für 99,99€",
-   "title": "SteelSeries Apex Pro Mini Wireless",
-   "grad": 0,
-   "price": 99.99,
-   "cat": "Gaming",
-   "hints": [],
-   "pub": 1795191015.0,
-   "quelle": "https://www.mydealz.de/deals/steelseries-apex-pro-mini-wireless-de-layout-fur-9999eur-allzeit-bestpreis-2877346"
-  },
   "2877341": {
    "id": "2877341",
-   "raw": "Glorious Model D 2 Wireless – ergonomische Gaming-Maus mit 66 g, BAMF-2.0-Sensor, 26.000 DPI und drei Verbindungsmodi (Mattweiß) | Prime",
+   "raw": "125° - Glorious Model D 2 Wireless – ergonomische Gaming-Maus mit 66 g, BAMF-2.0-Sensor, 26.000 DPI und drei Verbindungsmodi (Mattweiß) | Prime",
    "title": "Glorious Model D 2 Wireless",
-   "grad": 0,
+   "grad": 125,
    "price": 32.99,
    "cat": "Gaming",
    "hints": [],
-   "pub": 1795190853.0,
+   "pub": 1795272910.0,
    "quelle": "https://www.mydealz.de/deals/glorious-model-d-2-wireless-ergonomische-gaming-maus-mit-66-g-bamf-20-sensor-26000-dpi-und-drei-verbindungsmodi-mattweiss-prime-2877341"
-  },
-  "2877339": {
-   "id": "2877339",
-   "raw": "ICY BOX USB 3.2 Gen 1 Hub 7 Port mit Einzelschaltern IB-HUB1701",
-   "title": "ICY BOX USB 3.2 Gen 1 Hub 7 Port mit Einzelschaltern IB-HUB1701",
-   "grad": 0,
-   "price": 40.01,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795190670.0,
-   "quelle": "https://www.mydealz.de/deals/icy-box-usb-32-gen-1-hub-7-port-mit-einzelschaltern-ib-hub1701-2877339"
   },
   "2877338": {
    "id": "2877338",
-   "raw": "Gorenje RF414EPS4 Kühl-/Gefrierkombination, Gefrierteil oben, 206 L, LED, EEK E, 143,6 cm, Edelstahl-Look",
+   "raw": "125° - Gorenje RF414EPS4 Kühl-/Gefrierkombination, Gefrierteil oben, 206 L, LED, EEK E, 143,6 cm, Edelstahl-Look",
    "title": "Gorenje RF414EPS4 Kühl-/Gefrierkombination",
-   "grad": 0,
+   "grad": 125,
    "price": 229.0,
    "cat": "Haushalt",
    "hints": [],
-   "pub": 1795190515.0,
+   "pub": 1795262890.0,
    "quelle": "https://www.mydealz.de/deals/gorenje-rf414eps4-kuhl-gefrierkombination-gefrierteil-oben-206-l-led-eek-e-1436-cm-edelstahl-look-2877338"
-  },
-  "2877335": {
-   "id": "2877335",
-   "raw": "Bosch Accessories Bosch 15tlg. Mini-X-Line Spiralbohrer Mixed-Set (Holz, Stein und Metall, Zubehör Bohrmaschine) - Prime",
-   "title": "Bosch Accessories Bosch 15tlg. Mini-X-Line Spiralbohrer Mixed-Set",
-   "grad": 0,
-   "price": 6.47,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795190223.0,
-   "quelle": "https://www.mydealz.de/deals/bosch-accessories-bosch-15tlg-mini-x-line-spiralbohrer-mixed-set-holz-stein-und-metall-zubehor-bohrmaschine-prime-2877335"
-  },
-  "2877332": {
-   "id": "2877332",
-   "raw": "ONLY NOS Damen ONLPOWER MID Push UP SK REA2981K NOOS Skinny Jeans (Prime)",
-   "title": "ONLY NOS Damen ONLPOWER MID Push UP SK REA2981K NOOS Skinny Jeans",
-   "grad": 0,
-   "price": 11.99,
-   "cat": "Mode",
-   "hints": [],
-   "pub": 1795190202.0,
-   "quelle": "https://www.mydealz.de/deals/only-nos-damen-onlpower-mid-push-up-sk-rea2981k-noos-skinny-jeans-2877332"
-  },
-  "2877330": {
-   "id": "2877330",
-   "raw": "Pixel 11 Pixelsnap Case (Google) für 31,39 € obsidian [amazon: 8,20 € Kassenrabatt + 1 % Uneiliger Versand] (Prime)",
-   "title": "Pixel 11 Pixelsnap Case",
-   "grad": 0,
-   "price": 31.39,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795190010.0,
-   "quelle": "https://www.mydealz.de/deals/pixel-11-pixelsnap-case-google-fur-3139-eur-obsidian-amazon-820-eur-kassenrabatt-1-uneiliger-versand-2877330"
-  },
-  "2877328": {
-   "id": "2877328",
-   "raw": "Mattel Disney Princess Cinderella Puppe im klassischen Look (Prime)",
-   "title": "Mattel Disney Princess Cinderella Puppe im klassischen Look",
-   "grad": 0,
-   "price": 6.81,
-   "cat": null,
-   "hints": [],
-   "pub": 1795189997.0,
-   "quelle": "https://www.mydealz.de/deals/mattel-disney-princess-cinderella-puppe-im-klassischen-look-2877328"
   },
   "2877329": {
    "id": "2877329",
@@ -1679,50 +951,6 @@
    "hints": [],
    "pub": 1795199839.0,
    "quelle": "https://www.mydealz.de/deals/midea-mih741f238k0-induktionskochfeld-4-kochzonen-7400w-2877329"
-  },
-  "2877305": {
-   "id": "2877305",
-   "raw": "[Top Black Friday Angebot] Pokémon-Sammelkartenspiel: Weltmeisterschaftsdecks 2024 - Sakuya OTA - Fernando Cifuentes - Jesse Parker - Prime",
-   "title": "Pokémon-Sammelkartenspiel: Weltmeisterschaftsdecks 2024",
-   "grad": 0,
-   "price": 18.45,
-   "cat": null,
-   "hints": [],
-   "pub": 1795189958.0,
-   "quelle": "https://www.mydealz.de/deals/top-black-friday-angebot-pokemon-sammelkartenspiel-weltmeisterschaftsdecks-2024-sakuya-ota-fernando-cifuentes-jesse-parker-2877305"
-  },
-  "2877324": {
-   "id": "2877324",
-   "raw": "Hallmark Keepsake Weihnachtsschmuck 2026, Star Trek: Lower Decks U.S.S. Cerritos, Geschenke für Trekkies | Amazon Prime",
-   "title": "Hallmark Keepsake Weihnachtsschmuck 2026",
-   "grad": 0,
-   "price": 33.78,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795189783.0,
-   "quelle": "https://www.mydealz.de/deals/hallmark-keepsake-weihnachtsschmuck-2026-star-trek-lower-decks-uss-cerritos-geschenke-fur-trekkies-amazon-prime-2877324"
-  },
-  "2877322": {
-   "id": "2877322",
-   "raw": "Revell U.S.S. Voyager | Star-Trek-Raumschiffbausatz 1:670, 67 Einzelteile @ Amazon Prime",
-   "title": "Revell U.S.S. Voyager",
-   "grad": 0,
-   "price": 30.89,
-   "cat": null,
-   "hints": [],
-   "pub": 1795189657.0,
-   "quelle": "https://www.mydealz.de/deals/revell-uss-voyager-star-trek-raumschiffbausatz-1670-67-einzelteile-at-amazon-prime-2877322"
-  },
-  "2877320": {
-   "id": "2877320",
-   "raw": "Super Black Friday Angebot für BabyBrezza Produkte! Mit Baby Wunschliste nochmal +15% extra",
-   "title": "Super Black Friday für BabyBrezza Produkte! Mit Baby Wunschliste",
-   "grad": 0,
-   "price": 263.9,
-   "cat": null,
-   "hints": [],
-   "pub": 1795189543.0,
-   "quelle": "https://www.mydealz.de/deals/super-black-friday-angebot-fur-babybrezza-produkte-mit-baby-wunschliste-nochmal-15-extra-2877320"
   },
   "2877318": {
    "id": "2877318",
@@ -1757,17 +985,6 @@
    "pub": 1795192129.0,
    "quelle": "https://www.mydealz.de/deals/waipu-tv-perfekt-plus-12-monate-prepaid-2877356"
   },
-  "2841455": {
-   "id": "2841455",
-   "raw": "202° - Beyblade X Cobalt Dragoon 2-60C Deluxe linksdreh",
-   "title": "Beyblade X Cobalt Dragoon 2-60C Deluxe linksdreh",
-   "grad": 202,
-   "price": 17.49,
-   "cat": null,
-   "hints": [],
-   "pub": 1795191993.0,
-   "quelle": "https://www.mydealz.de/deals/beyblade-x-cobalt-dragoon-2-60c-deluxe-linksdreh-2841455"
-  },
   "2877372": {
    "id": "2877372",
    "raw": "108° - RØDE RØDECaster Duo Audio-Produktionslösung, 2 Combo-Buchsen, Touchscreen, 4 Fader, 6 SMART Pads, USB-C",
@@ -1790,28 +1007,6 @@
    "pub": 1795192065.0,
    "quelle": "https://www.mydealz.de/deals/peaktech-p-2755-vde-0100-installationstester-mit-bluetooth-usb-und-35-farbdisplay-2877370"
   },
-  "2877368": {
-   "id": "2877368",
-   "raw": "Hisense RS3P558NEFE Side-by-Side Kühl-/ Gefrierkombi / EEK D / 544L (347 Kühl/197 Gefrier) / No Frost",
-   "title": "Hisense RS3P558NEFE Side-by-Side Kühl-/ Gefrierkombi / EEK D / 544L",
-   "grad": 0,
-   "price": 573.9,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795192059.0,
-   "quelle": "https://www.mydealz.de/deals/hisense-rs3p558nefd-side-by-side-544l-2877368"
-  },
-  "2877364": {
-   "id": "2877364",
-   "raw": "OsmoFresh Fusion Stream & Fusion Air Auftisch-Osmoseanlagen – mit Festwasseranschluss oder Tank",
-   "title": "OsmoFresh Fusion Stream & Fusion Air Auftisch-Osmoseanlagen",
-   "grad": 0,
-   "price": 424.15,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795191924.0,
-   "quelle": "https://www.mydealz.de/deals/osmofresh-fusion-stream-fusion-air-auftisch-osmoseanlagen-mit-festwasseranschluss-oder-tank-2877364"
-  },
   "2877358": {
    "id": "2877358",
    "raw": "136° - Leonard Cohen - You Want It Darker Vinyl (Prime)",
@@ -1833,17 +1028,6 @@
    "hints": [],
    "pub": 1795227624.0,
    "quelle": "https://www.mydealz.de/deals/canon-eos-r50-v-vlog-kamera-gehause-aps-c-242-mp-4k-rf-mount-dual-pixel-cmos-af-ii-wlanbluetooth-2877357"
-  },
-  "2877344": {
-   "id": "2877344",
-   "raw": "Lancôme Rénergie H.C.F. Triple Serum, Anti-Aging Gesichtsserum, 50ml - SparAbo / Prime",
-   "title": "Lancôme Rénergie H.C.F. Triple Serum",
-   "grad": 0,
-   "price": 65.25,
-   "cat": "Beauty & Pflege",
-   "hints": [],
-   "pub": 1795191444.0,
-   "quelle": "https://www.mydealz.de/deals/lancome-renergie-hcf-triple-serum-anti-aging-gesichtsserum-50ml-2877344"
   },
   "2876842": {
    "id": "2876842",
@@ -1979,13 +1163,13 @@
   },
   "2877419": {
    "id": "2877419",
-   "raw": "CASO Design HW 660 Turbo Heißwasserspender (2,7 L)",
+   "raw": "102° - CASO Design HW 660 Turbo Heißwasserspender (2,7 L)",
    "title": "CASO Design HW 660 Turbo Heißwasserspender",
-   "grad": 0,
+   "grad": 102,
    "price": 75.99,
    "cat": "Haushalt",
    "hints": [],
-   "pub": 1795196128.0,
+   "pub": 1795266108.0,
    "quelle": "https://www.mydealz.de/deals/caso-design-hw-660-turbo-heisswasserspender-27-l-2877419"
   },
   "2877416": {
@@ -2103,13 +1287,13 @@
   },
   "2877397": {
    "id": "2877397",
-   "raw": "Philips Series 700 S792/06 Elektrorasierer, 4D Flex-Scherkopf, Nass- und Trockenrasur, IPX7, Nasenhaartrimmer",
+   "raw": "134° - Philips Series 700 S792/06 Elektrorasierer, 4D Flex-Scherkopf, Nass- und Trockenrasur, IPX7, Nasenhaartrimmer",
    "title": "Philips Series 700 S792/06 Elektrorasierer",
-   "grad": 0,
+   "grad": 134,
    "price": 99.0,
    "cat": "Beauty & Pflege",
    "hints": [],
-   "pub": 1795194695.0,
+   "pub": 1795262334.0,
    "quelle": "https://www.mydealz.de/deals/philips-series-700-s79206-elektrorasierer-4d-flex-scherkopf-nass-und-trockenrasur-ipx7-nasenhaartrimmer-2877397"
   },
   "2871097": {
@@ -2594,13 +1778,13 @@
   },
   "2877554": {
    "id": "2877554",
-   "raw": "Könighaus Anti-Schimmel Heizung",
+   "raw": "109° - Könighaus Anti-Schimmel Heizung",
    "title": "Könighaus Anti-Schimmel Heizung",
-   "grad": 0,
+   "grad": 109,
    "price": 27.3,
    "cat": "Haushalt",
    "hints": [],
-   "pub": 1795207158.0,
+   "pub": 1795280077.0,
    "quelle": "https://www.mydealz.de/deals/konighaus-anti-schimmel-heizung-2877554"
   },
   "2877550": {
@@ -3232,26 +2416,26 @@
   },
   "2877677": {
    "id": "2877677",
-   "raw": "FLYING GOOSE Sriracha Spicy Mayoo Sauce, extra scharfe Mayonnaise, sehr scharf, orange Kappe 455 ml (Spar-Abo Prime)",
+   "raw": "110° - FLYING GOOSE Sriracha Spicy Mayoo Sauce, extra scharfe Mayonnaise, sehr scharf, orange Kappe 455 ml (Spar-Abo Prime)",
    "title": "FLYING GOOSE Sriracha Spicy Mayoo Sauce",
-   "grad": 0,
+   "grad": 110,
    "price": 4.74,
    "cat": "Haushalt",
    "hints": [
     "nur im Spar-Abo"
    ],
-   "pub": 1795234258.0,
+   "pub": 1795265988.0,
    "quelle": "https://www.mydealz.de/deals/flying-goose-sriracha-spicy-mayoo-sauce-extra-scharfe-mayonnaise-sehr-scharf-orange-kappe-455-ml-spar-abo-prime-2877677"
   },
   "2877679": {
    "id": "2877679",
-   "raw": "Figo Kinder-Pflaster \"Kleine Abenteurer\" 10 Stück 1€ /LISTERINE Cool Mint Mild Reisegröße 1,16€ 95 ml/Kamill Handcreme Balsam/Protect 100ml",
+   "raw": "101° - Figo Kinder-Pflaster \"Kleine Abenteurer\" 10 Stück 1€ /LISTERINE Cool Mint Mild Reisegröße 1,16€ 95 ml/Kamill Handcreme Balsam/Protect 100ml",
    "title": "Figo Kinder-Pflaster \"Kleine Abenteurer\" 10 Stück /LISTERINE Cool Mint",
-   "grad": 0,
+   "grad": 101,
    "price": 1.0,
    "cat": "Beauty & Pflege",
    "hints": [],
-   "pub": 1795237093.0,
+   "pub": 1795268381.0,
    "quelle": "https://www.mydealz.de/deals/figo-kinder-pflaster-kleine-abenteurer-10-stuck-1eur-listerine-cool-mint-mild-reisegrosse-116eur-95-mlkamill-handcreme-balsamprotect-100ml-2877679"
   },
   "2877688": {
@@ -3467,9 +2651,9 @@
   },
   "2877736": {
    "id": "2877736",
-   "raw": "103° - SONGMICS Aktenschrank, Doppeltüren, Schloss, 5 Ebenen, 80x40x180 cm",
+   "raw": "109° - SONGMICS Aktenschrank, Doppeltüren, Schloss, 5 Ebenen, 80x40x180 cm",
    "title": "SONGMICS Aktenschrank",
-   "grad": 103,
+   "grad": 109,
    "price": 105.9,
    "cat": "Haushalt",
    "hints": [],
@@ -3658,15 +2842,15 @@
   },
   "2877808": {
    "id": "2877808",
-   "raw": "Rexona Men Anti Transpirant Spray Sport Defence Deospray 6x 150 ml (Spar-Abo Prime)",
+   "raw": "109° - Rexona Men Anti Transpirant Spray Sport Defence Deospray 6x 150 ml (Spar-Abo Prime)",
    "title": "Rexona Men Anti Transpirant Spray Sport Defence Deospray 6x 150 ml",
-   "grad": 0,
+   "grad": 109,
    "price": 11.23,
    "cat": "Beauty & Pflege",
    "hints": [
     "nur im Spar-Abo"
    ],
-   "pub": 1795253904.0,
+   "pub": 1795267221.0,
    "quelle": "https://www.mydealz.de/deals/rexona-men-anti-transpirant-spray-sport-defence-deospray-6x-150-ml-spar-abo-prime-2877808"
   },
   "2877806": {
@@ -3704,13 +2888,13 @@
   },
   "2877800": {
    "id": "2877800",
-   "raw": "Eurotronic Comet Zero Matter, Heizkörperthermostat, Matter Over Thread V1.4 (Prime)",
+   "raw": "123° - Eurotronic Comet Zero Matter, Heizkörperthermostat, Matter Over Thread V1.4 (Prime)",
    "title": "Eurotronic Comet Zero Matter",
-   "grad": 0,
+   "grad": 123,
    "price": 24.49,
    "cat": "Garten & Baumarkt",
    "hints": [],
-   "pub": 1795253535.0,
+   "pub": 1795266157.0,
    "quelle": "https://www.mydealz.de/deals/eurotronic-comet-zero-matter-heizkorperthermostat-matter-over-thread-v14-prime-2877800"
   },
   "2877841": {
@@ -3761,24 +2945,24 @@
   },
   "2877829": {
    "id": "2877829",
-   "raw": "Nanoleaf Smart Led Deckenleuchte 2600lm Flach Rund Ø32cm Dimmable [Energieklasse E]",
+   "raw": "114° - Nanoleaf Smart Led Deckenleuchte 2600lm Flach Rund Ø32cm Dimmable [Energieklasse E]",
    "title": "Nanoleaf Smart Led Deckenleuchte 2600lm Flach Rund Ø32cm Dimmable",
-   "grad": 0,
+   "grad": 114,
    "price": 67.49,
    "cat": "Technik",
    "hints": [],
-   "pub": 1795255634.0,
+   "pub": 1795281026.0,
    "quelle": "https://www.mydealz.de/deals/nanoleaf-smart-led-deckenleuchte-2600lm-flach-rund-o32cm-dimmable-energieklasse-e-2877829"
   },
   "2877820": {
    "id": "2877820",
-   "raw": "(Prime) NRG-5 Emergency Food Ration | 2300 kcal Notnahrung",
+   "raw": "130° - (Prime) NRG-5 Emergency Food Ration | 2300 kcal Notnahrung",
    "title": "NRG-5 Emergency Food Ration",
-   "grad": 0,
+   "grad": 130,
    "price": 5.73,
    "cat": "Sport & Freizeit",
    "hints": [],
-   "pub": 1795255039.0,
+   "pub": 1795273062.0,
    "quelle": "https://www.mydealz.de/deals/prime-nrg-5-emergency-food-ration-2300-kcal-notnahrung-2877820"
   },
   "2877817": {
@@ -3816,13 +3000,13 @@
   },
   "2877855": {
    "id": "2877855",
-   "raw": "Prime: Depeche Mode Songs of Faith and Devotion [Vinyl LP]",
+   "raw": "116° - Prime: Depeche Mode Songs of Faith and Devotion [Vinyl LP]",
    "title": "Depeche Mode Songs of Faith and Devotion",
-   "grad": 0,
+   "grad": 116,
    "price": 20.99,
    "cat": "Sport & Freizeit",
    "hints": [],
-   "pub": 1795258162.0,
+   "pub": 1795276998.0,
    "quelle": "https://www.mydealz.de/deals/prime-depeche-mode-songs-of-faith-and-devotion-vinyl-lp-2877855"
   },
   "2877851": {
@@ -3838,9 +3022,9 @@
   },
   "2875863": {
    "id": "2875863",
-   "raw": "104° - Pokémon Battle Figure Multipack – 8 Figuren inkl. Schiggy, Glumanda & Bisasam -Prime",
+   "raw": "108° - Pokémon Battle Figure Multipack – 8 Figuren inkl. Schiggy, Glumanda & Bisasam -Prime",
    "title": "Pokémon Battle Figure Multipack",
-   "grad": 104,
+   "grad": 108,
    "price": 26.24,
    "cat": null,
    "hints": [],
@@ -3849,9 +3033,9 @@
   },
   "2873897": {
    "id": "2873897",
-   "raw": "100° - Stanley FatMax Cuttermesser 0-10-486 (25 mm, mit Klingenmagazin)",
+   "raw": "103° - Stanley FatMax Cuttermesser 0-10-486 (25 mm, mit Klingenmagazin)",
    "title": "Stanley FatMax Cuttermesser 0-10-486",
-   "grad": 100,
+   "grad": 103,
    "price": 10.49,
    "cat": "Garten & Baumarkt",
    "hints": [],
@@ -3970,13 +3154,13 @@
   },
   "2877877": {
    "id": "2877877",
-   "raw": "[Prime] L'Oréal Men Expert XXL 100ml kühlende Gesichtspflege Anti-Glanz Erfrischendes mattierendes Gesichtsgel Hyaluron Creme Hydra Energy",
+   "raw": "182° - [Prime] L'Oréal Men Expert XXL 100ml kühlende Gesichtspflege Anti-Glanz Erfrischendes mattierendes Gesichtsgel Hyaluron Creme Hydra Energy",
    "title": "L'Oréal Men Expert XXL 100ml kühlende Gesichtspflege Anti-Glanz",
-   "grad": 0,
+   "grad": 182,
    "price": 9.47,
    "cat": "Beauty & Pflege",
    "hints": [],
-   "pub": 1795259165.0,
+   "pub": 1795263534.0,
    "quelle": "https://www.mydealz.de/deals/prime-loreal-men-expert-xxl-100ml-kuhlende-gesichtspflege-anti-glanz-erfrischendes-mattierendes-gesichtsgel-hyaluron-creme-hydra-energy-2877877"
   },
   "2877871": {
@@ -4003,9 +3187,9 @@
   },
   "2854136": {
    "id": "2854136",
-   "raw": "152° - [Amazon Prime] Sancho und Pancho (1969-72) - Die komplette Zeichentrick-Serie - DVD - IMDB 7,2",
+   "raw": "221° - [Amazon Prime] Sancho und Pancho (1969-72) - Die komplette Zeichentrick-Serie - DVD - IMDB 7,2",
    "title": "Sancho und Pancho",
-   "grad": 152,
+   "grad": 221,
    "price": 10.0,
    "cat": "Sport & Freizeit",
    "hints": [],
@@ -4014,13 +3198,13 @@
   },
   "2877901": {
    "id": "2877901",
-   "raw": "WORKPRO Klappbare Japansäge, SK5 Stahl Handsäge, 14 cm Doppelseitenklinge (Prime)",
+   "raw": "134° - WORKPRO Klappbare Japansäge, SK5 Stahl Handsäge, 14 cm Doppelseitenklinge (Prime)",
    "title": "WORKPRO Klappbare Japansäge",
-   "grad": 0,
+   "grad": 134,
    "price": 9.99,
    "cat": "Garten & Baumarkt",
    "hints": [],
-   "pub": 1795261230.0,
+   "pub": 1795274387.0,
    "quelle": "https://www.mydealz.de/deals/workpro-klappbare-japansage-sk5-stahl-handsage-14-cm-doppelseitenklinge-prime-2877901"
   },
   "2877898": {
@@ -4036,13 +3220,13 @@
   },
   "2877893": {
    "id": "2877893",
-   "raw": "Boyz N The Hood (1991) | Jungs im Viertel | 4K Blu-ray | dt. Ton | IMDB 7,8",
+   "raw": "121° - Boyz N The Hood (1991) | Jungs im Viertel | 4K Blu-ray | dt. Ton | IMDB 7,8",
    "title": "Boyz N The Hood",
-   "grad": 0,
+   "grad": 121,
    "price": 16.08,
    "cat": "Sport & Freizeit",
    "hints": [],
-   "pub": 1795260219.0,
+   "pub": 1795276987.0,
    "quelle": "https://www.mydealz.de/deals/boyz-n-the-hood-1991-jungs-im-viertel-4k-blu-ray-dt-ton-imdb-78-2877893"
   },
   "2877891": {
@@ -4055,6 +3239,831 @@
    "hints": [],
    "pub": 1795260148.0,
    "quelle": "https://www.mydealz.de/deals/comfee-gefrierschrank-160l-mit-5-schubladen-energieklasse-e-2877891"
+  },
+  "2877920": {
+   "id": "2877920",
+   "raw": "129° - XIAOMI Watch 5 Smartwatch 47 mm Jupiter Green (Google Wear OS, 1,54-Zoll-Saphirdisplay, bis 6 Tage Akku, GPS, EKG, 150+ Sportarten, 5 ATM)",
+   "title": "XIAOMI Watch 5 Smartwatch 47 mm Jupiter Green",
+   "grad": 129,
+   "price": 199.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795274418.0,
+   "quelle": "https://www.mydealz.de/deals/xiaomi-watch-5-smartwatch-47-mm-jupiter-green-google-wear-os-154-zoll-saphirdisplay-bis-6-tage-akku-gps-ekg-150-sportarten-5-atm-2877920"
+  },
+  "2877916": {
+   "id": "2877916",
+   "raw": "118° - MEDION HD2 Ionen-Haartrockner (1.500 W, BLDC-Motor, Diffusor & Stylingdüse, Selbstreinigungsfunktion) | Amazon Prime",
+   "title": "MEDION HD2 Ionen-Haartrockner",
+   "grad": 118,
+   "price": 18.9,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1795270264.0,
+   "quelle": "https://www.mydealz.de/deals/medion-hd2-ionen-haartrockner-1500-w-bldc-motor-diffusor-stylingduse-selbstreinigungsfunktion-amazon-prime-2877916"
+  },
+  "2877915": {
+   "id": "2877915",
+   "raw": "Levi's Herren New Duncan Gürtel in größe 105 (L/Taille 101,6cm), braun für nur 10,65€ (Prime)",
+   "title": "Levi's Herren New Duncan Gürtel in größe 105",
+   "grad": 0,
+   "price": 10.65,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795263081.0,
+   "quelle": "https://www.mydealz.de/deals/levis-herren-new-duncan-gurtel-in-grosse-105-ltaille-1016cm-braun-fur-nur-1065eur-prime-2877915"
+  },
+  "2877908": {
+   "id": "2877908",
+   "raw": "(Prime) Melissa & Doug Eisladen aus Holz",
+   "title": "Melissa & Doug Eisladen aus Holz",
+   "grad": 0,
+   "price": 29.99,
+   "cat": null,
+   "hints": [],
+   "pub": 1795262222.0,
+   "quelle": "https://www.mydealz.de/deals/prime-melissa-doug-eisladen-aus-holz-2877908"
+  },
+  "2857641": {
+   "id": "2857641",
+   "raw": "185° - Apache 207 - 21 Gramm - 2LP Vinyl | Prime",
+   "title": "Apache 207 21 Gramm",
+   "grad": 185,
+   "price": 18.99,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795265068.0,
+   "quelle": "https://www.mydealz.de/deals/apache-207-21-gramm-2lp-vinyl-prime-2857641"
+  },
+  "2877952": {
+   "id": "2877952",
+   "raw": "FISCHER SmartLine Black Kupplungs-Fahrradträger (für 2 Fahrräder, bis 50 kg Nutzlast, abklappbar, mit Rücklichtern & Kennzeichenhalter)",
+   "title": "FISCHER SmartLine Black Kupplungs-Fahrradträger",
+   "grad": 0,
+   "price": 122.72,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795265503.0,
+   "quelle": "https://www.mydealz.de/deals/fischer-smartline-black-kupplungs-fahrradtrager-fur-2-fahrrader-bis-50-kg-nutzlast-abklappbar-mit-rucklichtern-kennzeichenhalter-2877952"
+  },
+  "2877950": {
+   "id": "2877950",
+   "raw": "140° - schleich HORSE CLUB – Pura Raza Española Jungpferd (13924) (Prime)",
+   "title": "schleich HORSE CLUB",
+   "grad": 140,
+   "price": 2.79,
+   "cat": null,
+   "hints": [],
+   "pub": 1795277683.0,
+   "quelle": "https://www.mydealz.de/deals/schleich-horse-club-pura-raza-espanola-jungpferd-13924-prime-2877950"
+  },
+  "2877949": {
+   "id": "2877949",
+   "raw": "AEG 18 V Pro18V Akku-Handstaubsauger BHSS18C-0 (1.274 l/min Luftstrom, inkl. Bodendüse & Verlängerungsstange, ohne Akku und Ladegerät) Prime",
+   "title": "AEG 18 V Pro18V Akku-Handstaubsauger BHSS18C-0",
+   "grad": 0,
+   "price": 38.99,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795265242.0,
+   "quelle": "https://www.mydealz.de/deals/aeg-18-v-pro18v-akku-handstaubsauger-bhss18c-0-1274-lmin-luftstrom-inkl-bodenduse-verlangerungsstange-ohne-akku-und-ladegerat-prime-2877949"
+  },
+  "2877948": {
+   "id": "2877948",
+   "raw": "Colgate Extra Clean Handzahnbürste, Mittelhart, 3er Pack für knapp 50ct/stk - im Spar-Abo + 10% Coupon sogar nur 1,19€ (Prime)",
+   "title": "Colgate Extra Clean Handzahnbürste",
+   "grad": 0,
+   "price": 1.49,
+   "cat": "Beauty & Pflege",
+   "hints": [
+    "nur im Spar-Abo",
+    "mit Coupon"
+   ],
+   "pub": 1795265186.0,
+   "quelle": "https://www.mydealz.de/deals/colgate-extra-clean-handzahnburste-mittelhart-3er-pack-fur-knapp-50ctstk-im-spar-abo-10-coupon-sogar-nur-119eur-prime-2877948"
+  },
+  "2877945": {
+   "id": "2877945",
+   "raw": "122° - Samsung microSD T7, 128 GB, MB-MB128T/WW (Prime)",
+   "title": "Samsung microSD T7",
+   "grad": 122,
+   "price": 25.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795281116.0,
+   "quelle": "https://www.mydealz.de/deals/samsung-microsd-t7-128-gb-mb-mb128tww-2877945"
+  },
+  "2877944": {
+   "id": "2877944",
+   "raw": "Jurassic World Mattel Hammond Collection Indominus Rex (66 cm, JKG98) (Prime)",
+   "title": "Jurassic World Mattel Hammond Collection Indominus Rex",
+   "grad": 0,
+   "price": 32.99,
+   "cat": null,
+   "hints": [],
+   "pub": 1795265050.0,
+   "quelle": "https://www.mydealz.de/deals/jurassic-world-mattel-hammond-collection-indominus-rex-66-cm-jkg98-prime-2877944"
+  },
+  "2877941": {
+   "id": "2877941",
+   "raw": "142° - ABUS Pro Shield XPlus 5955 Rahmenschloss-Set (mit 85-cm-Einsteckkette, Schlosstasche, XPlus-Zylinder, Sicherheitslevel 9, Made in Germany)",
+   "title": "ABUS Pro Shield XPlus 5955 Rahmenschloss-Set",
+   "grad": 142,
+   "price": 44.64,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795273060.0,
+   "quelle": "https://www.mydealz.de/deals/abus-pro-shield-xplus-5955-rahmenschloss-set-mit-85-cm-einsteckkette-schlosstasche-xplus-zylinder-sicherheitslevel-9-made-in-germany-2877941"
+  },
+  "2877940": {
+   "id": "2877940",
+   "raw": "(Prime) WMF Kochtopf 6,5l Induktion Fleischtopf",
+   "title": "WMF Kochtopf 6",
+   "grad": 0,
+   "price": 38.49,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795264913.0,
+   "quelle": "https://www.mydealz.de/deals/wmf-kochtopf-65l-induktion-fleischtopf-2877940"
+  },
+  "2877938": {
+   "id": "2877938",
+   "raw": "Home Pilot RolloTron Classic Minigurt: Elektrischer Gurtwickler für Rollläden bis 5 m² – Nachrüstung mit Zeitschaltuhr | Made in Germany",
+   "title": "Home Pilot RolloTron Classic Minigurt: Elektrischer Gurtwickler für",
+   "grad": 0,
+   "price": 68.84,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795264657.0,
+   "quelle": "https://www.mydealz.de/deals/home-pilot-rollotron-classic-minigurt-elektrischer-gurtwickler-fur-rollladen-bis-5-m2-nachrustung-mit-zeitschaltuhr-made-in-germany-2877938"
+  },
+  "2877882": {
+   "id": "2877882",
+   "raw": "Weihnachtsbaum künstlich 180 cm – Dichter Tannenbaum aus 100% PVC, schwer entflammbar, mit Regenschirmsystem und Ständer - Pure Living PRIME",
+   "title": "Weihnachtsbaum künstlich 180 cm",
+   "grad": 0,
+   "price": 69.95,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795264363.0,
+   "quelle": "https://www.mydealz.de/deals/weihnachtsbaum-kunstlich-180-cm-dichter-tannenbaum-aus-100-pvc-schwer-entflammbar-mit-regenschirmsystem-und-stander-pure-living-prime-2877882"
+  },
+  "2877931": {
+   "id": "2877931",
+   "raw": "{prime] Wiha zai Hause Elektrischer Akku Schraubendreher mit 8 Bits, 3,6 V Li-Ion (44621)",
+   "title": "{ ] Wiha zai Hause Elektrischer Akku Schraubendreher mit 8 Bits",
+   "grad": 0,
+   "price": 22.99,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795264305.0,
+   "quelle": "https://www.mydealz.de/deals/prime-wiha-zai-hause-elektrischer-akku-schraubendreher-mit-8-bits-36-v-li-ion-44621-2877931"
+  },
+  "2877927": {
+   "id": "2877927",
+   "raw": "139° - [prime] Wiha Essential Feinmechaniker Schraubendreher Set 7-tlg. In Tasche (45896) Feinmechaniker Werkzeug Set",
+   "title": "Wiha Essential Feinmechaniker Schraubendreher Set 7-tlg. In Tasche",
+   "grad": 139,
+   "price": 9.99,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795274148.0,
+   "quelle": "https://www.mydealz.de/deals/prime-wiha-essential-feinmechaniker-schraubendreher-set-7-tlg-in-tasche-45896-feinmechaniker-werkzeug-set-2877927"
+  },
+  "2877926": {
+   "id": "2877926",
+   "raw": "Gaming Laptop MSI Cyborg, RTX5060, 1TB SSD, Intel Core 7, 144hz",
+   "title": "Gaming Laptop MSI Cyborg",
+   "grad": 0,
+   "price": 1079.0,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795264059.0,
+   "quelle": "https://www.mydealz.de/deals/gaming-laptop-msi-cyborg-rtx5060-1tb-ssd-intel-core-7-144hz-2877926"
+  },
+  "2877922": {
+   "id": "2877922",
+   "raw": "119° - (Prime) Pokémon PKW4224 - Select Entwicklungs Multipacks - offizielles Spielset (Evoli, Folipurba, Glaziola, Feelinara)",
+   "title": "Pokémon PKW4224 Select Entwicklungs Multipacks",
+   "grad": 119,
+   "price": 25.39,
+   "cat": null,
+   "hints": [],
+   "pub": 1795278739.0,
+   "quelle": "https://www.mydealz.de/deals/pokemon-pkw4224-select-entwicklungs-multipacks-offizielles-spielset-evoli-folipurba-glaziola-feelinara-2877922"
+  },
+  "2877925": {
+   "id": "2877925",
+   "raw": "Arkham Horror Kartenspiel LGC / Kapitel 2 2026 Version",
+   "title": "Arkham Horror Kartenspiel LGC / Kapitel 2 2026 Version",
+   "grad": 0,
+   "price": 53.99,
+   "cat": null,
+   "hints": [],
+   "pub": 1795263872.0,
+   "quelle": "https://www.mydealz.de/deals/arkham-horror-kartenspiel-lgc-kapitel-2-2026-version-2877925"
+  },
+  "2877984": {
+   "id": "2877984",
+   "raw": "Eraser (UHD) – Digitaler Kauf bei Amazon Prime Video",
+   "title": "Eraser (UHD) Digitaler Kauf bei Video",
+   "grad": 0,
+   "price": 3.99,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795267296.0,
+   "quelle": "https://www.mydealz.de/deals/eraser-uhd-digitaler-kauf-bei-amazon-prime-video-fur-399-eur-statt-1299-eur-2877984"
+  },
+  "2877981": {
+   "id": "2877981",
+   "raw": "188° - Garmin Fenix 8, 47 mm, GPS-Multisport-Smartwatch, Schwarz/Schiefergrau (Prime)",
+   "title": "Garmin Fenix 8",
+   "grad": 188,
+   "price": 499.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795272069.0,
+   "quelle": "https://www.mydealz.de/deals/garmin-fenix-8-47-mm-gps-multisport-smartwatch-schwarzschiefergrau-prime-2877981"
+  },
+  "2877979": {
+   "id": "2877979",
+   "raw": "X-Shot Insanity Bezerko Blaster mit 48 Schaumstoff-Darts [Entfernung bis zu 27m] (Prime)",
+   "title": "X-Shot Insanity Bezerko Blaster mit 48 Schaumstoff-Darts",
+   "grad": 0,
+   "price": 13.79,
+   "cat": null,
+   "hints": [],
+   "pub": 1795267091.0,
+   "quelle": "https://www.mydealz.de/deals/x-shot-insanity-bezerko-blaster-mit-48-schaumstoff-darts-entfernung-bis-zu-27m-prime-2877979"
+  },
+  "2877978": {
+   "id": "2877978",
+   "raw": "BLACKROLL BLACKBOX, Faszienrollen-Set für die Selbstmassage (Prime)",
+   "title": "BLACKROLL BLACKBOX",
+   "grad": 0,
+   "price": 42.66,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795267087.0,
+   "quelle": "https://www.mydealz.de/deals/blackroll-blackbox-faszienrollen-set-fur-die-selbstmassage-2877978"
+  },
+  "2877974": {
+   "id": "2877974",
+   "raw": "Bächlein Handbrause Matt Schwarz oder Chrom rund oder eckig (3 Strahlarten, Antikalk-Noppen, universeller G 1/2-Zoll-Anschluss) Prime",
+   "title": "Bächlein Handbrause Matt Schwarz oder Chrom rund oder eckig",
+   "grad": 0,
+   "price": 11.95,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795266676.0,
+   "quelle": "https://www.mydealz.de/deals/bachlein-handbrause-matt-schwarz-oder-chrom-rund-oder-eckig-3-strahlarten-antikalk-noppen-universeller-g-12-zoll-anschluss-prime-2877974"
+  },
+  "2877968": {
+   "id": "2877968",
+   "raw": "Corsair K70 PRO TKL RGB Gaming-Tastatur (QWERTZ, Hall-Effekt-Schalter, Rapid Trigger, 8.000 Hz, abnehmbare Handballenauflage) | Amazon",
+   "title": "Corsair K70 PRO TKL RGB Gaming-Tastatur",
+   "grad": 0,
+   "price": 89.99,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795266151.0,
+   "quelle": "https://www.mydealz.de/deals/corsair-k70-pro-tkl-rgb-gaming-tastatur-qwertz-hall-effekt-schalter-rapid-trigger-8000-hz-abnehmbare-handballenauflage-amazon-2877968"
+  },
+  "2877961": {
+   "id": "2877961",
+   "raw": "ROMMELSBACHER Back & Grill Ofen BG 1550 (30 Liter, 1550 W, Umluft, Drehspieß, Doppelverglasung)",
+   "title": "ROMMELSBACHER Back & Grill Ofen BG 1550",
+   "grad": 0,
+   "price": 93.99,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795265735.0,
+   "quelle": "https://www.mydealz.de/deals/rommelsbacher-back-grill-ofen-bg-1550-30-liter-1550-w-umluft-drehspiess-doppelverglasung-2877961"
+  },
+  "2877960": {
+   "id": "2877960",
+   "raw": "Amazon Glückrad in Amazon App: Gutscheine auf Playmobil Boss Calvin Klein Joop Delonghi Philips Skechers Jack Jones Whiskas ESN More",
+   "title": "Glückrad in App: Gutscheine auf Playmobil Boss Calvin Klein Joop",
+   "grad": 0,
+   "price": null,
+   "cat": "Haushalt",
+   "hints": [
+    "mit Gutschein"
+   ],
+   "pub": 1795265700.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-gluckrad-in-amazon-app-gutscheine-auf-playmobil-boss-delonghi-philips-2877960"
+  },
+  "2877956": {
+   "id": "2877956",
+   "raw": "NATURAL ELEMENTS - SoProtein Whey Complex Coffee Protein Pulver | 500g | Cappuccino/Cappuccino Decaf/Schokolade",
+   "title": "NATURAL ELEMENTS SoProtein Whey Complex Coffee Protein Pulver",
+   "grad": 0,
+   "price": 15.0,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795265533.0,
+   "quelle": "https://www.mydealz.de/deals/natural-elements-soprotein-whey-complex-coffee-protein-pulver-500g-cappuccinocappuccino-decafschokolade-2877956"
+  },
+  "2877954": {
+   "id": "2877954",
+   "raw": "Ravensburger Puzzle Wasserfälle von Iguazu – 2000 Teile Landschaftspuzzle (16607) (Prime)",
+   "title": "Ravensburger Puzzle Wasserfälle von Iguazu",
+   "grad": 0,
+   "price": 19.99,
+   "cat": null,
+   "hints": [],
+   "pub": 1795265515.0,
+   "quelle": "https://www.mydealz.de/deals/ravensburger-puzzle-wasserfalle-von-iguazu-2000-teile-landschaftspuzzle-16607-prime-2877954"
+  },
+  "2878001": {
+   "id": "2878001",
+   "raw": "140° - TRELOCK Fold-it Daily – Faltschloss 130 cm, Sicherheitsstufe 10, 1,0 kg, mit X-Press-Halterung & Tracking-Tag-Fach | Amazon Prime",
+   "title": "TRELOCK Fold-it Daily",
+   "grad": 140,
+   "price": 36.29,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795270906.0,
+   "quelle": "https://www.mydealz.de/deals/trelock-fold-it-daily-faltschloss-130-cm-sicherheitsstufe-10-10-kg-mit-x-press-halterung-tracking-tag-fach-amazon-prime-2878001"
+  },
+  "2878000": {
+   "id": "2878000",
+   "raw": "145° - Bosch Professional 18V 3er Combo-Kit (GSB 18V-65 + GBH 18V-22 + GWS 18V-11 + 3x 5,0 Ah Akku + Schnellladegerät GAL 12V/18V-80 + M-BAG)",
+   "title": "Bosch Professional 18V 3er Combo-Kit",
+   "grad": 145,
+   "price": 444.99,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795274177.0,
+   "quelle": "https://www.mydealz.de/deals/bosch-professional-18v-3er-combo-kit-gsb-18v-65-gbh-18v-22-gws-18v-11-3x-50-ah-akku-schnellladegerat-gal-12v18v-80-m-bag-2878000"
+  },
+  "2877999": {
+   "id": "2877999",
+   "raw": "PRIME Gebraucht \"sehr gut\" Xiaomi 17 Ultra Smartphone 16+512 GB Schwarz LOFIC HDR",
+   "title": "Gebraucht \"sehr gut\" Xiaomi 17 Ultra Smartphone 16+512 GB Schwarz",
+   "grad": 0,
+   "price": 880.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795268482.0,
+   "quelle": "https://www.mydealz.de/deals/prime-gebraucht-sehr-gut-xiaomi-17-ultra-smartphone-16512-gb-schwarz-lofic-hdr-2877999"
+  },
+  "2877994": {
+   "id": "2877994",
+   "raw": "141° - EBL wiederaufladbare Batterien AA / AAA | z.B. 8er AAA Akku 1100mAh für 6,86€ oder 8er AA Akku 2800mAh für 11,04€ | Amazon Prime",
+   "title": "EBL wiederaufladbare Batterien AA / AAA",
+   "grad": 141,
+   "price": 6.86,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795272823.0,
+   "quelle": "https://www.mydealz.de/deals/ebl-wiederaufladbare-batterien-aa-aaa-zb-8er-aaa-akku-1100mah-fur-686eur-oder-8er-aa-akku-2800mah-fur-1104eur-amazon-prime-2877994"
+  },
+  "2877991": {
+   "id": "2877991",
+   "raw": "139° - [Prime] Vodafone Prepaid CallYa L | 115 GB | 20€ Start, + 60€ Black Week Bonusguthaben | ohne Vertrag | 5G | 300Mbit/s",
+   "title": "Vodafone Prepaid CallYa L",
+   "grad": 139,
+   "price": 3.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795272402.0,
+   "quelle": "https://www.mydealz.de/deals/prime-vodafone-prepaid-callya-l-115-gb-20eur-start-60eur-black-week-bonusguthaben-ohne-vertrag-5g-300mbits-2877991"
+  },
+  "2877988": {
+   "id": "2877988",
+   "raw": "111° - Clementoni Stitch Stift-Atelier – DIY-Set mit 5 Stiften, Figuren, Verzierungen & Aufklebern (Kreativspielzeug ab 6 Jahren, 25+ Teile) Prime",
+   "title": "Clementoni Stitch Stift-Atelier",
+   "grad": 111,
+   "price": 10.09,
+   "cat": null,
+   "hints": [],
+   "pub": 1795276981.0,
+   "quelle": "https://www.mydealz.de/deals/clementoni-stitch-stift-atelier-diy-set-mit-5-stiften-figuren-verzierungen-aufklebern-kreativspielzeug-ab-6-jahren-25-teile-prime-2877988"
+  },
+  "2877987": {
+   "id": "2877987",
+   "raw": "118° - BlueBrixx-Pro 109641 - Burg Bärenfels: Grundburg | modulare & erweiterbare Spielburg | 1766 Klemmbausteine | inkl. 7 Minifiguren",
+   "title": "BlueBrixx-Pro 109641 Burg Bärenfels: Grundburg",
+   "grad": 118,
+   "price": 85.21,
+   "cat": null,
+   "hints": [],
+   "pub": 1795276420.0,
+   "quelle": "https://www.mydealz.de/deals/bluebrixx-pro-109641-burg-barenfels-grundburg-modulare-erweiterbare-spielburg-1766-klemmbausteine-2877987"
+  },
+  "2859609": {
+   "id": "2859609",
+   "raw": "265° - PJ Harvey - Stories from the City, Stories from the Sea [Vinyl LP]",
+   "title": "PJ Harvey Stories from the City",
+   "grad": 265,
+   "price": 17.59,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795269361.0,
+   "quelle": "https://www.mydealz.de/deals/pj-harvey-stories-from-the-city-stories-from-the-sea-vinyl-lp-2859609"
+  },
+  "2878015": {
+   "id": "2878015",
+   "raw": "Victorinox Angler Schweizer Taschenmesser mit 19 Funktionen (Fischentschupper, Angellöser, Kombizange, 91 mm, 113 g, Swiss Made) | Prime",
+   "title": "Victorinox Angler Schweizer Taschenmesser mit 19 Funktionen",
+   "grad": 0,
+   "price": 32.12,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795270112.0,
+   "quelle": "https://www.mydealz.de/deals/victorinox-angler-taschenmesser-mit-19-funktionen-fischentschupper-angelloser-kombizange-91-mm-113-g-swiss-made-amazon-prime-2878015"
+  },
+  "2878012": {
+   "id": "2878012",
+   "raw": "ASUS Prime AP201 MicroATX Gehäuse",
+   "title": "ASUS AP201 MicroATX Gehäuse",
+   "grad": 0,
+   "price": 52.9,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795269907.0,
+   "quelle": "https://www.mydealz.de/deals/asus-prime-ap201-microatx-gehause-2878012"
+  },
+  "2878038": {
+   "id": "2878038",
+   "raw": "126° - [Prime] Jack & Jones 2er-Pack nur 14,40€ Pro Hose Herren Dave Male Chino Relaxed Hose verschiedene Grössen",
+   "title": "Jack & Jones 2er-Pack Pro Hose Herren Dave Male Chino Relaxed Hose",
+   "grad": 126,
+   "price": 28.79,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795278031.0,
+   "quelle": "https://www.mydealz.de/deals/prime-jack-jones-2er-pack-nur-1440eur-pro-hose-herren-dave-male-chino-relaxed-hose-verschiedene-grossen-2878038"
+  },
+  "2878037": {
+   "id": "2878037",
+   "raw": "Corsair NIGHTSWORD v2 Wireless SD Stream Deck – kabellose Gaming-Maus (33.000 DPI, 8.000 Hz, bis zu 170 Std. Akku, RGB) | Amazon/MMS",
+   "title": "Corsair NIGHTSWORD v2 Wireless SD Stream Deck",
+   "grad": 0,
+   "price": 84.99,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795272470.0,
+   "quelle": "https://www.mydealz.de/deals/corsair-nightsword-v2-wireless-sd-stream-deck-kabellose-gaming-maus-33000-dpi-8000-hz-bis-zu-170-std-akku-rgb-amazonmms-2878037"
+  },
+  "2878035": {
+   "id": "2878035",
+   "raw": "Megan (M3gan) 4K Ultra HD Blu-ray uncut Amazon Prime Black Friday",
+   "title": "Megan (M3gan) 4K Ultra HD Blu-ray uncut Black Friday",
+   "grad": 0,
+   "price": 10.51,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795272319.0,
+   "quelle": "https://www.mydealz.de/deals/megan-m3gan-4k-ultra-hd-blu-ray-uncut-amazon-prime-black-friday-2878035"
+  },
+  "2878032": {
+   "id": "2878032",
+   "raw": "115° - CORSAIR RM1000e (2025) 1000W ATX-Netzteil (vollmodular, ATX 3.1, PCIe 5.1, 12V-2x6-Kabel, Zero-RPM-Modus, Cybenetics Gold, schwarz) Amazon",
+   "title": "CORSAIR RM1000e",
+   "grad": 115,
+   "price": 107.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795282847.0,
+   "quelle": "https://www.mydealz.de/deals/corsair-rm1000e-2025-1000w-atx-netzteil-vollmodular-atx-31-pcie-51-12v-2x6-kabel-zero-rpm-modus-cybenetics-gold-schwarz-amazon-2878032"
+  },
+  "2878031": {
+   "id": "2878031",
+   "raw": "[Prime] RITUALS The Ritual of Karma Geschenkset, Lotusblüte, Klein",
+   "title": "RITUALS The Ritual of Karma Geschenkset",
+   "grad": 0,
+   "price": 19.55,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1795272001.0,
+   "quelle": "https://www.mydealz.de/deals/prime-rituals-the-ritual-of-karma-geschenkset-lotusblute-klein-2878031"
+  },
+  "2878029": {
+   "id": "2878029",
+   "raw": "Corsair M65 RGB Ultra Gaming-Maus (kabelgebunden, 26.000 DPI, 8K Hz, Gewichtssystem, optische Schalter, RGB, PC/PS5/PS4/Xbox) | Prime",
+   "title": "Corsair M65 RGB Ultra Gaming-Maus",
+   "grad": 0,
+   "price": 44.99,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795271796.0,
+   "quelle": "https://www.mydealz.de/deals/corsair-m65-rgb-ultra-gaming-maus-kabelgebunden-26000-dpi-8k-hz-gewichtssystem-optische-schalter-rgb-pcps5ps4xbox-prime-2878029"
+  },
+  "2878028": {
+   "id": "2878028",
+   "raw": "[Prime Spar-Abo] Old Spice Gentle Man's Coconut + Vanilla 3-in-1 Duschgel & Shampoo 800 ml",
+   "title": "Old Spice Gentle Man's Coconut + Vanilla 3-in-1 Duschgel & Shampoo 800",
+   "grad": 0,
+   "price": 5.6,
+   "cat": "Beauty & Pflege",
+   "hints": [
+    "nur im Spar-Abo"
+   ],
+   "pub": 1795271701.0,
+   "quelle": "https://www.mydealz.de/deals/prime-spar-abo-old-spice-gentle-mans-coconut-vanilla-3-in-1-duschgel-shampoo-800-ml-2878028"
+  },
+  "2878025": {
+   "id": "2878025",
+   "raw": "Shark PowerDetect Clean & Empty kabelloser Staubsauger, Grau IP3225EUT",
+   "title": "Shark PowerDetect Clean & Empty kabelloser Staubsauger",
+   "grad": 0,
+   "price": 289.99,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795271268.0,
+   "quelle": "https://www.mydealz.de/deals/shark-powerdetect-clean-empty-kabelloser-staubsauger-grau-ip3225eut-2878025"
+  },
+  "2878021": {
+   "id": "2878021",
+   "raw": "109° - CORSAIR MM300 PRO Extended Gaming-Mauspad (93 x 30 cm, spritzwassergeschützt, Mikrofasergewebe, 3mm dick, rutschfeste Gummiunterseite) Prime",
+   "title": "CORSAIR MM300 PRO Extended Gaming-Mauspad",
+   "grad": 109,
+   "price": 14.99,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795282936.0,
+   "quelle": "https://www.mydealz.de/deals/corsair-mm300-pro-extended-gaming-mauspad-93-x-30-cm-spritzwassergeschutzt-mikrofasergewebe-3mm-dick-rutschfeste-gummiunterseite-prime-2878021"
+  },
+  "2875257": {
+   "id": "2875257",
+   "raw": "120° - QINCAO Baumwollsocken Herren & Damen (10 Paar, Schwarz, versch. Größen) | 81 % Baumwolle, atmungsaktiv, flache Zehennaht, rutschfest | Prime",
+   "title": "QINCAO Baumwollsocken Herren & Damen",
+   "grad": 120,
+   "price": 11.99,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795273113.0,
+   "quelle": "https://www.mydealz.de/deals/qincao-baumwollsocken-herren-damen-10-paar-schwarz-versch-grossen-81-baumwolle-atmungsaktiv-flache-zehennaht-rutschfest-prime-2875257"
+  },
+  "2875972": {
+   "id": "2875972",
+   "raw": "101° - Monopoly Star Wars : Heroes vs. Villains - PS5 / Nintendo Switch 1+2 - physische Version - Ubisoft @ Prime",
+   "title": "Monopoly Star Wars : Heroes vs. Villains",
+   "grad": 101,
+   "price": 19.99,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795272913.0,
+   "quelle": "https://www.mydealz.de/deals/monopoly-star-wars-heroes-vs-villains-ps5-nintendo-switch-12-physische-version-ubisoft-at-prime-2875972"
+  },
+  "2878046": {
+   "id": "2878046",
+   "raw": "3 CD Helloween - March of Time The Best of 40 Years @ Amazon Prime",
+   "title": "3 CD Helloween",
+   "grad": 0,
+   "price": 13.99,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795273818.0,
+   "quelle": "https://www.mydealz.de/deals/3-cd-helloween-march-of-time-the-best-of-40-years-at-amazon-prime-2878046"
+  },
+  "2878045": {
+   "id": "2878045",
+   "raw": "102° - 6 Stück X-Sense Smarter Rauchmelder WLAN mit Sprachausgabe und 17 Standorten, Feuermelder, Rauchmelder vernetzt, 33 mm etc",
+   "title": "6 Stück X-Sense Smarter Rauchmelder WLAN mit Sprachausgabe und 17",
+   "grad": 102,
+   "price": 117.79,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795283281.0,
+   "quelle": "https://www.mydealz.de/deals/x-sense-smarter-rauchmelder-wlan-mit-sprachausgabe-und-17-standorten-feuermelder-rauchmelder-vernetzt-33-mm-etc-2878045"
+  },
+  "2878043": {
+   "id": "2878043",
+   "raw": "109° - (Prime) Kate Bush The Kick Inside (2018 Remaster) [Vinyl LP]",
+   "title": "Kate Bush The Kick Inside",
+   "grad": 109,
+   "price": 17.59,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795282043.0,
+   "quelle": "https://www.mydealz.de/deals/kate-bush-the-kick-inside-2018-remaster-vinyl-lp-2878043"
+  },
+  "2873200": {
+   "id": "2873200",
+   "raw": "Philips Hue Play LED-Lightbar, 2er-Pack, Schwarz (Nur einmal nutzbar)",
+   "title": "Philips Hue Play LED-Lightbar",
+   "grad": 0,
+   "price": 77.93,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795275777.0,
+   "quelle": "https://www.mydealz.de/deals/httpswwwamazondephilips-hue-doppelpack-millionen-kompatibeldpb07fydgd7r-2873200"
+  },
+  "2878069": {
+   "id": "2878069",
+   "raw": "Harry Potter 25th Anniversary Steelbook Collection (4K UHD + BS)",
+   "title": "Harry Potter 25th Anniversary Steelbook Collection",
+   "grad": 0,
+   "price": 232.88,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795276118.0,
+   "quelle": "https://www.mydealz.de/deals/harry-potter-25th-anniversary-steelbook-collection-4k-uhd-bs-2878069"
+  },
+  "2878068": {
+   "id": "2878068",
+   "raw": "Lavazza, Espresso Gourmet Caramel, 20 Aluminiumkapseln Nespresso, 20 Cent pro Kapsel (Prime Spar-Abo)",
+   "title": "Lavazza, Espresso Gourmet Caramel, 20 Aluminiumkapseln Nespresso, 20",
+   "grad": 0,
+   "price": 4.0,
+   "cat": "Haushalt",
+   "hints": [
+    "nur im Spar-Abo"
+   ],
+   "pub": 1795276066.0,
+   "quelle": "https://www.mydealz.de/deals/lavazza-espresso-gourmet-caramel-20-aluminiumkapseln-nespresso-2878068"
+  },
+  "2878067": {
+   "id": "2878067",
+   "raw": "[Prime] RITUALS The Ritual of Jing Kosmetikset, Pflegeset, Lotusblüte und Jujube, Mittel",
+   "title": "RITUALS The Ritual of Jing Kosmetikset",
+   "grad": 0,
+   "price": 27.93,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1795275968.0,
+   "quelle": "https://www.mydealz.de/deals/prime-rituals-the-ritual-of-jing-geschenkset-lotusblute-und-jujube-mittel-2878067"
+  },
+  "2878062": {
+   "id": "2878062",
+   "raw": "( Prime ) Emerson, Lake & Palmer - Out of This World : Live (1970-1997) 10LPs Vinyl Schallplatten",
+   "title": "Emerson, Lake & Palmer",
+   "grad": 0,
+   "price": 64.99,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795275548.0,
+   "quelle": "https://www.mydealz.de/deals/prime-emerson-lake-palmer-out-of-this-world-live-1970-1997-10lps-vinyl-schallplatten-2878062"
+  },
+  "2878081": {
+   "id": "2878081",
+   "raw": "Madonna - Confessions II (Translucent Red Vinyl) - Prime",
+   "title": "Madonna Confessions II",
+   "grad": 0,
+   "price": 20.49,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795276844.0,
+   "quelle": "https://www.mydealz.de/deals/madonna-confessions-ii-translucent-red-vinyl-2878081"
+  },
+  "2878078": {
+   "id": "2878078",
+   "raw": "[Amazon] Braun Smart Haarentfernung IPL i·expert 7, PL7311",
+   "title": "Braun Smart Haarentfernung IPL i·expert 7",
+   "grad": 0,
+   "price": 379.99,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1795276764.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-braun-smart-haarentfernung-ipl-iexpert-7-pl7311-2878078"
+  },
+  "2878077": {
+   "id": "2878077",
+   "raw": "120° - LEGO Star Wars Razor Crest 75447 - Spare 14,01€ an der Kasse, 4-Fach Payback möglich",
+   "title": "LEGO Star Wars Razor Crest 75447",
+   "grad": 120,
+   "price": 94.99,
+   "cat": null,
+   "hints": [],
+   "pub": 1795282266.0,
+   "quelle": "https://www.mydealz.de/deals/lego-star-wars-razor-crest-75447-spare-1401eur-an-der-kasse-2878077"
+  },
+  "2878073": {
+   "id": "2878073",
+   "raw": "UGREEN 20Gbps NVMe SSD-Dockingstation, Dual-Bay M.2 SSD Gehäuse mit Offline-Klonfunktion",
+   "title": "UGREEN 20Gbps NVMe SSD-Dockingstation",
+   "grad": 0,
+   "price": 51.17,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795276447.0,
+   "quelle": "https://www.mydealz.de/deals/ugreen-20gbps-nvme-ssd-dockingstation-dual-bay-m2-ssd-gehause-mit-offline-klonfunktion-2878073"
+  },
+  "2877199": {
+   "id": "2877199",
+   "raw": "113° - Hasbro Looping Louie Gesellschaftsspiel | Klassiker mit 3D-Aufbau für 2–4 Spieler ab 4 Jahren, Geschicklichkeitsspiel (Prime)",
+   "title": "Hasbro Looping Louie Gesellschaftsspiel",
+   "grad": 113,
+   "price": 19.49,
+   "cat": null,
+   "hints": [],
+   "pub": 1795279212.0,
+   "quelle": "https://www.mydealz.de/deals/hasbro-looping-louie-gesellschaftsspiel-klassiker-mit-3d-aufbau-fur-2-4-spieler-ab-4-jahren-geschicklichkeitsspiel-prime-2877199"
+  },
+  "2878090": {
+   "id": "2878090",
+   "raw": "[Amazon Wunschliste] Roba Kasperlefigurenset 6 Handpuppen Figuren aus Stoff für Puppentheater mit Prime kostenlos sonst plus Versand",
+   "title": "Roba Kasperlefigurenset 6 Handpuppen Figuren aus Stoff für",
+   "grad": 0,
+   "price": 18.95,
+   "cat": null,
+   "hints": [],
+   "pub": 1795278530.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-wunschliste-roba-kasperlefigurenset-6-handpuppen-figuren-aus-stoff-fur-puppentheater-mit-prime-kostenlos-sonst-plus-versand-2878090"
+  },
+  "2878097": {
+   "id": "2878097",
+   "raw": "NORDMUT Campingsofa faltbar für 2 Personen – stabile Camping Couch 320 kg belastbar (Prime)",
+   "title": "NORDMUT Campingsofa faltbar Personen",
+   "grad": 0,
+   "price": 83.77,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795279994.0,
+   "quelle": "https://www.mydealz.de/deals/nordmut-campingsofa-faltbar-fur-2-personen-stabile-camping-couch-320-kg-belastbar-prime-2878097"
+  },
+  "2847009": {
+   "id": "2847009",
+   "raw": "1387° - [früher Prime Day] Dyson V8 Origin (2026) Kabelloser Staubsauger, Silver und Nickel, 130 AW, Motorbar",
+   "title": "Dyson V8 Origin",
+   "grad": 1387,
+   "price": 229.0,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795281445.0,
+   "quelle": "https://www.mydealz.de/deals/fruher-prime-day-dyson-v8-origin-2026-kabelloser-staubsauger-silver-und-nickel-130-aw-motorbar-2847009"
+  },
+  "2873958": {
+   "id": "2873958",
+   "raw": "100° - (Heizlüfter) Dreo Atom 316 Gold (DR-HSH006)",
+   "title": "(Heizlüfter) Dreo Atom 316 Gold (DR-HSH006)",
+   "grad": 100,
+   "price": 39.99,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795280842.0,
+   "quelle": "https://www.mydealz.de/deals/dreo-atom-316-gold-dr-hsh006-2873958"
+  },
+  "2878108": {
+   "id": "2878108",
+   "raw": "NZXT Kraken Plus 240 RGB AIO Wasserkühlung für 69€ (Amazon.de)",
+   "title": "NZXT Kraken Plus 240 RGB AIO Wasserkühlung",
+   "grad": 0,
+   "price": 69.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795281662.0,
+   "quelle": "https://www.mydealz.de/deals/nzxt-kraken-plus-240-rgb-aio-wasserkuhlung-fur-69eur-amazonde-2878108"
+  },
+  "2878103": {
+   "id": "2878103",
+   "raw": "[Amazon Prime/Spar-Abo] Jever Fun alkoholfrei 24×0,5l Dosen 11,86€ (0,99€/l) + 6€ Pfand (ohne Eile 11,72€) – 32 IBU – herb, hopfig & trocken",
+   "title": "Jever Fun alkoholfrei 24×0",
+   "grad": 0,
+   "price": 11.86,
+   "cat": "Haushalt",
+   "hints": [
+    "nur im Spar-Abo"
+   ],
+   "pub": 1795280745.0,
+   "quelle": "https://www.mydealz.de/deals/amazon-primespar-abo-jever-fun-alkoholfrei-2405l-dosen-fur-1186eur-6eur-pfand-ohne-eile-1172eur-32-ibu-herb-hopfig-2878103"
+  },
+  "2878099": {
+   "id": "2878099",
+   "raw": "SKECHERS Sneaker Hotshot - Pyke, viele Größen für 28,74€ (Prime/aboutyou)",
+   "title": "SKECHERS Sneaker Hotshot",
+   "grad": 0,
+   "price": 28.74,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795280442.0,
+   "quelle": "https://www.mydealz.de/deals/skechers-sneaker-hotshot-pyke-viele-grossen-fur-2874eur-primeaboutyou-2878099"
+  },
+  "2878123": {
+   "id": "2878123",
+   "raw": "Bosch 32tlg. Schrauberbit-Set - Prime",
+   "title": "Bosch 32tlg. Schrauberbit-Set",
+   "grad": 0,
+   "price": 8.27,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795283012.0,
+   "quelle": "https://www.mydealz.de/deals/bosch-32tlg-schrauberbit-set-prime-2878123"
+  },
+  "2878122": {
+   "id": "2878122",
+   "raw": "Arbeitshandschuhe 10x Paar EN388 Herren Gr 8-9 (S-M) Modell TK34004554 (Amazon Prime)",
+   "title": "Arbeitshandschuhe 10x Paar EN388 Herren Gr 8-9",
+   "grad": 0,
+   "price": 8.49,
+   "cat": "Garten & Baumarkt",
+   "hints": [],
+   "pub": 1795282996.0,
+   "quelle": "https://www.mydealz.de/deals/arbeitshandschuhe-10x-paar-en388-herren-gr-8-9-s-m-modell-tk34004554-amazon-prime-2878122"
+  },
+  "2878115": {
+   "id": "2878115",
+   "raw": "LEGO Star Wars Adventskalender 2026 | [75456] (Prime)",
+   "title": "LEGO Star Wars Adventskalender 2026",
+   "grad": 0,
+   "price": 19.95,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795282091.0,
+   "quelle": "https://www.mydealz.de/deals/lego-star-wars-adventskalender-2026-75456-prime-2878115"
   }
  }
 }
