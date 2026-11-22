@@ -730,7 +730,7 @@
   "2877318"
  ],
  "vs_slot": "2026-11-21 18:00",
- "vs_poll": 1795303520.8106062,
+ "vs_poll": 1795323455.0134597,
  "vs_pool": {
   "2877183": {
    "id": "2877183",
@@ -753,28 +753,6 @@
    "hints": [],
    "pub": 1795258995.0,
    "quelle": "https://www.mydealz.de/deals/wera-05134000001-kraftform-micro-big-pack-1-2877184"
-  },
-  "2877224": {
-   "id": "2877224",
-   "raw": "102° - Sammeldeal: Ferngesteuerte Carrera RC Mario Kart ab ►28,49€ (Mario, Peach Bowser) 9km/h, 30Min Fahrzeit, LiFePo4 Akku, 2,4GHz, ab 6 J. Prime",
-   "title": "Sammeldeal: Ferngesteuerte Carrera RC Mario Kart ab",
-   "grad": 102,
-   "price": 28.49,
-   "cat": null,
-   "hints": [],
-   "pub": 1795211884.0,
-   "quelle": "https://www.mydealz.de/deals/sammeldeal-carrera-rc-mario-kart-pipe-kart-ab-2849eur-mario-peach-bowser-9-kmh-30min-fahrzeit-lifepo4-akku-24-ghz-ab-6-j-prime-2877224"
-  },
-  "2877300": {
-   "id": "2877300",
-   "raw": "104° - Anker Nano 10-in-1 USB-C Hub mit Smart Display & Dual Monitor Dock",
-   "title": "Anker Nano 10-in-1 USB-C Hub mit Smart Display & Dual Monitor Dock",
-   "grad": 104,
-   "price": 79.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795209795.0,
-   "quelle": "https://www.mydealz.de/deals/anker-nano-10-in-1-usb-c-hub-mit-smart-display-dual-monitor-dock-2877300"
   },
   "2877341": {
    "id": "2877341",
@@ -864,17 +842,6 @@
    "pub": 1795228302.0,
    "quelle": "https://www.mydealz.de/deals/gxtrust-emita-ii-usb-mikrofon-mit-arm-pop-und-windfilter-niere-192-khz24-bit-fur-pcps4ps5-schwarz-2877409"
   },
-  "2877404": {
-   "id": "2877404",
-   "raw": "113° - Bosch Serie 2 beutelloser Bodenstaubsauger, 700 W, 1,5 L, Hygiene-Filter, inkl. Polsterdüse, Blau, BGS05AM",
-   "title": "Bosch Serie 2 beutelloser Bodenstaubsauger",
-   "grad": 113,
-   "price": 79.0,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795208677.0,
-   "quelle": "https://www.mydealz.de/deals/bosch-serie-2-beutelloser-bodenstaubsauger-700-w-15-l-hygiene-filter-inkl-polsterduse-blau-bgs05am-2877404"
-  },
   "2877397": {
    "id": "2877397",
    "raw": "134° - Philips Series 700 S792/06 Elektrorasierer, 4D Flex-Scherkopf, Nass- und Trockenrasur, IPX7, Nasenhaartrimmer",
@@ -908,28 +875,6 @@
    "pub": 1795286497.0,
    "quelle": "https://www.mydealz.de/deals/vasagle-nachttisch-snapsemble-mit-1-schublade-beistelltisch-nachtschrank-superschnelle-montage-schlafzimmer-wolkenweiss-2877479"
   },
-  "2877470": {
-   "id": "2877470",
-   "raw": "125° - Beurer FC 45 elektrische Gesichtsreinigungsbürste, 2-stufige Rotation (PRIME/ Otto UP)",
-   "title": "Beurer FC 45 elektrische Gesichtsreinigungsbürste",
-   "grad": 125,
-   "price": 9.99,
-   "cat": "Beauty & Pflege",
-   "hints": [],
-   "pub": 1795208461.0,
-   "quelle": "https://www.mydealz.de/deals/beurer-fc-45-elektrische-gesichtsreinigungsburste-2-stufige-rotation-prime-otto-up-2877470"
-  },
-  "2877500": {
-   "id": "2877500",
-   "raw": "104° - LEGO Icons - Golden Retriever Welpe 11384 [Prime/ Otto]",
-   "title": "LEGO Icons Golden Retriever Welpe 11384",
-   "grad": 104,
-   "price": 79.99,
-   "cat": null,
-   "hints": [],
-   "pub": 1795211872.0,
-   "quelle": "https://www.mydealz.de/deals/amazon-otto-2877500"
-  },
   "2877493": {
    "id": "2877493",
    "raw": "116° - [Prime] [Black Friday] Victorinox Okulier und Hakenmesser",
@@ -951,39 +896,6 @@
    "hints": [],
    "pub": 1795212444.0,
    "quelle": "https://www.mydealz.de/deals/shining-4k-ultra-hd-blu-ray-prime-2877507"
-  },
-  "2877530": {
-   "id": "2877530",
-   "raw": "117° - SONAX ReifenGlanz Special Edition (500 ml) AMAZON BLACK FRIDAY DEAL - Prime",
-   "title": "SONAX ReifenGlanz Special Edition",
-   "grad": 117,
-   "price": 8.5,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795212146.0,
-   "quelle": "https://www.mydealz.de/deals/sonax-reifenglanz-special-edition-500-ml-amazon-black-friday-deal-2877530"
-  },
-  "2877526": {
-   "id": "2877526",
-   "raw": "114° - Meguiar's Reifenpflege, Endurance High Gloss für Autoreifen - Langanhaltendes Reifenglanz, 473ml - G7516EU AMAZON BLACK DEAL",
-   "title": "Meguiar's Reifenpflege",
-   "grad": 114,
-   "price": 12.65,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795211873.0,
-   "quelle": "https://www.mydealz.de/deals/meguiars-reifenpflege-endurance-high-gloss-fur-autoreifen-langanhaltendes-reifenglanz-473ml-g7516eu-amazon-black-deal-2877526"
-  },
-  "2877521": {
-   "id": "2877521",
-   "raw": "138° - LIQUI MOLY Kunststofftiefenpfleger Auto Garten , Art.-Nr. 1536 I 500 ml AMAZAN BLACK DEAL - Prime",
-   "title": "LIQUI MOLY Kunststofftiefenpfleger Auto Garten",
-   "grad": 138,
-   "price": 9.95,
-   "cat": "Garten & Baumarkt",
-   "hints": [],
-   "pub": 1795210511.0,
-   "quelle": "https://www.mydealz.de/deals/liqui-moly-kunststofftiefenpfleger-auto-garten-art-nr-1536-i-500-ml-amazan-black-deal-2877521"
   },
   "2877556": {
    "id": "2877556",
@@ -1010,17 +922,6 @@
    "pub": 1795280077.0,
    "quelle": "https://www.mydealz.de/deals/konighaus-anti-schimmel-heizung-2877554"
   },
-  "2877547": {
-   "id": "2877547",
-   "raw": "131° - Kabellose Tastatur Logitech MX Keys Mini for Mac für 64,99€ (statt 77€)",
-   "title": "Kabellose Tastatur Logitech MX Keys Mini for Mac",
-   "grad": 131,
-   "price": 64.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795212212.0,
-   "quelle": "https://www.mydealz.de/deals/kabellose-tastatur-logitech-mx-keys-mini-for-mac-fur-6499eur-statt-77eur-2877547"
-  },
   "2877538": {
    "id": "2877538",
    "raw": "141° - Bluey: Das Videospiel PS4 & PS5 (Amazon Prime)",
@@ -1031,28 +932,6 @@
    "hints": [],
    "pub": 1795213944.0,
    "quelle": "https://www.mydealz.de/deals/bluey-das-videospiel-ps4-ps5-amazon-prime-2877538"
-  },
-  "2875213": {
-   "id": "2875213",
-   "raw": "128° - Govee RGBIC LED Stehlampe, 1000 lm, Matter & Alexa, in Schwarz, Silber oder Gold",
-   "title": "Govee RGBIC LED Stehlampe",
-   "grad": 128,
-   "price": 53.99,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795208834.0,
-   "quelle": "https://www.mydealz.de/deals/govee-rgbic-led-stehlampe-1000-lm-matter-alexa-in-schwarz-silber-oder-gold-2875213"
-  },
-  "2877573": {
-   "id": "2877573",
-   "raw": "Philips Hue Bridge + 4x E27 Smart LED Lampen (bunt)",
-   "title": "Philips Hue Bridge + 4x E27 Smart LED Lampen",
-   "grad": 0,
-   "price": 79.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795208880.0,
-   "quelle": "https://www.mydealz.de/deals/philips-hue-bridge-4x-e27-smart-led-lampen-bunt-2877573"
   },
   "2877567": {
    "id": "2877567",
@@ -1076,17 +955,6 @@
    "pub": 1795214457.0,
    "quelle": "https://www.mydealz.de/deals/nigrin-6190-eiskratzer-2877566"
   },
-  "2877565": {
-   "id": "2877565",
-   "raw": "120° - (Prime) Fisher-Price - mein erster RC-Fernlenkwagen / RC Car/ Ferngesteuertes Auto- Back to the Roots in neuem Gewand",
-   "title": "Fisher-Price mein erster RC-Fernlenkwagen / RC Car/ Ferngesteuertes",
-   "grad": 120,
-   "price": 22.53,
-   "cat": null,
-   "hints": [],
-   "pub": 1795212267.0,
-   "quelle": "https://www.mydealz.de/deals/prime-fisher-price-mein-erster-rc-fernlenkwagen-rc-car-ferngesteuertes-auto-back-to-the-roots-in-neuem-gewand-2877565"
-  },
   "2877563": {
    "id": "2877563",
    "raw": "131° - Pampers Gr. 3 Sparabo 16ct pro Windel (Prime)",
@@ -1097,17 +965,6 @@
    "hints": [],
    "pub": 1795239614.0,
    "quelle": "https://www.mydealz.de/deals/pampers-gr-3-sparabo-16ct-pro-windel-2877563"
-  },
-  "2877561": {
-   "id": "2877561",
-   "raw": "128° - (PRIME) Soehnle Küchenwaage Page Compact 300, Haushaltswaage bis 5 kg (1-g-genau) - Weiß",
-   "title": "Soehnle Küchenwaage Page Compact 300",
-   "grad": 128,
-   "price": 12.99,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795211137.0,
-   "quelle": "https://www.mydealz.de/deals/soehnle-kuchenwaage-page-compact-300-haushaltswaage-bis-5-kg-1-g-genau-weiss-2877561"
   },
   "2877560": {
    "id": "2877560",
@@ -1130,61 +987,6 @@
    "hints": [],
    "pub": 1795239996.0,
    "quelle": "https://www.mydealz.de/deals/playmobil-asterix-romischer-streitwagen-mit-senator-brutus-soldat-2-pferden-jetzt-fur-1712-euro-bei-amazon-2877558"
-  },
-  "2875229": {
-   "id": "2875229",
-   "raw": "127° - UGREEN Cat 8 LAN-Kabel 10 m, flach, schwarz, inkl. Kabelclips",
-   "title": "UGREEN Cat 8 LAN-Kabel 10 m",
-   "grad": 127,
-   "price": 9.47,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795209817.0,
-   "quelle": "https://www.mydealz.de/deals/ugreen-cat-8-lan-kabel-10-m-flach-schwarz-inkl-kabelclips-2875229"
-  },
-  "2875241": {
-   "id": "2875241",
-   "raw": "139° - UGREEN 240 W USB-C Kabel mit Digital-Display, PD 3.1, E-Marker, 1 m, für iPhone, Galaxy, MacBook, Space Grau",
-   "title": "UGREEN 240 W USB-C Kabel mit Digital-Display",
-   "grad": 139,
-   "price": 10.16,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795209814.0,
-   "quelle": "https://www.mydealz.de/deals/ugreen-240-w-usb-c-kabel-mit-digital-display-pd-31-e-marker-1-m-fur-iphone-galaxy-macbook-space-grau-2875241"
-  },
-  "2875290": {
-   "id": "2875290",
-   "raw": "142° - [Amazon] Samsung Galaxy Buds4 Pro ab 149,98 € exklusiv mit 2 Jahren Herstellergarantie (154€ in weiß) | PAYBACK 4x Punkte",
-   "title": "Samsung Galaxy Buds4 Pro exklusiv mit 2 Jahren Herstellergarantie",
-   "grad": 142,
-   "price": 149.98,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795209813.0,
-   "quelle": "https://www.mydealz.de/deals/samsung-galaxy-buds4-pro-ab-14998-eur-bei-amazon-exklusiv-mit-2-jahren-herstellergarantie-154eur-in-weiss-2875290"
-  },
-  "2876066": {
-   "id": "2876066",
-   "raw": "109° - EcoFlow Laptop Powerbank 20.000 mAh mit 100W und ausziehbarem Kabel",
-   "title": "EcoFlow Laptop Powerbank 20.000 mAh mit 100W und ausziehbarem Kabel",
-   "grad": 109,
-   "price": 47.99,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795209805.0,
-   "quelle": "https://www.mydealz.de/deals/ecoflow-laptop-powerbank-20000-mah-mit-100w-und-ausziehbarem-kabel-2876066"
-  },
-  "2876226": {
-   "id": "2876226",
-   "raw": "109° - Sony GP-VPT3 Bluetooth-Aufnahmegriff und Stativ, abnehmbare Fernbedienung, für ZV- und α-Serie, Schwarz",
-   "title": "Sony GP-VPT3 Bluetooth-Aufnahmegriff und Stativ",
-   "grad": 109,
-   "price": 79.0,
-   "cat": "Technik",
-   "hints": [],
-   "pub": 1795209800.0,
-   "quelle": "https://www.mydealz.de/deals/sony-gp-vpt3-bluetooth-aufnahmegriff-und-stativ-abnehmbare-fernbedienung-fur-zv-und-a-serie-schwarz-2876226"
   },
   "2877589": {
    "id": "2877589",
@@ -1251,28 +1053,6 @@
    "hints": [],
    "pub": 1795212336.0,
    "quelle": "https://www.mydealz.de/deals/parasite-finde-den-eindringling-4k-uhd-digital-kauf-prime-video-2877581"
-  },
-  "2877580": {
-   "id": "2877580",
-   "raw": "Beurer UB 75 & UB 90 Wärmeunterbett (150 x 80 cm, Baumwolle, Schnellheizung, maschinenwaschbar)",
-   "title": "Beurer UB 75 & UB 90 Wärmeunterbett",
-   "grad": 0,
-   "price": 49.99,
-   "cat": "Haushalt",
-   "hints": [],
-   "pub": 1795209934.0,
-   "quelle": "https://www.mydealz.de/deals/beurer-ub-75-ub-90-warmeunterbett-150-x-80-cm-baumwolle-schnellheizung-maschinenwaschbar-2877580"
-  },
-  "2877576": {
-   "id": "2877576",
-   "raw": "Tommy Hilfiger Herren Trunk Um0um03890 (3er Pack) (Prime)",
-   "title": "Tommy Hilfiger Herren Trunk Um0um03890",
-   "grad": 0,
-   "price": 20.49,
-   "cat": "Mode",
-   "hints": [],
-   "pub": 1795209102.0,
-   "quelle": "https://www.mydealz.de/deals/tommy-hilfiger-herren-trunk-um0um03890-3er-pack-2877576"
   },
   "2863567": {
    "id": "2863567",
@@ -3444,9 +3224,9 @@
   },
   "2878164": {
    "id": "2878164",
-   "raw": "124° - Apple iPad pro Magic Keyboard 13“ M4 M5 Amazon prime",
+   "raw": "132° - Apple iPad pro Magic Keyboard 13“ M4 M5 Amazon prime",
    "title": "Apple iPad pro Magic Keyboard 13“ M4 M5",
-   "grad": 124,
+   "grad": 132,
    "price": 332.0,
    "cat": "Technik",
    "hints": [],
@@ -3587,9 +3367,9 @@
   },
   "2878192": {
    "id": "2878192",
-   "raw": "109° - Hisense 98 Zoll TV für 1169 euro 98E7Q",
+   "raw": "118° - Hisense 98 Zoll TV für 1169 euro 98E7Q",
    "title": "Hisense 98 Zoll TV 98E7Q",
-   "grad": 109,
+   "grad": 118,
    "price": 1169.0,
    "cat": "Technik",
    "hints": [],
@@ -3675,13 +3455,13 @@
   },
   "2878215": {
    "id": "2878215",
-   "raw": "Bosch PRO Akku-Bauleuchte GLI 18V-300 - Prime",
+   "raw": "154° - Bosch PRO Akku-Bauleuchte GLI 18V-300 - Prime",
    "title": "Bosch PRO Akku-Bauleuchte GLI 18V-300",
-   "grad": 0,
+   "grad": 154,
    "price": 33.99,
    "cat": "Garten & Baumarkt",
    "hints": [],
-   "pub": 1795293798.0,
+   "pub": 1795305404.0,
    "quelle": "https://www.mydealz.de/deals/bosch-pro-akku-bauleuchte-gli-18v-300-2878215"
   },
   "2878212": {
@@ -3741,9 +3521,9 @@
   },
   "2878239": {
    "id": "2878239",
-   "raw": "130° - Im Westen nichts Neues (4K UHD Blu-ray) (Dolby Atmos, HDR10) (Prime)",
+   "raw": "133° - Im Westen nichts Neues (4K UHD Blu-ray) (Dolby Atmos, HDR10) (Prime)",
    "title": "Im Westen nichts Neues",
-   "grad": 130,
+   "grad": 133,
    "price": 12.79,
    "cat": "Sport & Freizeit",
    "hints": [],
@@ -3752,9 +3532,9 @@
   },
   "2878237": {
    "id": "2878237",
-   "raw": "113° - Ricola Honig Alpen Salbei, 75g Original Schweizer Kräuter-Bonbons mit 13 Alpenkräutern, Honig, Salbei & Vitamin C (Prime Spar-Abo)",
+   "raw": "110° - Ricola Honig Alpen Salbei, 75g Original Schweizer Kräuter-Bonbons mit 13 Alpenkräutern, Honig, Salbei & Vitamin C (Prime Spar-Abo)",
    "title": "Ricola Honig Alpen Salbei",
-   "grad": 113,
+   "grad": 110,
    "price": 1.5,
    "cat": "Haushalt",
    "hints": [
@@ -3941,9 +3721,9 @@
   },
   "2869477": {
    "id": "2869477",
-   "raw": "783° - Apple AirPods Pro 3 [Amazon / Joybuy]",
+   "raw": "1083° - Apple AirPods Pro 3 [Amazon / Joybuy]",
    "title": "Apple AirPods Pro 3",
-   "grad": 783,
+   "grad": 1083,
    "price": 189.0,
    "cat": "Technik",
    "hints": [],
@@ -3952,9 +3732,9 @@
   },
   "2870897": {
    "id": "2870897",
-   "raw": "107° - Burnhard RAGNAR Küchenmesser Grillmesser Pakkaholzgriff 20cm - Prime",
+   "raw": "122° - Burnhard RAGNAR Küchenmesser Grillmesser Pakkaholzgriff 20cm - Prime",
    "title": "Burnhard RAGNAR Küchenmesser Grillmesser Pakkaholzgriff 20cm",
-   "grad": 107,
+   "grad": 122,
    "price": 34.13,
    "cat": "Haushalt",
    "hints": [],
@@ -3963,9 +3743,9 @@
   },
   "2871521": {
    "id": "2871521",
-   "raw": "104° - Dreame Aqua10 Roller schwarz Saug-/Wischroboter",
+   "raw": "112° - Dreame Aqua10 Roller schwarz Saug-/Wischroboter",
    "title": "Dreame Aqua10 Roller schwarz Saug-/Wischroboter",
-   "grad": 104,
+   "grad": 112,
    "price": 479.0,
    "cat": "Haushalt",
    "hints": [],
@@ -3974,9 +3754,9 @@
   },
   "2873098": {
    "id": "2873098",
-   "raw": "117° - DREAME L40 Ultra A Saugroboter mit Wischfunktion mit 24.000 Pa Saugkraft",
+   "raw": "123° - DREAME L40 Ultra A Saugroboter mit Wischfunktion mit 24.000 Pa Saugkraft",
    "title": "DREAME L40 Ultra A Saugroboter mit Wischfunktion mit 24.000 Pa",
-   "grad": 117,
+   "grad": 123,
    "price": 299.0,
    "cat": "Haushalt",
    "hints": [],
@@ -3985,9 +3765,9 @@
   },
   "2873558": {
    "id": "2873558",
-   "raw": "103° - Russell Hobbs Inspire Wasserkocher grau (1,7 l, 2400 W)",
+   "raw": "115° - Russell Hobbs Inspire Wasserkocher grau (1,7 l, 2400 W)",
    "title": "Russell Hobbs Inspire Wasserkocher grau",
-   "grad": 103,
+   "grad": 115,
    "price": 24.99,
    "cat": "Haushalt",
    "hints": [],
@@ -3996,9 +3776,9 @@
   },
   "2874220": {
    "id": "2874220",
-   "raw": "103° - Prime - SONGMICS Kopfkissen, ergonomisch, höhenverstellbar, Memory Foam Nackenkissen, Schlafkissen, kühlender Effekt",
+   "raw": "135° - Prime - SONGMICS Kopfkissen, ergonomisch, höhenverstellbar, Memory Foam Nackenkissen, Schlafkissen, kühlender Effekt",
    "title": "SONGMICS Kopfkissen",
-   "grad": 103,
+   "grad": 135,
    "price": 17.59,
    "cat": "Haushalt",
    "hints": [],
@@ -4007,9 +3787,9 @@
   },
   "2869640": {
    "id": "2869640",
-   "raw": "102° - [Amazon Prime] Pepsi Zero Zucker Mango 24 x 0,33 l für 14,99 € zzgl. Pfand",
+   "raw": "114° - [Amazon Prime] Pepsi Zero Zucker Mango 24 x 0,33 l für 14,99 € zzgl. Pfand",
    "title": "Pepsi Zero Zucker Mango 24 x 0",
-   "grad": 102,
+   "grad": 114,
    "price": 14.99,
    "cat": "Haushalt",
    "hints": [],
@@ -4018,24 +3798,24 @@
   },
   "2878287": {
    "id": "2878287",
-   "raw": "Star Wars 1-9 - Die Skywalker Saga 4K Ultra-HD Blu-ray",
+   "raw": "105° - Star Wars 1-9 - Die Skywalker Saga 4K Ultra-HD Blu-ray",
    "title": "Star Wars 1-9",
-   "grad": 0,
+   "grad": 105,
    "price": 122.08,
    "cat": "Sport & Freizeit",
    "hints": [],
-   "pub": 1795303502.0,
+   "pub": 1795307473.0,
    "quelle": "https://www.mydealz.de/deals/star-wars-1-9-die-skywalker-saga-4k-ultra-hd-blu-ray-2878287"
   },
   "2878285": {
    "id": "2878285",
-   "raw": "Apple Mac mini mit Apple M6 Chip 16GB RAM / 256 GB SSD",
+   "raw": "124° - Apple Mac mini mit Apple M6 Chip 16GB RAM / 256 GB SSD",
    "title": "Apple Mac mini mit Apple M6 Chip 16GB RAM / 256 GB SSD",
-   "grad": 0,
+   "grad": 124,
    "price": 835.0,
    "cat": "Technik",
    "hints": [],
-   "pub": 1795303003.0,
+   "pub": 1795319276.0,
    "quelle": "https://www.mydealz.de/deals/apple-mac-mini-mit-apple-m6-chip-16gb-ram-256-gb-ssd-2878285"
   },
   "2878284": {
@@ -4051,14 +3831,236 @@
   },
   "2878282": {
    "id": "2878282",
-   "raw": "Oclean Flow elektrische Zahnbürste | USB-C | Schallzahnbürste mit 180 Tagen Akkulaufzeit | 5 Putzmodi | weiß 19.80€ / blau 20,08€ (Prime)",
+   "raw": "123° - Oclean Flow elektrische Zahnbürste | USB-C | Schallzahnbürste mit 180 Tagen Akkulaufzeit | 5 Putzmodi | weiß 19.80€ / blau 20,08€ (Prime)",
    "title": "Oclean Flow elektrische Zahnbürste",
-   "grad": 0,
+   "grad": 123,
    "price": 19.8,
    "cat": "Beauty & Pflege",
    "hints": [],
-   "pub": 1795302345.0,
+   "pub": 1795311842.0,
    "quelle": "https://www.mydealz.de/deals/oclean-flow-elektrische-zahnburste-usb-c-schallzahnburste-mit-180-tagen-akkulaufzeit-5-putzmodi-ipx7-weiss-oder-blau-prime-2878282"
+  },
+  "2878298": {
+   "id": "2878298",
+   "raw": "Avatar -Fire and Ash UHD-BluRay [Prime]",
+   "title": "Avatar -Fire and Ash UHD-BluRay",
+   "grad": 0,
+   "price": 20.17,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795304642.0,
+   "quelle": "https://www.mydealz.de/deals/avatar-fire-and-ash-uhd-bluray-prime-2878298"
+  },
+  "2878292": {
+   "id": "2878292",
+   "raw": "[Sammeldeal][AMAZON] adidas Unisex-Badeschlappen Shower",
+   "title": "adidas Unisex-Badeschlappen Shower",
+   "grad": 0,
+   "price": 15.4,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795303825.0,
+   "quelle": "https://www.mydealz.de/deals/sammeldealamazon-adidas-unisex-badeschlappen-shower-2878292"
+  },
+  "2878289": {
+   "id": "2878289",
+   "raw": "109° - [Prime] GRAEF Manuale H9 Manueller Allesschneider, Made in Germany, Vollmetall",
+   "title": "GRAEF Manuale H9 Manueller Allesschneider",
+   "grad": 109,
+   "price": 86.63,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795312322.0,
+   "quelle": "https://www.mydealz.de/deals/prime-graef-manuale-h9-manueller-allesschneider-made-in-germany-vollmetall-2878289"
+  },
+  "2878304": {
+   "id": "2878304",
+   "raw": "Barbarian 4K + Blu-Ray Steelbook",
+   "title": "Barbarian 4K + Blu-Ray Steelbook",
+   "grad": 0,
+   "price": 20.87,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795305694.0,
+   "quelle": "https://www.mydealz.de/deals/barbarian-4k-blu-ray-steelbook-2878304"
+  },
+  "2878303": {
+   "id": "2878303",
+   "raw": "Wie ein wilder Stier - Limitiertes Mediabook – Cover A (4K Ultra HD) [Amazon Prime]",
+   "title": "Wie ein wilder Stier",
+   "grad": 0,
+   "price": 23.66,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795305694.0,
+   "quelle": "https://www.mydealz.de/deals/wie-ein-wilder-stier-limitiertes-mediabook-cover-a-4k-ultra-hd-2878303"
+  },
+  "2878322": {
+   "id": "2878322",
+   "raw": "Apple AirPods Pro 3",
+   "title": "Apple AirPods Pro 3",
+   "grad": 0,
+   "price": 189.0,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795308757.0,
+   "quelle": "https://www.mydealz.de/deals/apple-airpods-pro-3-2878322"
+  },
+  "2878319": {
+   "id": "2878319",
+   "raw": "Knight Rider - Special Edition (20 Blu-rays + Bonus Blu-ray) bieten die klassische Serie - uncut und mit komplettierter Synchronisation.",
+   "title": "Knight Rider Special Edition",
+   "grad": 0,
+   "price": 74.13,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795307942.0,
+   "quelle": "https://www.mydealz.de/deals/knight-rider-special-edition-20-blu-rays-bonus-blu-ray-bieten-die-klassische-serie-uncut-und-mit-komplettierter-synchronisation-2878319"
+  },
+  "2878317": {
+   "id": "2878317",
+   "raw": "Echo Dot Max",
+   "title": "Echo Dot Max",
+   "grad": 0,
+   "price": 54.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795307821.0,
+   "quelle": "https://www.mydealz.de/deals/exho-dot-max-2878317"
+  },
+  "2878331": {
+   "id": "2878331",
+   "raw": "Logitech G PRO X 2 Lightspeed Wireless Gaming-PC-Headset, Schwarz",
+   "title": "Logitech G PRO X 2 Lightspeed Wireless Gaming-PC-Headset",
+   "grad": 0,
+   "price": 139.99,
+   "cat": "Gaming",
+   "hints": [],
+   "pub": 1795310628.0,
+   "quelle": "https://www.mydealz.de/deals/logitech-g-pro-x-2-lightspeed-wireless-gaming-pc-headset-schwarz-2878331"
+  },
+  "2878328": {
+   "id": "2878328",
+   "raw": "Comfee Dehumidifier MDDP-50DEN7 (Luftfeuchter)",
+   "title": "Comfee Dehumidifier MDDP-50DEN7",
+   "grad": 0,
+   "price": 189.99,
+   "cat": "Haushalt",
+   "hints": [],
+   "pub": 1795309826.0,
+   "quelle": "https://www.mydealz.de/deals/comfee-dehumidifier-mddp-50den7-luftfeuchter-2878328"
+  },
+  "2878327": {
+   "id": "2878327",
+   "raw": "Avatar 3-Movie-Collection [4K UHD + Blu-ray]",
+   "title": "Avatar 3-Movie-Collection",
+   "grad": 0,
+   "price": 37.15,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795309530.0,
+   "quelle": "https://www.mydealz.de/deals/avatar-3-movie-collection-4k-uhd-blu-ray-2878327"
+  },
+  "2878325": {
+   "id": "2878325",
+   "raw": "GL.iNet GL-X3000 Spitz AX 5G Router Mobilfunk-Gateway Wi-Fi 6 Dual-SIM",
+   "title": "GL.iNet GL-X3000 Spitz AX 5G Router Mobilfunk-Gateway Wi-Fi 6 Dual-SIM",
+   "grad": 0,
+   "price": 331.49,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795309349.0,
+   "quelle": "https://www.mydealz.de/deals/glinet-gl-x3000-spitz-ax-5g-mobilfunk-gateway-wi-fi-6-dual-sim-2878325"
+  },
+  "2878324": {
+   "id": "2878324",
+   "raw": "L'Oréal Men Expert Duschgel",
+   "title": "L'Oréal Men Expert Duschgel",
+   "grad": 0,
+   "price": 1.23,
+   "cat": "Beauty & Pflege",
+   "hints": [],
+   "pub": 1795309224.0,
+   "quelle": "https://www.mydealz.de/deals/loreal-men-expert-duschgel-2878324"
+  },
+  "2878333": {
+   "id": "2878333",
+   "raw": "Citizen Promaster NY0040-09W Automatikuhr Marine Diver aka Leuchtkeks amazon PRIME",
+   "title": "Citizen Promaster NY0040-09W Automatikuhr Marine Diver aka Leuchtkeks",
+   "grad": 0,
+   "price": 184.57,
+   "cat": "Mode",
+   "hints": [],
+   "pub": 1795311059.0,
+   "quelle": "https://www.mydealz.de/deals/citizen-promaster-ny0040-09w-automatikuhr-marine-diver-aka-leuchtkeks-amazon-prime-2878333"
+  },
+  "2865361": {
+   "id": "2865361",
+   "raw": "112° - Vodafone Prepaid CallYa Allnet M Starter-Set (50 GB 5G + 15 € Startguthaben, Allnet Flat) (Prime)",
+   "title": "Vodafone Prepaid CallYa Allnet M Starter-Set",
+   "grad": 112,
+   "price": 2.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795313759.0,
+   "quelle": "https://www.mydealz.de/deals/vodafone-prepaid-callya-allnet-m-starter-set-50-gb-5g-15-eur-startguthaben-allnet-flat-prime-2865361"
+  },
+  "2878343": {
+   "id": "2878343",
+   "raw": "15% Rabatt auf Zalando Geschenkgutscheine, kombinierbar mit Rabattcodes",
+   "title": "15% Rabatt auf Zalando Geschenkgutscheine",
+   "grad": 0,
+   "price": 85.0,
+   "cat": "Mode",
+   "hints": [
+    "mit Gutschein"
+   ],
+   "pub": 1795314550.0,
+   "quelle": "https://www.mydealz.de/deals/15-rabatt-auf-zalando-wertgutscheine-geschenkgutscheine-2878343"
+  },
+  "2878352": {
+   "id": "2878352",
+   "raw": "Harry Styles - Fine Line (Vinyl)",
+   "title": "Harry Styles Fine Line",
+   "grad": 0,
+   "price": 24.39,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795320158.0,
+   "quelle": "https://www.mydealz.de/deals/harry-styles-fine-line-vinyl-2878352"
+  },
+  "2878350": {
+   "id": "2878350",
+   "raw": "Harry Styles - Harry's House (LP) (Vinyl)",
+   "title": "Harry Styles Harry's House",
+   "grad": 0,
+   "price": 23.99,
+   "cat": "Sport & Freizeit",
+   "hints": [],
+   "pub": 1795319920.0,
+   "quelle": "https://www.mydealz.de/deals/harry-styles-harrys-house-lp-vinyl-2878350"
+  },
+  "2878349": {
+   "id": "2878349",
+   "raw": "Apple AirPods Max 2 [Amazon Retourenkauf: Hervorragend für 396€ | Wie Neu für 405€]",
+   "title": "Apple AirPods Max 2",
+   "grad": 0,
+   "price": 396.58,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795319886.0,
+   "quelle": "https://www.mydealz.de/deals/apple-airpods-max-2-amazon-retorukenauf-hervorragend-fur-396eur-wie-neu-fur-405eur-2878349"
+  },
+  "2878339": {
+   "id": "2878339",
+   "raw": "Oehlbach 3,5mm Klinke auf Cinch Kabel bei Amazon",
+   "title": "Oehlbach 3,5mm Klinke auf Cinch Kabel bei",
+   "grad": 0,
+   "price": 19.99,
+   "cat": "Technik",
+   "hints": [],
+   "pub": 1795323124.0,
+   "quelle": "https://www.mydealz.de/deals/oehlbach-35mm-klinke-auf-cinch-kabel-bei-amazon-2878339"
   }
  }
 }
